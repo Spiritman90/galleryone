@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Inter:wght@100;200;300;400;500;600;700;800&family=Montserrat:wght@500&family=Nunito+Sans:wght@300;600;800&display=swap");
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  font-weight: 200;
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  font-weight: 300;
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  font-weight: 400;
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  font-weight: 500;
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  font-weight: 600;
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque";
+  font-weight: 700;
+  src: local("Acherus Grotesque"),
+    url(../../fonts/Acherus-Grotesque/AcherusGrotesque-Regular.otf)
+      format("opentype");
+}
+
+$background-color: #474747;
+$darker-background: #07090d;
+$primary-color: #eb861e;
+$btn-gray: #efefef;
+$input-gray: #828282;
+$btn-text: #2f1b06;
+$secondary-font: "Inter", sans-serif;
+$primary-font: "Acherus Grotesque", sans-serif;

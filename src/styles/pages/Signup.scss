@@ -1,0 +1,142 @@
+@import "../variables/colors.scss";
+
+.auth-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  // margin: 12rem 0;
+
+  &__heading {
+    h2 {
+      font-family: $primary-font;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 4rem;
+      color: $btn-gray;
+    }
+    p {
+      font-family: $secondary-font;
+      font-weight: 200;
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+      color: $btn-gray;
+      margin-bottom: 1.3125rem;
+    }
+  }
+
+  label {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  input {
+    height: 4.25rem;
+    width: 23.875rem;
+    border-radius: 1.25rem;
+    padding: 1rem, 1.5rem, 1rem, 24px 1.5rem;
+    margin-left: -0.5rem;
+    color: #828282;
+    background-color: $darker-background;
+    outline: none;
+    font-family: $primary-font;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+
+    border: 2px solid #d0d2d4;
+
+    &::placeholder {
+      font-size: 1.25rem;
+      line-height: 2.25rem;
+      font-family: $primary-font;
+      font-weight: 400;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 2rem;
+
+    .create-btn {
+      height: 4.25rem;
+      width: 23.875rem;
+      border-radius: 1.875rem;
+      padding: 1.25rem, 6rem, 1.25rem, 6rem;
+      background-color: $primary-color;
+      border: none;
+      font-family: $primary-font;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    .sign-btn {
+      height: 4.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8125rem;
+      width: 23.5625rem;
+      border-radius: 1.875rem;
+      padding: 1.25rem, 6rem, 1.25rem, 6rem;
+      border: none;
+      font-family: $primary-font;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      background-color: $btn-gray;
+      background: $btn-gray;
+      cursor: pointer;
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    .google {
+      background-color: $btn-gray;
+    }
+  }
+  .full-name {
+    position: absolute;
+    top: 9rem;
+    right: 44rem;
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    line-height: 25.6px;
+    color: $input-gray;
+    background-color: $darker-background;
+    padding: 0.5rem;
+    border: none;
+  }
+
+  .email {
+    position: absolute;
+    top: 16.5rem;
+    right: 46rem;
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    line-height: 25.6px;
+    color: $input-gray;
+    background-color: $darker-background;
+    padding: 0.5rem;
+  }
+
+  .password {
+    position: absolute;
+    top: 23.5rem;
+    right: 44.5rem;
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    line-height: 25.6px;
+    color: $input-gray;
+    background-color: $darker-background;
+    padding: 0.5rem;
+  }
+}
