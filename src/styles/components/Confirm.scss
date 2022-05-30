@@ -1,0 +1,63 @@
+@import "../variables/colors.scss";
+
+.confirm {
+  display: grid;
+  place-items: center;
+
+  &__heading {
+    h2 {
+      color: white;
+      font-family: $primary-font;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 51px;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__buttons {
+    display: inline-flex;
+    gap: 1rem;
+  }
+
+  &__black {
+    background-color: $darker-background;
+    color: $primary-color;
+    font-family: $primary-font;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    border: 3px solid $primary-color;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 19px 45px;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+
+  &__orange {
+    background-color: $primary-color;
+    color: $btn-text;
+    font-family: $primary-font;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 19px 45px 19px 45px;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+
+  &__black,
+  &__orange {
+    width: 250px;
+  }
+}

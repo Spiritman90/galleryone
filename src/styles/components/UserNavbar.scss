@@ -1,0 +1,42 @@
+@import "../variables/colors.scss";
+
+.user__navbar {
+  background-color: $darker-background;
+  // background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  color: $btn-gray;
+  position: relative;
+
+  .navbar__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .navbar__item {
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .user {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    &__image {
+      // background-color: #d0d2d4;
+      border-radius: 50%;
+    }
+  }
+}

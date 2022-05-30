@@ -1,0 +1,70 @@
+@import "../variables/colors.scss";
+
+.user__profile {
+  background-color: #121721;
+  // padding: 2rem;
+  border-radius: 10px;
+  font-family: $primary-font;
+  // padding: 1.5rem;
+  width: 20rem;
+  position: absolute;
+  top: 5.6rem;
+  right: 2rem;
+
+  .user__balance {
+    border-bottom: 2px solid #636870;
+    padding: 1rem 1.5rem;
+  }
+
+  .wallet__balance {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-items: center;
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+  h4 {
+    margin-left: 2rem;
+    // border-bottom: 1px solid white;
+  }
+
+  .user__actions {
+    // padding-top: 1.5rem;
+    padding: 34px 1.5rem 14px 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    cursor: pointer;
+  }
+
+  .user__account {
+    display: flex;
+    gap: 0.3rem;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .user__wallet {
+    display: flex;
+    gap: 0.4rem;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .user__logout {
+    display: flex;
+    gap: 0.7rem;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

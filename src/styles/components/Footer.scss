@@ -1,0 +1,44 @@
+@import "../../styles/variables/colors.scss";
+
+.footer {
+  display: grid;
+
+  grid-template-columns: 1.43fr max-content 2.17fr max-content 1fr max-content 1fr max-content 0.879fr;
+  color: $btn-gray;
+  background-color: $darker-background;
+  padding: 4rem 0;
+
+  &__logo {
+    display: flex;
+    grid-column: 2/3;
+
+    align-self: center;
+  }
+  .features {
+    &__feature {
+      grid-column: 4/5;
+    }
+    &__legal {
+      grid-column: 6/7;
+    }
+    &__about {
+      align-self: center;
+      grid-column: 8/9;
+    }
+  }
+}
+.features__heading {
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $btn-gray;
+  margin-bottom: 1rem;
+}
+
+.features__item {
+  margin: 0.5rem 0;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $btn-gray;
+}

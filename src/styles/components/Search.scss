@@ -1,0 +1,34 @@
+@import "../../styles/variables/colors.scss";
+
+.search-input {
+  padding: 12px 12px 12px 58px;
+  width: 100%;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 2px solid #d0d2d4;
+  background-color: inherit;
+  color: #d0d2d4;
+  font-size: 1rem;
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+
+  &::placeholder {
+    font-family: "Inter" sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-left: 1rem;
+  }
+}
+
+.search-label {
+  display: block;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  inset: 18px auto auto 24px;
+}

@@ -1,11 +1,12 @@
 @import "../variables/colors.scss";
 
 .auth-form {
+  // justify-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  position: relative;
+  // height: 100vh;
+  // position: relative;
   // margin: 12rem 0;
 
   &__heading {
@@ -35,16 +36,15 @@
   input {
     height: 4.25rem;
     width: 23.875rem;
-    border-radius: 1.25rem;
+    border-radius: 0.5rem;
     padding: 1rem, 1.5rem, 1rem, 24px 1.5rem;
-    margin-left: -0.5rem;
+    // margin-left: -0.5rem;
     color: #828282;
     background-color: $darker-background;
     outline: none;
     font-family: $primary-font;
     padding-left: 1rem;
     font-size: 1.5rem;
-
     border: 2px solid #d0d2d4;
 
     &::placeholder {
@@ -64,7 +64,7 @@
     .create-btn {
       height: 4.25rem;
       width: 23.875rem;
-      border-radius: 1.875rem;
+      border-radius: 0.5rem;
       padding: 1.25rem, 6rem, 1.25rem, 6rem;
       background-color: $primary-color;
       border: none;
@@ -85,7 +85,7 @@
       justify-content: center;
       gap: 0.8125rem;
       width: 23.5625rem;
-      border-radius: 1.875rem;
+      border-radius: 0.5rem;
       padding: 1.25rem, 6rem, 1.25rem, 6rem;
       border: none;
       font-family: $primary-font;
@@ -111,7 +111,7 @@
     font-size: 1.25rem;
     line-height: 25.6px;
     color: $input-gray;
-    background-color: $darker-background;
+    background-color: #151c28;
     padding: 0.5rem;
     border: none;
   }
@@ -124,7 +124,7 @@
     font-size: 1.25rem;
     line-height: 25.6px;
     color: $input-gray;
-    background-color: $darker-background;
+    background-color: #151c28;
     padding: 0.5rem;
   }
 
@@ -136,7 +136,7 @@
     font-size: 1.25rem;
     line-height: 25.6px;
     color: $input-gray;
-    background-color: $darker-background;
+    background-color: #151c28;
     padding: 0.5rem;
   }
 }

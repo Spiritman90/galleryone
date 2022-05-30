@@ -1,0 +1,11 @@
+.auth {
+  background-color: #151c28;
+  background-image: url(./../../assets/gOne.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  height: 100vh;
+
+  &__logo {
+    margin: 77px 0 0 68px;
+  }
+}

@@ -8,5 +8,20 @@ body {
   background-color: #151c28;
 }
 
+ul {
+  list-style: none;
+}
+
+@import "./styles/components/Navbar.scss";
+@import "./styles/components/Search.scss";
+@import "./styles/components/Footer.scss";
+@import "./styles/components/ProductImage.scss";
+@import "./styles/components/UserNavbar.scss";
+@import "./styles/components/UserProfile.scss";
+@import "./styles/components/Confirm.scss";
+
 @import "./styles/pages/Signup.scss";
 @import "./styles/pages/Login.scss";
+@import "./styles/pages/Home.scss";
+@import "./styles/components/Auth.scss";
+@import "./styles/pages/Error.scss";
