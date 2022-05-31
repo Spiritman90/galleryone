@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import AuthWrapper from "./components/AuthWrapper";
 import { useState } from "react";
 import Error from "./pages/Error";
+import About from "./pages/About";
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
@@ -14,11 +15,12 @@ function App() {
       <Routes>
         <Route element={userSignedIn ? <Layout /> : <Navigate to='/login' />}>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='*' element={<Error />} />
         </Route>
         <Route element={<AuthWrapper />}>
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
-          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>

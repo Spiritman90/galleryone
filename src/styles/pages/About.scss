@@ -1,0 +1,145 @@
+@import "../variables/colors.scss";
+
+.about {
+  // margin: 26px 64px;
+
+  & p {
+    font-family: $secondary-font;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #d0d2d4;
+  }
+
+  &__heading {
+    display: grid;
+    place-items: center;
+    padding-bottom: 10px;
+    border-bottom: 5px solid $color-gold;
+    color: $color-gold;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51px;
+    margin-top: 1rem;
+  }
+
+  .value {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 26px 64px;
+
+    &__heading {
+      font-family: $secondary-font;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 102px;
+      color: $primary-color;
+    }
+  }
+
+  .value__lead {
+    flex: 1.2;
+  }
+
+  .value__image {
+    flex: 1;
+  }
+
+  .value__photo {
+    width: 100%;
+    margin-top: 88px;
+  }
+
+  .mission {
+    margin-top: 152px;
+    display: grid;
+    place-items: center;
+    margin: 26px 64px;
+
+    &__heading {
+      font-family: $secondary-font;
+      color: $color-gold;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 51px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 30px;
+      margin-top: 35px;
+    }
+  }
+
+  .team {
+    margin: 26px 64px;
+  }
+
+  .team__heading {
+    display: grid;
+    place-items: center;
+    margin: 140px 0 44px 0;
+    font-family: $secondary-font;
+    color: $color-gold;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51px;
+    text-align: left;
+  }
+
+  .team__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+  }
+
+  .team__photo {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .team__profile {
+    display: grid;
+    place-items: center;
+  }
+
+  .team__name {
+    font-family: $secondary-font;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $color-blue;
+  }
+
+  .team__role {
+    font-family: $secondary-font;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  .what {
+    background-color: $darker-background;
+    padding-top: 40px;
+    padding-bottom: 223px;
+    margin-bottom: 162px;
+    margin-top: 8rem;
+  }
+
+  .what__heading {
+    display: grid;
+    place-items: center;
+    color: $color-gold;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51px;
+    margin-bottom: 70px;
+  }
+
+  .what__card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 26px 64px;
+  }
+}

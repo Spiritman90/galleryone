@@ -8,7 +8,6 @@ import { useNavigate } from "react-router";
 const UserProfile = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    // console.log("clicked");
     navigate("/login");
   };
   return (
@@ -21,7 +20,6 @@ const UserProfile = () => {
           </span>
         </div>
         <h4>NGN 20, 000</h4>
-        {/* <hr /> */}
       </div>
       <div className='user__actions'>
         <div className='user__account'>

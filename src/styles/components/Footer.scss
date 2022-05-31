@@ -41,4 +41,8 @@
   font-family: $primary-font;
   font-weight: 400;
   color: $btn-gray;
+
+  &:hover {
+    color: $primary-color;
+  }
 }

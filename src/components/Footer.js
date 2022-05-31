@@ -27,8 +27,12 @@ const Footer = () => {
 
       <div className='features features__about'>
         <ul className='features__list'>
-          <li className='features__item'>About</li>
-          <li className='features__item'>Contact</li>
+          <Link to='/about'>
+            <li className='features__item'>About</li>
+          </Link>
+          <Link to='/contact'>
+            <li className='features__item'>Contact</li>
+          </Link>
         </ul>
       </div>
     </footer>
