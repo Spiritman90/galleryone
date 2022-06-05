@@ -5,10 +5,10 @@ import Tunmise from "../assets/Tunmise.jpg";
 import Bethel from "../assets/Bethel.jpg";
 import Ellipse from "../assets/Ellipse 27.jpg";
 import WhatCard from "../components/WhatCard";
-// import Femi from "../assets/femi.jpg";
-// import Pere from "../assets/pere.jpg";
-// import Samuel from "../assets/samuel.jpg";
-// import Dimeji from "../assets/dimeji.jpg";
+import Femi from "../assets/fm.jpg";
+import Pere from "../assets/pere.jpg";
+import Samuel from "../assets/samuel.jpg";
+import Dimeji from "../assets/dimeji.jpg";
 
 const About = () => {
   return (
@@ -92,58 +92,34 @@ const About = () => {
             </div>
           </div>
 
-          {/* <div className='femi__photo'>
-            <img src={Femi} alt='femi' className='team__photo' />
-            <p className='team__name'>Adewole Femi</p>
-            <p className='team__role'>Front-end Engineer</p>
+          <div className='femi__photo'>
+            <img src={Femi} alt='samuel' className='team__photo' />
+            <div className='team__profile'>
+              <p className='team__name'>Adewole Femi</p>
+              <p className='team__role'>Frontend Developer</p>
+            </div>
           </div>
 
           <div className='pere__photo'>
-            <img src={Pere} alt='pere' className='femi' />
-            <p className='team__name'>Adewole Femi</p>
-            <p className='team__role'>Back-end Engineer</p>
+            <img src={Samuel} alt='samuel' className='team__photo' />
+            <div className='team__profile'>
+              <p className='team__name'>Samuel Omolaja</p>
+              <p className='team__role'>Backend Developer</p>
+            </div>
           </div>
 
           <div className='samuel__photo'>
-            <img src={Samuel} alt='samuel' className='samuel' />
-            <p className='team__name'>Samuel Omolaja</p>
-            <p className='team__role'>Back-end Engineer</p>
-          </div> */}
-
-          {/* <div className='dimeji__photo'>
-            <img src={Dimeji} alt='samuel' className='dimeji' />
-            <p className='team__name'>Oladimeji Shekoni</p>
-            <p className='team__role'>Data Analyst</p>
-          </div> */}
-
-          <div className='ellipse__photo'>
-            <img src={Ellipse} alt='samuel' className='team__photo' />
+            <img src={Pere} alt='samuel' className='team__photo' />
             <div className='team__profile'>
-              <p className='team__name'>David Shedrach</p>
-              <p className='team__role'>Product</p>
+              <p className='team__name'>Egbekun Pere-Ebi</p>
+              <p className='team__role'>Backend Developer</p>
             </div>
           </div>
-
-          <div className='ellipse__photo'>
-            <img src={Ellipse} alt='samuel' className='team__photo' />
+          <div className='dimeji__photo'>
+            <img src={Dimeji} alt='samuel' className='team__photo' />
             <div className='team__profile'>
-              <p className='team__name'>David Shedrach</p>
-              <p className='team__role'>Product</p>
-            </div>
-          </div>
-
-          <div className='ellipse__photo'>
-            <img src={Ellipse} alt='samuel' className='team__photo' />
-            <div className='team__profile'>
-              <p className='team__name'>David Shedrach</p>
-              <p className='team__role'>Product</p>
-            </div>
-          </div>
-          <div className='ellipse__photo'>
-            <img src={Ellipse} alt='samuel' className='team__photo' />
-            <div className='team__profile'>
-              <p className='team__name'>David Shedrach</p>
-              <p className='team__role'>Product</p>
+              <p className='team__name'>Oladimeji Shekoni</p>
+              <p className='team__role'>Data Analyst</p>
             </div>
           </div>
 

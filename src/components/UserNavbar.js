@@ -3,7 +3,7 @@ import Logo from "../customicons/Logo";
 import User from "../customicons/User";
 import Arrow from "../customicons/Arrow";
 import SearhBar from "./SearhBar";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import UserProfile from "./UserProfile";
 
 const UserNavbar = () => {
@@ -19,7 +19,9 @@ const UserNavbar = () => {
         <Logo />
       </Link>
       <ul className='navbar__list'>
-        <li className='navbar__item'>Live Auction</li>
+        <NavLink to='/liveauction'>
+          <li className='navbar__item'>Live Auction</li>
+        </NavLink>
         <li className='navbar__item'>Sell an Item</li>
       </ul>
       <SearhBar />

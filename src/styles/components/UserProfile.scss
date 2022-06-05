@@ -40,27 +40,30 @@
   .user__account {
     display: flex;
     gap: 0.3rem;
+    padding: 0.5rem;
 
     &:hover {
-      color: $primary-color;
+      background-color: $primary-color;
     }
   }
 
   .user__wallet {
     display: flex;
     gap: 0.4rem;
+    padding: 0.5rem;
 
     &:hover {
-      color: $primary-color;
+      background-color: $primary-color;
     }
   }
 
   .user__logout {
     display: flex;
     gap: 0.7rem;
+    padding: 0.5rem;
 
     &:hover {
-      color: $primary-color;
+      background-color: $primary-color;
     }
   }
 }

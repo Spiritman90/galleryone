@@ -6,7 +6,7 @@ import UserNavbar from "./UserNavbar";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [userLoggedIn, setUserLoggedIn] = useState(true);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
 
   return (
     <>

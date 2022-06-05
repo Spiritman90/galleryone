@@ -7,6 +7,9 @@ import AuthWrapper from "./components/AuthWrapper";
 import { useState } from "react";
 import Error from "./pages/Error";
 import About from "./pages/About";
+import LiveAuction from "./pages/LiveAuction";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
@@ -17,6 +20,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='*' element={<Error />} />
+          <Route path='/liveauction' element={<LiveAuction />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/privacy' element={<Privacy />} />
         </Route>
         <Route element={<AuthWrapper />}>
           <Route path='/signup' element={<Signup />} />

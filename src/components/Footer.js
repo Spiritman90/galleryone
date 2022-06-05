@@ -20,8 +20,10 @@ const Footer = () => {
       <div className='features features__legal'>
         <h5 className='features__heading'>Legal</h5>
         <ul className='features__list'>
-          <li className='features__item'>Privacy Policy</li>
-          <li className='features__item'>Terms of Service</li>
+          <Link to='/privacy'>
+            <li className='features__item'>Privacy Policy</li>
+            <li className='features__item'>Terms of Service</li>
+          </Link>
         </ul>
       </div>
 

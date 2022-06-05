@@ -1,0 +1,89 @@
+@import "../variables/colors.scss";
+
+.contact__heading {
+  display: grid;
+  place-items: center;
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 51px;
+  color: $color-gold;
+  margin: 64px 0 64px 0;
+}
+
+.contact-image {
+  width: 100%;
+}
+
+.get {
+  background-color: $darker-background;
+  margin-top: 8rem;
+  padding: 5rem;
+  margin-bottom: 10rem;
+
+  &__lead {
+    display: grid;
+    place-items: center;
+  }
+
+  &__heading {
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    color: $color-gold;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    font-family: $secondary-font;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 58px;
+    color: #d0d2d4;
+  }
+
+  .card__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 26px 64px;
+  }
+
+  .get__card {
+    background-color: #d9d9d9;
+    // padding: 110px 50px;
+    padding: 122px 10px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 140px;
+  }
+
+  .header__text {
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51px;
+    margin-bottom: 1rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .body__text {
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+
+  .card__icon {
+    position: absolute;
+    bottom: 20rem;
+    right: 3rem;
+  }
+}
+
+.map__image {
+  width: 100%;
+  margin-bottom: 7rem;
+}

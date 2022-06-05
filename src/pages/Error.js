@@ -10,15 +10,10 @@ const Error = () => {
         <div className='error__image'>
           <img src={ErrorIcon} alt='icon' />
         </div>
-
-        <div className='error__message'>
-          <h4 className='error__heading'>Oops! We did not find anything</h4>
-          <div>
-            <button onClick={() => navigate("/")} className='error__btn'>
-              Take me home
-            </button>
-          </div>
-        </div>
+        <h4 className='error__heading'>Oops! We did not find anything</h4>
+        {/* <button onClick={() => navigate("/")} className='error__btn'>
+          Take me home
+        </button> */}
       </div>
     </>
   );
