@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #151c28;
+  // background-color: #151c28;
 }
 
 ul {
@@ -31,6 +31,8 @@ a {
 @import "./styles/components/WhatCard.scss";
 @import "./styles/components/Modal.scss";
 @import "./styles/components/FundWallet.scss";
+@import "./styles/components/SoldOut.scss";
+@import "./styles/components/SuccessfulBid.scss";
 
 @import "./styles/pages/Signup.scss";
 @import "./styles/pages/Login.scss";

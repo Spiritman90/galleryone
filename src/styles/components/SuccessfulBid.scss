@@ -1,0 +1,66 @@
+@import "../variables/colors.scss";
+
+.successful {
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+
+  &__heading {
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51px;
+    color: #fff;
+  }
+
+  &__text {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #fff;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__dark {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: $darker-background;
+    color: $primary-color;
+    outline: none;
+    border: 3px solid $primary-color;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+
+  &__orange {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    background-color: $primary-color;
+    color: $primary-color;
+    outline: none;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    cursor: pointer;
+    color: $btn-text;
+    border: none;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}
