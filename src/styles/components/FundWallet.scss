@@ -1,0 +1,110 @@
+@import "../variables/colors.scss";
+
+.fund {
+  margin: 0.2rem 3rem;
+
+  &__heading {
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  &__amount {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  &__why {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #fff;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  &__reply {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  &__input {
+    height: 68px;
+    width: 394px;
+    border-radius: 8px;
+    border: 2px solid #d0d2d4;
+    background-color: $darker-background;
+    font-family: Acherus Grotesque;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    padding-left: 1rem;
+    outline: none;
+    color: #d0d2d4;
+  }
+
+  &__special {
+    display: flex;
+    gap: 0.5rem;
+    // margin-top: 1rem;
+  }
+
+  &__input2 {
+    height: 68px;
+    width: 193px;
+    border-radius: 8px;
+    padding-left: 1rem;
+    outline: none;
+    border: 2px solid #d0d2d4;
+    background-color: $darker-background;
+    font-family: Acherus Grotesque;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    padding-left: 1rem;
+    outline: none;
+    color: #d0d2d4;
+  }
+
+  &__button {
+    display: grid;
+    // place-items: center;
+    margin-top: 2rem;
+  }
+
+  &__btn {
+    background-color: $primary-color;
+    // padding: 1rem 4rem;
+    border: none;
+    height: 68px;
+    width: 382px;
+    border-radius: 8px;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}

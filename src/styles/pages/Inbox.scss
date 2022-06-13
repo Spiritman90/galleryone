@@ -1,0 +1,60 @@
+@import "../variables/colors.scss";
+
+.inbox {
+  margin-top: 98px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #636870;
+    padding-bottom: 1.5rem;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__content {
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: $btn-gray;
+  }
+
+  &__date {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $btn-gray;
+  }
+
+  &__number {
+    display: grid;
+    place-items: center;
+    margin-top: 25rem;
+  }
+
+  &__digit {
+    // height: 50px;
+    // width: 56px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    color: black;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}

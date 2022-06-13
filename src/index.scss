@@ -17,6 +17,10 @@ a {
   color: inherit;
 }
 
+.active {
+  color: $primary-color;
+}
+
 @import "./styles/components/Navbar.scss";
 @import "./styles/components/Search.scss";
 @import "./styles/components/Footer.scss";
@@ -25,6 +29,8 @@ a {
 @import "./styles/components/UserProfile.scss";
 @import "./styles/components/Confirm.scss";
 @import "./styles/components/WhatCard.scss";
+@import "./styles/components/Modal.scss";
+@import "./styles/components/FundWallet.scss";
 
 @import "./styles/pages/Signup.scss";
 @import "./styles/pages/Login.scss";
@@ -35,3 +41,9 @@ a {
 @import "./styles/pages/LiveAuction.scss";
 @import "./styles/pages/Contact.scss";
 @import "./styles/pages/Privacy.scss";
+@import "./styles/pages/Sell.scss";
+@import "./styles/pages/Verify.scss";
+@import "./styles/pages/Inbox.scss";
+@import "./styles/pages/Success.scss";
+@import "./styles/pages/ForgotPasswordOne.scss";
+@import "./styles/pages/ForgotPasswordTwo.scss";

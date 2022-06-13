@@ -24,3 +24,36 @@
   background-color: $darker-background;
   padding: 0.5rem;
 }
+
+.dont {
+  display: grid;
+  place-items: center;
+  margin-top: 1.5rem;
+
+  &__text {
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: white;
+
+    span {
+      font-family: $secondary-font;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 26px;
+      color: $primary-color;
+    }
+  }
+
+  &__link {
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $primary-color;
+    // display: grid;
+    // place-self: center start;
+    margin-top: 1rem;
+  }
+}

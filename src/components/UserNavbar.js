@@ -22,7 +22,9 @@ const UserNavbar = () => {
         <NavLink to='/liveauction'>
           <li className='navbar__item'>Live Auction</li>
         </NavLink>
-        <li className='navbar__item'>Sell an Item</li>
+        <NavLink to='/sell'>
+          <li className='navbar__item'>Sell an Item</li>
+        </NavLink>
       </ul>
       <SearhBar />
 

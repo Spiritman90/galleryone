@@ -1,8 +1,11 @@
 @import "../variables/colors.scss";
 
 .confirm {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
 
   &__heading {
     h2 {
