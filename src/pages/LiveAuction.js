@@ -1,37 +1,54 @@
 import React from "react";
-import auction from "../assets/Auction.jpg";
+import Burna from "../assets/Newlive.jpg";
+import Live from "../customicons/Live";
+import Bidders from "../customicons/Bidders";
 
 const LiveAuction = () => {
   return (
     <section className='auction'>
       <div className='auction__wrapper'>
         <div className='auction__item'>
-          <img src={auction} alt='auction' className='auction__image' />
+          <img src={Burna} alt='auction' className='auction__image' />
         </div>
 
         <div className='auction__details'>
-          <h3 className='auction__name'>Macbook Pro 2020</h3>
-          <p className='auction__info'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.{" "}
-          </p>
-          <div className='last__bid'>
-            <p className='bid'>
-              Your last bid <span className='bid__price'>N20000</span>
+          <div className='auction__end'>
+            <p className='auction__name'>Auctions ends in</p>
+            <h3 className='auction__info'>2hrs 38mins 32secs</h3>
+          </div>
+
+          <div className='auction__current'>
+            <p className='auction__lead'>Current item</p>
+            <h3 className='auction__item'>Burna boy LIVE concert tickets</h3>
+            <p className='auction__text'>
+              The grammy award winner will be live at the Eko convention centre
+              this December, this package includes a pre show meeting and the
+              best seat in the house!
             </p>
           </div>
-          <button className='bid__btn'>Bid NGN 22000</button>
+
+          <div className='auction__bids'>
+            <p className='auction__bid'>Your last bid</p>
+            <p className='auction__amount'>N20000</p>
+          </div>
+          <div className='auction__button'>
+            <button className='auction__btn'>Bid NGN 22000</button>
+          </div>
         </div>
       </div>
 
       <div className='live'>
         <div className='live__wrapper'>
           <div className='live__lead'>
+            <span>
+              <Live />
+            </span>{" "}
             <h4 className='live__heading'>Live Feed</h4>
           </div>
-
           <div className='live__bidders'>
+            <span>
+              <Bidders />
+            </span>{" "}
             <p className='live__bids'>2000 bidders</p>
           </div>
         </div>

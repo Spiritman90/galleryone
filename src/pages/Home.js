@@ -1,13 +1,15 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Modal from "../components/Modal";
 import ProductImage from "../components/ProductImage";
+// import Modal from "../components/Modal";
 
 const Home = () => {
   return (
     <header className='header'>
       <Banner />
-      {/* <Modal></Modal> */}
+      {/* <Modal>
+        <Bid />
+      </Modal> */}
 
       <section className='offers'>
         <p className='offers__heading'>Best Offers</p>

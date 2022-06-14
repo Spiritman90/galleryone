@@ -12,6 +12,12 @@ const UserProfile = () => {
   const [showModal, setShowModal] = useState(false);
   const [showFundWallet, setShowFundWallet] = useState(false);
 
+  const hideModal = (ele) => {
+    ele === "fundWallet"
+      ? setShowFundWallet(!FundWallet)
+      : setShowModal(!showModal);
+  };
+
   const navigate = useNavigate();
   // const handleClick = () => {};
   return (
@@ -42,7 +48,7 @@ const UserProfile = () => {
         </div>
 
         {showFundWallet && (
-          <Modal>
+          <Modal comp={"fundWallet"} hideModal={hideModal}>
             <FundWallet />
           </Modal>
         )}
@@ -53,7 +59,7 @@ const UserProfile = () => {
         </div>
       </div>
       {showModal && (
-        <Modal>
+        <Modal comp={"confirm"} hideModal={hideModal}>
           <Confirm setShowModal={setShowModal} />
         </Modal>
       )}

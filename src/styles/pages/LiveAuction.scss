@@ -1,7 +1,7 @@
 @import "../variables/colors.scss";
 
 .auction {
-  margin: 81px 49px;
+  margin: 5.0625rem 3.0625rem;
   color: $btn-gray;
 
   &__wrapper {
@@ -10,61 +10,89 @@
   }
 
   &__image {
-    width: 769px;
+    // width: 769px;
+    width: 48.0625rem;
+    // width: 100%;
     border-radius: 1rem;
   }
 
-  // &__details {
-  //   flex: 1;
-  // }
-
-  // &__item {
-  //   flex: -1;
-  // }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
 
   &__name {
     font-family: $secondary-font;
-    font-size: 28px;
     font-weight: 700;
     line-height: 36px;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
+    font-size: 14px;
+    color: $btn-gray;
   }
 
   &__info {
     font-family: $secondary-font;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 40px;
-    margin-bottom: 1rem;
-  }
-
-  .bid {
-    font-family: $secondary-font;
-    font-size: 28px;
+    // margin-bottom: 1rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 36px;
-    margin-bottom: 2rem;
+    color: #e2b93b;
+  }
 
-    &__price {
-      font-family: $secondary-font;
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 36px;
-    }
+  &__lead {
+    font-family: $secondary-font;
+    font-weight: 700;
+    line-height: 36px;
+    // margin-bottom: 1rem;
+    font-size: 14px;
+    color: $btn-gray;
+  }
 
-    &__btn {
-      border-radius: 8px;
-      padding: 1.25rem 6rem;
-      background-color: $primary-color;
-      border: none;
-      font-family: $secondary-font;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 28px;
+  &__item {
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $btn-gray;
+  }
 
-      &:hover {
-        filter: brightness(90%);
-      }
+  &__text {
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $btn-gray;
+  }
+
+  &__bid {
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22.4px;
+    color: #636870;
+  }
+
+  &__amount {
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 1.25rem 6rem;
+    background-color: $primary-color;
+    border: none;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(90%);
     }
   }
 
@@ -74,6 +102,18 @@
     padding: 1rem;
     color: $btn-gray;
 
+    &__lead {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &__bidders {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
     &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -82,9 +122,10 @@
 
     &__heading {
       font-family: $secondary-font;
-      font-size: 28px;
-      font-weight: 700;
       line-height: 36px;
+      font-size: 20px;
+      font-weight: 400;
+      color: $btn-gray;
     }
 
     &__bids {
@@ -92,10 +133,7 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 29px;
-    }
-
-    &__container {
-      // margin: ;
+      color: $btn-gray;
     }
 
     &__actions {
@@ -112,12 +150,20 @@
         background-color: #121721;
       }
     }
-
     &__time {
       font-family: $primary-font;
       font-size: 24px;
       font-weight: 400;
       line-height: 38px;
+      color: $btn-gray;
+    }
+
+    &__name {
+      font-family: $secondary-font;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 38px;
+      color: $btn-gray;
     }
   }
 }

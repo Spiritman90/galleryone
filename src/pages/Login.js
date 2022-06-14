@@ -42,6 +42,7 @@ const Login = () => {
               required
               onChange={(e) => setEmail(e.target.value)}
               value={email}
+              disabled={false}
             />
           </label>
           <label>
@@ -55,7 +56,7 @@ const Login = () => {
           </label>
           <div className='buttons'>
             <button className='create-btn'>Login</button>
-            <button className='sign-btn'>
+            <button className='google-btn'>
               {" "}
               <Google className='google' />
               Google login{" "}

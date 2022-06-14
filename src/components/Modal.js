@@ -1,9 +1,11 @@
 import React from "react";
 
-const Modal = ({ children }) => {
+const Modal = ({ hideModal, children, comp }) => {
   return (
-    <div className='modal-backdrop'>
-      <div className='modal'>{children}</div>
+    <div onClick={() => hideModal(comp)} className='modal-backdrop'>
+      <div onClick={(e) => e.stopPropagation()} className='modal'>
+        {children}
+      </div>
     </div>
   );
 };

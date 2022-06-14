@@ -1,11 +1,11 @@
 @import "../variables/colors.scss";
 
 .verify__input {
-  height: 119px;
-  width: 828px;
-  border-radius: 20px;
-  padding: 14px, 32px, 14px, 32px;
-  border: 2px solid #636870;
+  height: 12.438rem;
+  width: 51.74rem;
+  border-radius: 1.25rem;
+  // padding: 14px, 32px, 14px, 32px;
+  border: 0.125rem solid #636870;
   background: $darker-background;
 }
 
@@ -27,18 +27,17 @@
   gap: 4rem;
 
   & input {
-    height: 68px;
-    width: 390px;
-    top: 14px;
+    height: 4.25rem;
+    width: 24.375rem;
     padding-left: 1rem;
-    border-radius: 8px;
-    border: 2px solid #d0d2d4;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #d0d2d4;
     outline: none;
     background: $darker-background;
     font-family: $primary-font;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 2.25rem;
     color: #828282;
 
     // padding: 16px 24px;
@@ -46,20 +45,18 @@
 }
 
 .verify__validate {
-  height: 68px;
-  width: 835px;
-  top: 14px;
+  height: 4.25rem;
+  width: 52.187rem;
   padding-left: 1rem;
-  border-radius: 8px;
-  border: 2px solid #d0d2d4;
+  border-radius: 0.5rem;
+  border: 0.125rem solid #d0d2d4;
   outline: none;
   background: $darker-background;
   font-family: $primary-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 2.25rem;
   color: #828282;
-  height: 68px;
 }
 
 .verify__button {
@@ -71,32 +68,31 @@
 }
 
 .verify__light {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   padding: 1rem 5rem;
   border: none;
   background-color: inherit;
   color: $primary-color;
-  border: 3px solid $primary-color;
+  border: 0.1875rem solid $primary-color;
   font-family: $secondary-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 1.75rem;
   &:hover {
     filter: brightness(85%);
   }
 }
 
 .verify__orange {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   padding: 1rem 5rem;
   border: none;
   background-color: $primary-color;
-  // color: $primary-color;
-  border: 3px solid $primary-color;
+  border: 0.1875rem solid $primary-color;
   font-family: $secondary-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 1.75rem;
 
   &:hover {
     filter: brightness(85%);

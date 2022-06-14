@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
 import file from "../assets/file.jpg";
 import Verify from "./Verify";
-// import { Link } from "react-router-dom";
 
 const Sell = () => {
-  const navigate = useNavigate();
   const [changeView, setChangeView] = useState(0);
 
   return (

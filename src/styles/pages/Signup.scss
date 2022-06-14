@@ -1,13 +1,10 @@
 @import "../variables/colors.scss";
 
 .auth-form {
-  // justify-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 100vh;
-  // position: relative;
-  // margin: 12rem 0;
+  margin-top: -2rem;
 
   &__heading {
     h2 {
@@ -30,15 +27,14 @@
   label {
     display: block;
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
   input {
     height: 4.25rem;
-    width: 23.875rem;
+    width: 29.125rem;
     border-radius: 0.5rem;
-    padding: 1rem, 1.5rem, 1rem, 24px 1.5rem;
-    // margin-left: -0.5rem;
+    // padding: 1rem, 1.5rem, 1rem, 24px 1.5rem;
     color: #828282;
     background-color: $darker-background;
     outline: none;
@@ -55,23 +51,38 @@
     }
   }
 
+  .name__auth {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .name__input {
+    height: 4.25rem;
+    width: 14.0625rem;
+    border-radius: 0.5rem;
+  }
+
   .buttons {
     display: flex;
     flex-direction: column;
-    margin-top: 1.5rem;
-    gap: 2rem;
+    margin-top: 2rem;
+    gap: 1rem;
+    // border-bottom: 2px solid #636870;
 
     .create-btn {
       height: 4.25rem;
-      width: 23.875rem;
+      width: 28.9375rem;
       border-radius: 0.5rem;
       padding: 1.25rem, 6rem, 1.25rem, 6rem;
       background-color: $primary-color;
       border: none;
-      font-family: $primary-font;
+      font-family: $secondary-font;
       font-size: 1.25rem;
       line-height: 1.75rem;
       cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $btn-text;
 
       &:hover {
         filter: brightness(90%);
@@ -80,20 +91,51 @@
 
     .sign-btn {
       height: 4.25rem;
+      width: 29rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8125rem;
+      border-radius: 0.5rem;
+      // padding: 1.25rem, 6rem, 1.25rem, 6rem;
+      border: 3px solid $primary-color;
+      font-family: $secondary-font;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      color: $primary-color;
+      background-color: $darker-background;
+      cursor: pointer;
+      font-weight: 700;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    .line {
+      border-bottom: 1px solid #d0d2d4;
+      margin-top: 2rem;
+    }
+
+    .google-btn {
+      height: 4.25rem;
+      width: 29.125rem;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.8125rem;
-      width: 23.5625rem;
       border-radius: 0.5rem;
-      padding: 1.25rem, 6rem, 1.25rem, 6rem;
+      // padding: 1.25rem, 6rem, 1.25rem, 6rem;
       border: none;
-      font-family: $primary-font;
+      font-family: $secondary-font;
       font-size: 1.25rem;
       line-height: 1.75rem;
       background-color: $btn-gray;
       background: $btn-gray;
       cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+
       &:hover {
         filter: brightness(90%);
       }
