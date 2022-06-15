@@ -1,0 +1,167 @@
+@import "../variables/colors.scss";
+
+.pdetails {
+  padding: 71px 63px;
+
+  &__container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__text {
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: $btn-gray;
+    margin-top: 3.4375rem;
+  }
+
+  &__price {
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    color: $btn-gray;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-end;
+    // margin-left: 20rem;
+
+    // display: grid;
+    // gap: 0.5rem;
+  }
+
+  &__buybtn {
+    padding: 1rem 8.7rem;
+    border-radius: 0.5rem;
+    background-color: $primary-color;
+    border: none;
+    outline: none;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    cursor: pointer;
+    display: grid;
+    place-self: end center;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+
+  &__bidbtn {
+    padding: 1rem 8rem;
+    border-radius: 0.5rem;
+    color: $primary-color;
+    background-color: $darker-background;
+    border: 2px solid $primary-color;
+    outline: none;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+
+  &__add {
+    color: $primary-color;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding-left: 15rem;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 2rem;
+    // height: 32.25rem;
+    // width: 431.87rem;
+    border-radius: 0.9375rem;
+    // flex: 1;
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  &__photo {
+    width: 100%;
+    border-radius: 0.9375rem;
+  }
+
+  &__goods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+
+  &__description {
+    margin-top: 9.1875rem;
+  }
+
+  &__describe {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+    color: $btn-gray;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: $btn-gray;
+    margin-bottom: 5rem;
+  }
+
+  &__products {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+    color: $btn-gray;
+    margin-bottom: 1rem;
+  }
+
+  &__reviews {
+    margin-top: 5rem;
+    // margin-top: 13.5625rem;
+  }
+
+  &__rave {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: $btn-gray;
+    margin-bottom: 2.1875rem;
+  }
+
+  &__reviewed {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}

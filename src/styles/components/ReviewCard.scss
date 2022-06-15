@@ -1,0 +1,39 @@
+@import "../variables/colors.scss";
+
+.review {
+  background-color: #121721;
+  height: 14.5rem;
+  width: 37.6875rem;
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__star {
+    display: flex;
+  }
+
+  &__name {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: $btn-gray;
+  }
+
+  &__message {
+    margin-top: 2rem;
+  }
+
+  &__statement {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: $btn-gray;
+  }
+}

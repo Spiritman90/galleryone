@@ -17,6 +17,7 @@ import History from "./pages/History";
 import Inbox from "./pages/Inbox";
 import Success from "./pages/Success";
 import ForgotPasswordOne from "./pages/ForgotPasswordOne";
+import ProductDetails from "./pages/ProductDetails";
 // import ForgotPasswordTwo from "./pages/ForgotPasswordTwo";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/success' element={<Success />} />
+          <Route path='/product-details' element={<ProductDetails />} />
 
           <Route path='/sell' element={<SellerWrapper />}>
             <Route path='sell_form' element={<Sell />} />

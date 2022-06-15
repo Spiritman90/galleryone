@@ -1,15 +1,17 @@
 import React from "react";
-import offer from "../assets/offers.jpg";
+import { Link } from "react-router-dom";
 
-const ProductImage = () => {
+const ProductImage = ({ ImageSource, details, price }) => {
   return (
-    <div className='product'>
-      <div className='product__image'>
-        <img src={offer} alt='laptops' className='product__photo' />
-        <p className='product__name'>Macbook Pro 2020</p>
-        <p className='product__price'>NGN950, 000</p>
+    <Link to='/product-details'>
+      <div className='product'>
+        <div className='product__image'>
+          <img src={ImageSource} alt='laptops' className='product__photo' />
+          <p className='product__name'>{details}</p>
+          <p className='product__price'>NGN{price}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
