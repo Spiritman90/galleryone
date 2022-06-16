@@ -1,0 +1,51 @@
+@import "../variables/colors.scss";
+
+.personal {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+
+  &__details {
+    margin-top: 5.25rem;
+  }
+
+  &__btn {
+    background-color: inherit;
+    border: none;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    color: $primary-color;
+    cursor: pointer;
+  }
+
+  &__label {
+    display: flex;
+    gap: 10.5rem;
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: $btn-gray;
+
+    &:not(:last-child) {
+      margin-bottom: 2.625rem;
+    }
+  }
+
+  &__input {
+    width: 18.125rem;
+    color: $btn-gray;
+    background-color: inherit;
+    border: none;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #636870;
+    outline: none;
+    text-align: justify;
+    border-bottom: 0.0625rem solid #636870;
+  }
+}

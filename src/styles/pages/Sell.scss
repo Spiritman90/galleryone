@@ -1,12 +1,13 @@
 @import "../variables/colors.scss";
 
 .sell {
-  margin: 64px;
+  // margin: 64px;
+  padding: 64px;
   // margin: 26px;
 
   &__wrapper {
     display: flex;
-    // gap: 2rem;
+    gap: 2rem;
   }
 
   //Info is in the sellWrapper component
@@ -30,8 +31,12 @@
       border-radius: 0.625rem;
       padding: 1rem;
       margin-right: 3rem;
-      height: 64px;
-      width: 240px;
+      height: 4rem;
+      width: 19rem;
+
+      &:hover {
+        filter: brightness(90%);
+      }
     }
   }
 
@@ -44,13 +49,16 @@
   &__information {
     background-color: $darker-background;
     color: white;
-    width: 59.6875rem;
+    // width: 59.6875rem;
     height: 56.8125rem;
     // flex: 1;
+    // height: 48.8125rem;
+    width: 60.8125rem;
+    border-radius: 0.625rem;
   }
 
   &__container {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     gap: 6rem;
     // padding: 0 5rem;
@@ -63,8 +71,8 @@
     line-height: 2.375rem;
   }
 
-  &__margin {
-    margin: 1.875rem 3.875rem;
+  &__padding {
+    padding: 1.875rem 3.875rem;
   }
 
   &__border {

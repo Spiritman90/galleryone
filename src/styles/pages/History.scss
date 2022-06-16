@@ -1,12 +1,12 @@
 @import "../variables/colors.scss";
 
-.inbox {
-  margin-top: 98px;
+.history {
+  margin-top: 50px;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
   }
 
   &__mail {
@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #636870;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 
   &__details {
@@ -40,9 +40,11 @@
   }
 
   &__number {
-    display: grid;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     place-items: center;
-    margin-top: 20rem;
+    margin-top: 10rem;
   }
 
   &__digit {

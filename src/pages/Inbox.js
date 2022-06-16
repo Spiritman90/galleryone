@@ -5,7 +5,7 @@ import Mail from "../customicons/Mail";
 const Inbox = () => {
   return (
     <section className='sell__information'>
-      <div className='sell__margin'>
+      <div className='sell__padding'>
         <div className='inbox'>
           <div className='inbox__wrapper'>
             <div className='inbox__mail'>

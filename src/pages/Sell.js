@@ -9,7 +9,7 @@ const Sell = () => {
     <>
       {changeView === 0 && (
         <div className='sell__information'>
-          <div className='sell__margin'>
+          <div className='sell__padding'>
             <h4 className='sell__heading'>Item Information</h4>
             <div className='sell__container'>
               <div className='sell__border'>
