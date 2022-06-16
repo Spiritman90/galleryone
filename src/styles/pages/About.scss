@@ -90,7 +90,7 @@
   .team__gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 3.5rem;
   }
 
   .team__photo {
@@ -105,9 +105,10 @@
 
   .team__name {
     font-family: $secondary-font;
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: $color-blue;
+    color: #d0d2d4;
+    margin-top: 1rem;
   }
 
   .team__role {
@@ -115,6 +116,7 @@
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 26px;
+    color: #fbe7d2;
   }
 
   .what {

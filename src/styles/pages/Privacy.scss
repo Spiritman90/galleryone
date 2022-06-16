@@ -4,9 +4,9 @@
   // margin: 26px 64px;
 
   &__lead {
-    background-color: #2f1b06;
+    background-color: $darker-background;
     margin-top: 3rem;
-    color: #fff;
+    color: #d0d2d4;
     padding: 2rem 0;
   }
 
@@ -46,7 +46,7 @@
 }
 
 .policy__heading {
-  color: $color-blue;
+  color: #fbe7d2;
   font-size: 24px;
   font-weight: 600;
   line-height: 38px;
@@ -63,33 +63,30 @@
 }
 
 .blue {
-  color: $color-blue;
+  color: $primary-color;
   text-decoration: underline;
 }
 
 .helpful {
-  background-color: #636870;
-  padding: 2rem 0;
+  background-color: $darker-background;
+  padding: 4rem 0;
   color: #d0d2d4;
   margin-top: 5rem;
 
   &__lead {
     display: flex;
     justify-content: space-around;
-    // align-items: center;
     justify-items: center;
-    border-bottom: 2px solid $color-gold;
+    border-bottom: 2px solid $primary-color;
   }
 
   &__stars {
     display: flex;
     gap: 2rem;
+    margin-top: 1rem;
+    margin-right: 20rem;
     // align-items: center;
     // justify-content: center;
-  }
-
-  .star {
-    width: 3rem;
   }
 
   &__heading {
@@ -97,65 +94,34 @@
     font-size: 36px;
     font-weight: 600;
     line-height: 58px;
-    margin-bottom: 1.5rem;
-  }
-
-  &__details {
-    display: flex;
-    // flex-direction: column;
-    gap: 8rem;
-    font-family: $secondary-font;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 38px;
-    margin: 3rem 5rem;
-    text-align: justify;
-  }
-
-  &__button {
-    margin-top: 9rem;
-    border-radius: 8px;
-    width: 14rem;
-    padding: 1rem 2rem;
-    border: none;
-    background-color: $primary-color;
-    font-family: $secondary-font;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-
-    &:hover {
-      filter: brightness(90%);
-    }
+    margin-bottom: 2.625rem;
   }
 }
 
 .help {
   background-color: $darker-background;
-  color: white;
   display: flex;
+  gap: 0.5rem;
   align-items: center;
   justify-items: center;
   padding: 3rem 9rem;
-  gap: 3rem;
   font-family: $secondary-font;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 58px;
   color: #d0d2d4;
   margin: 3rem 0;
 
   &__button {
-    border-radius: 8px;
-    width: 14rem;
-    padding: 1rem 2rem;
     border: none;
-    background-color: #d0d2d4;
+    background-color: inherit;
     font-family: $secondary-font;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 25px;
-    border: 2px solid $primary-color;
+    color: $primary-color;
+    text-decoration: underline;
+    cursor: pointer;
 
     &:hover {
       filter: brightness(90%);

@@ -5,7 +5,7 @@ const Verify = () => {
   const navigate = useNavigate();
   return (
     <section className='sell__information'>
-      <div className='sell__margin'>
+      <div className='sell__padding'>
         <h4 className='sell__heading verify__heading'>Verify Identity</h4>
 
         <form className='verify__form'>

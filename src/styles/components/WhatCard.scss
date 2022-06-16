@@ -1,7 +1,7 @@
 @import "../variables/colors.scss";
 
 .card {
-  background-color: #636870;
+  background-color: #0e131b;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,7 @@
 
   &__heading {
     font-family: $secondary-font;
-    color: $primary-color;
+    color: #d0d2d4;
     font-size: 32px;
     font-weight: 700;
     line-height: 51px;
@@ -27,6 +27,6 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 38px;
-    color: $btn-text;
+    color: #d0d2d4;
   }
 }

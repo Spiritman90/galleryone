@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import star8 from "../assets/orange-star.jpg";
-import star6 from "../assets/star.jpg";
 import { useNavigate } from "react-router";
+import PolicyStar from "../customicons/PolicyStar";
 
 const Privacy = () => {
   const navigate = useNavigate();
@@ -150,25 +149,39 @@ const Privacy = () => {
             </div>
             <div className='helpful__stars'>
               <div className='img'>
-                <img src={star6} alt='star' className='star' />
-              </div>
-
-              <div className='img'>
-                <img src={star8} alt='star' className='star' />
+                <PolicyStar />
               </div>
               <div className='img'>
-                <img src={star6} alt='star' className='star' />
+                <PolicyStar />
               </div>
               <div className='img'>
-                <img src={star6} alt='star' className='star' />
+                <PolicyStar />
               </div>
               <div className='img'>
-                <img src={star6} alt='star' className='star' />
+                <PolicyStar />
+              </div>
+              <div className='img'>
+                <PolicyStar />
               </div>
             </div>
           </div>
 
-          <div className='helpful__details'>
+          <section className='help'>
+            <div className='help__lead'>
+              <p className='help__text'>Need more help?</p>
+            </div>
+
+            <div className='button'>
+              <button
+                className='help__button'
+                onClick={() => navigate("/contact")}
+              >
+                Contact us
+              </button>
+            </div>
+          </section>
+
+          {/* <div className='helpful__details'>
             <p className='helpful__text'>
               It takes only a few min to create a GalleryOne account. Once your
               account is set up, you and buy and sell here
@@ -180,20 +193,8 @@ const Privacy = () => {
             >
               Sign Up
             </button>
-          </div>
+          </div> */}
         </section>
-      </section>
-
-      <section className='help'>
-        <div className='help__lead'>
-          <p className='help__text'>Need more help?</p>
-        </div>
-
-        <div className='button'>
-          <button className='help__button' onClick={() => navigate("/contact")}>
-            Contact Us
-          </button>
-        </div>
       </section>
     </section>
   );
