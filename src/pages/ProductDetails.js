@@ -14,8 +14,10 @@ import Bid from "../components/Bid";
 import ReviewCard from "../components/ReviewCard";
 import ReviewYellow from "../customicons/ReviewYellow";
 import ReviewGray from "../customicons/ReviewGray";
+import { useNavigate } from "react-router";
 
 const ProductDetails = () => {
+  const navigate = useNavigate();
   const [showBidModaL, setShowBidModal] = useState(false);
   const hideModal = (ele) => {
     ele === "bid" ? setShowBidModal(!Bid) : setShowBidModal(showBidModaL);
@@ -45,7 +47,12 @@ const ProductDetails = () => {
           </div>
 
           <div className='pdetails__buttons'>
-            <button className='pdetails__buybtn'>Buy Now</button>
+            <button
+              className='pdetails__buybtn'
+              onClick={() => navigate("/buy-now")}
+            >
+              Buy Now
+            </button>
             <button
               className='pdetails__bidbtn'
               onClick={() => setShowBidModal(!showBidModaL)}
@@ -87,29 +94,29 @@ const ProductDetails = () => {
           <ProductImage
             ImageSource={sim1}
             details='Apple IPad Mini 6 Wi-Fi + 
-Cellular - 256Gb - Space Grey 
-- 2021'
+            Cellular - 256Gb - Space Grey 
+             - 2021'
             price='535,000'
           />
           <ProductImage
             ImageSource={sim2}
             details='Apple MacBook Air 13" 
-Intel Core I7 16GB Ram 
-512GB 2020 Model - Gold'
+            Intel Core I7 16GB Ram 
+            512GB 2020 Model - Gold'
             price='750,000'
           />
           <ProductImage
             ImageSource={sim3}
             details='Hp Envy 15 X360 11th Gen, 
-Intel Core I7 (16GB RAM,1TB 
-SSD) - FP Reader -Wins 11'
+            Intel Core I7 (16GB RAM,1TB 
+            SSD) - FP Reader -Wins 11'
             price='779,200'
           />
           <ProductImage
             ImageSource={sim4}
             details='Asus Zenbook 14 
-Intel Core I7-10510U, 
-16GB RAM 512GB SSD Wins 10'
+            Intel Core I7-10510U, 
+            16GB RAM 512GB SSD Wins 10'
             price='629,900'
           />
         </div>
