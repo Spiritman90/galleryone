@@ -1,18 +1,18 @@
 @import "../../styles/variables/colors.scss";
 
 .header {
-  margin: 64px;
+  margin: 4rem;
 
   &__photo {
     width: 100%;
   }
 
   .offers__heading {
-    margin: 64px 0 64px 0;
+    margin: 4rem 0 4rem 0;
     font-family: $primary-font;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 38px;
+    line-height: 2.375rem;
     color: $btn-gray;
   }
 

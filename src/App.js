@@ -19,7 +19,7 @@ import Success from "./pages/Success";
 import ForgotPasswordOne from "./pages/ForgotPasswordOne";
 import ProductDetails from "./pages/ProductDetails";
 import BuyNow from "./pages/BuyNow";
-// import ForgotPasswordTwo from "./pages/ForgotPasswordTwo";
+import ForgotPasswordTwo from "./pages/ForgotPasswordTwo";
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
@@ -48,7 +48,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/forgotpasswordone' element={<ForgotPasswordOne />} />
-          {/* <Route path='/forgotpasswordtwo' element={<ForgotPasswordTwo />} /> */}
+          <Route path='/forgotpasswordtwo' element={<ForgotPasswordTwo />} />
         </Route>
       </Routes>
     </BrowserRouter>

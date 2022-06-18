@@ -3,6 +3,8 @@
 .navbar {
   background-color: $darker-background;
   padding: 1rem;
+  position: sticky;
+  top: 0;
 
   display: grid;
   grid-template-columns: 1fr [logoStart] max-content [logoEnd] 1fr [searchStart] 6fr[searchEnd] 1fr [buttonStart] 5.76fr [buttonEnd] 0.85fr;
@@ -27,15 +29,15 @@
     border-radius: 0.5rem;
     background-color: inherit;
     color: $primary-color;
-    border: 3px solid $primary-color;
+    border: 0.1875rem solid $primary-color;
     font-family: $primary-font;
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25rem;
     font-family: $secondary-font;
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25rem;
 
     &:hover {
       filter: brightness(80%);
@@ -48,15 +50,15 @@
     border-radius: 0.5rem;
     background-color: $primary-color;
     color: $btn-text;
-    border: 1px solid $primary-color;
+    border: 0.0625rem solid $primary-color;
     font-family: $primary-font;
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25rem;
     font-family: $secondary-font;
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25rem;
 
     &:hover {
       filter: brightness(90%);

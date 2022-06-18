@@ -3,16 +3,15 @@
 .error__page {
   display: grid;
   place-items: center;
-  // height: 100vh;
   margin-top: 8rem;
 
   .error__heading {
     color: #ffffff;
     font-family: $secondary-font;
-    font-size: 32px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 51px;
-    margin-bottom: 141px;
+    line-height: 3.1875rem;
+    margin-bottom: 8.8125rem;
   }
 
   // .error__btn {

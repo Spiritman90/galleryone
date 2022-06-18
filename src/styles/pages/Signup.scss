@@ -34,14 +34,13 @@
     height: 4.25rem;
     width: 29.125rem;
     border-radius: 0.5rem;
-    // padding: 1rem, 1.5rem, 1rem, 24px 1.5rem;
     color: #828282;
     background-color: $darker-background;
     outline: none;
     font-family: $primary-font;
     padding-left: 1rem;
     font-size: 1.5rem;
-    border: 2px solid #d0d2d4;
+    border: 0.125rem solid #d0d2d4;
 
     &::placeholder {
       font-size: 1.25rem;
@@ -67,7 +66,6 @@
     flex-direction: column;
     margin-top: 2rem;
     gap: 1rem;
-    // border-bottom: 2px solid #636870;
 
     .create-btn {
       height: 4.25rem;
@@ -96,8 +94,7 @@
       justify-content: center;
       gap: 0.8125rem;
       border-radius: 0.5rem;
-      // padding: 1.25rem, 6rem, 1.25rem, 6rem;
-      border: 3px solid $primary-color;
+      border: 0.1875rem solid $primary-color;
       font-family: $secondary-font;
       font-size: 1.25rem;
       line-height: 1.75rem;
@@ -112,7 +109,7 @@
     }
 
     .line {
-      border-bottom: 1px solid #d0d2d4;
+      border-bottom: 0.0625rem solid #d0d2d4;
       margin-top: 1rem;
     }
 
@@ -124,7 +121,6 @@
       justify-content: center;
       gap: 0.8125rem;
       border-radius: 0.5rem;
-      // padding: 1.25rem, 6rem, 1.25rem, 6rem;
       border: none;
       font-family: $secondary-font;
       font-size: 1.25rem;
@@ -151,7 +147,7 @@
     right: 44rem;
     font-family: $primary-font;
     font-size: 1.25rem;
-    line-height: 25.6px;
+    line-height: 1.625rem;
     color: $input-gray;
     background-color: #151c28;
     padding: 0.5rem;
@@ -164,7 +160,7 @@
     right: 46rem;
     font-family: $primary-font;
     font-size: 1.25rem;
-    line-height: 25.6px;
+    line-height: 1.625rem;
     color: $input-gray;
     background-color: #151c28;
     padding: 0.5rem;
@@ -176,7 +172,7 @@
     right: 44.5rem;
     font-family: $primary-font;
     font-size: 1.25rem;
-    line-height: 25.6px;
+    line-height: 1.625rem;
     color: $input-gray;
     background-color: #151c28;
     padding: 0.5rem;

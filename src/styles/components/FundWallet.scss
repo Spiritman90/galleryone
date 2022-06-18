@@ -5,27 +5,27 @@
 
   &__heading {
     font-family: $secondary-font;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 51px;
+    line-height: 3.1875rem;
     color: #fff;
     margin-bottom: 1rem;
   }
 
   &__amount {
     font-family: $primary-font;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
     color: #fff;
     margin-bottom: 1rem;
   }
 
   &__why {
     font-family: $primary-font;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
     color: #fff;
     text-decoration: underline;
     margin-bottom: 1rem;
@@ -34,9 +34,9 @@
 
   &__reply {
     font-family: $primary-font;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
     color: #fff;
     margin-bottom: 1rem;
   }
@@ -47,15 +47,15 @@
   }
 
   &__input {
-    height: 68px;
-    width: 394px;
-    border-radius: 8px;
-    border: 2px solid #d0d2d4;
+    height: 4.25rem;
+    width: 24.625rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #d0d2d4;
     background-color: $darker-background;
     font-family: Acherus Grotesque;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 2.25rem;
     padding-left: 1rem;
     outline: none;
     color: #d0d2d4;
@@ -64,21 +64,20 @@
   &__special {
     display: flex;
     gap: 0.5rem;
-    // margin-top: 1rem;
   }
 
   &__input2 {
-    height: 68px;
-    width: 193px;
-    border-radius: 8px;
+    height: 4.25rem;
+    width: 12.0625rem;
+    border-radius: 0.5rem;
     padding-left: 1rem;
     outline: none;
-    border: 2px solid #d0d2d4;
+    border: 0.125rem solid #d0d2d4;
     background-color: $darker-background;
     font-family: Acherus Grotesque;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 2.25rem;
     padding-left: 1rem;
     outline: none;
     color: #d0d2d4;
@@ -86,7 +85,6 @@
 
   &__button {
     display: grid;
-    // place-items: center;
     margin-top: 2rem;
   }
 
@@ -94,13 +92,13 @@
     background-color: $primary-color;
     // padding: 1rem 4rem;
     border: none;
-    height: 68px;
-    width: 382px;
-    border-radius: 8px;
+    height: 4.25rem;
+    width: 23.875rem;
+    border-radius: 0.5rem;
     font-family: $secondary-font;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 1.75rem;
     cursor: pointer;
 
     &:hover {

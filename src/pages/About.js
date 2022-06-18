@@ -35,7 +35,7 @@ const About = () => {
 
       <section className='mission'>
         <div className='mission__lead'>
-          <h2 className='mission__heading'>Our Mission at GalleyOne</h2>
+          <h2 className='mission__heading'>Our Mission at GalleryOne</h2>
           <p className='mission__text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
             pulvinar pulvinar tristique in. Id etiam leo et orci donec nisi sed

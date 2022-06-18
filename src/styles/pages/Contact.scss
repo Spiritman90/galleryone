@@ -4,11 +4,12 @@
   display: grid;
   place-items: center;
   font-family: $secondary-font;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 51px;
-  color: $color-gold;
-  margin: 64px 0 64px 0;
+  line-height: 3.1875rem;
+  // color: $color-gold;
+  color: #f3bb81;
+  margin: 4rem 0 4rem 0;
 }
 
 .contact-image {
@@ -28,18 +29,19 @@
 
   &__heading {
     font-family: $secondary-font;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 38px;
-    color: $color-gold;
+    line-height: 2.375rem;
+    // color: $color-gold;
+    color: #f3bb81;
     margin-bottom: 1.5rem;
   }
 
   &__text {
     font-family: $secondary-font;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 700;
-    line-height: 58px;
+    line-height: 3.625rem;
     color: #d0d2d4;
   }
 
@@ -47,23 +49,22 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: 26px 64px;
+    margin: 1.625rem 4rem;
   }
 
   .get__card {
     background-color: #d9d9d9;
-    // padding: 110px 50px;
-    padding: 122px 10px;
-    border-radius: 20px;
+    padding: 7.625rem 0.625rem;
+    border-radius: 1.25rem;
     position: relative;
-    margin-top: 140px;
+    margin-top: 8.75rem;
   }
 
   .header__text {
     font-family: $secondary-font;
-    font-size: 32px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 51px;
+    line-height: 3.1875rem;
     margin-bottom: 1rem;
     display: grid;
     place-items: center;
@@ -71,15 +72,15 @@
 
   .body__text {
     font-family: $secondary-font;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 38px;
+    line-height: 2.375rem;
   }
 
   .card__icon {
     position: absolute;
-    bottom: 20rem;
-    right: 5rem;
+    bottom: 15rem;
+    right: 4rem;
     margin-bottom: 3rem;
   }
 }

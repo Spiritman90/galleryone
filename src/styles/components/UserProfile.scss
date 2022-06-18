@@ -2,7 +2,7 @@
 
 .user__profile {
   background-color: #121721;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   font-family: $primary-font;
   width: 20rem;
   position: absolute;
@@ -10,7 +10,7 @@
   right: 2rem;
 
   .user__balance {
-    border-bottom: 2px solid #636870;
+    border-bottom: 0.125rem solid #636870;
     padding: 1rem 1.5rem;
   }
 
@@ -30,7 +30,7 @@
   }
 
   .user__actions {
-    padding: 34px 1.5rem 14px 1.5rem;
+    padding: 2.125rem 1.5rem 0.875rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;

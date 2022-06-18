@@ -18,6 +18,7 @@ const ReviewCard = ({ name, starSrc, statement }) => {
             <ReviewYellow />
             <ReviewGray /> */}
             {starSrc}, {starSrc}, {starSrc}, {starSrc}, {starSrc}
+            {/* {starSrc} */}
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+// import { useSelector, useDispatch } from "react-redux";
+
 import Google from "../customicons/Google";
 
 const Signup = () => {
@@ -9,6 +11,8 @@ const Signup = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const user = useSelector((state) => state.user);
+  // const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();

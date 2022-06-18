@@ -5,18 +5,17 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  // gap: 1rem;
   margin-top: 5rem;
 
   &__message {
-    margin-bottom: 260px;
+    margin-bottom: 16.25rem;
   }
 
   &__text {
     font-family: $secondary-font;
-    font-size: 32px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 51px;
+    line-height: 3.1875rem;
     color: $btn-gray;
   }
 }

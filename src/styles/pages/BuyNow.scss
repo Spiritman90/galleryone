@@ -3,31 +3,6 @@
 .buynow {
   padding: 5.1875rem 4.4375rem;
 
-  // &__background {
-  //   background-color: red;
-  //   height: 7.625rem;
-  //   width: 54rem;
-  //   border-radius: 10px;
-  // }
-
-  // &__check {
-  //   display: flex;
-  //   gap: 1rem;
-  //   padding: 42px;
-  // }
-
-  // &__flex {
-  //   display: flex;
-  //   gap: 1rem;
-  // }
-
-  // &__order {
-  //   height: 53.9375rem;
-  //   width: 25.9375rem;
-  //   border-radius: 10px;
-  //   background-color: rgb(95, 83, 83);
-  // }
-
   &__flex {
     display: flex;
   }
@@ -35,8 +10,7 @@
   &__a {
     height: 47.8125rem;
     width: 54rem;
-    border-radius: 10px;
-    // padding: 48px;
+    border-radius: 0.625rem;
   }
 
   &__b {
@@ -46,17 +20,11 @@
     background-color: $darker-background;
   }
 
-  // &__form {
-  //   background-color: $darker-background;
-  //   padding: 2rem;
-  // }
-
   &__address {
     background-color: $darker-background;
     height: 7.625rem;
-    // width: 54rem;
     width: 47.125rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     margin-bottom: 1rem;
     cursor: pointer;
   }
@@ -74,10 +42,6 @@
     padding: 2.625rem;
     align-items: center;
     gap: 1rem;
-  }
-
-  &__info {
-    // background-color: $darker-background;
   }
 
   &__special {
@@ -153,7 +117,7 @@
     outline: none;
     padding-left: 1rem;
     background-color: $darker-background;
-    border: 2px solid #d0d2d4;
+    border: 0.125rem solid #d0d2d4;
     font-family: $primary-font;
     font-size: 1.25rem;
     font-weight: 400;
@@ -173,7 +137,7 @@
     outline: none;
     padding-left: 1rem;
     background-color: $darker-background;
-    border: 2px solid #d0d2d4;
+    border: 0.125rem solid #d0d2d4;
     font-family: $primary-font;
     font-size: 1.25rem;
     font-weight: 400;
@@ -182,17 +146,15 @@
   }
 
   &__container {
-    padding: 1px 1.25rem;
+    padding: 0.0625rem 1.25rem;
   }
 
   &__order {
-    // padding: 53px, 20px;
     font-family: $secondary-font;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2.375rem;
     color: #fff;
-    // margin-top: 3.3125rem;
     margin-bottom: 1.125rem;
     margin-top: 1.5rem;
   }
@@ -212,28 +174,28 @@
   }
   &__price {
     font-family: $primary-font;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 1rem;
     color: $btn-gray;
     margin-bottom: 1rem;
   }
 
   &__unit {
     font-family: $primary-font;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 1.8125rem;
     color: $btn-gray;
     margin-bottom: 1rem;
   }
 
   &__amount {
     font-family: $secondary-font;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     color: $btn-gray;
-    line-height: 29px;
+    line-height: 1.8125rem;
     color: $btn-gray;
   }
 
@@ -244,9 +206,9 @@
 
   &__sub {
     font-family: $primary-font;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 1.8125rem;
     color: $btn-gray;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -254,9 +216,9 @@
 
   &__sum {
     font-family: $primary-color;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
-    line-height: 29px;
+    line-height: 1.8125rem;
     color: $btn-gray;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -270,7 +232,7 @@
   &__fee {
     color: #e2b93b;
     font-family: $secondary-font;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     margin-top: 3rem;
   }

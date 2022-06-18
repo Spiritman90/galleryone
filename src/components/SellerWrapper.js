@@ -9,7 +9,7 @@ const SellerWrapper = () => {
     if (pathname === "/sell") {
       navigate("/sell/sell_form");
     }
-  }, [pathname]);
+  }, [pathname, navigate]);
   return (
     <section className='sell'>
       <div className='sell__wrapper'>

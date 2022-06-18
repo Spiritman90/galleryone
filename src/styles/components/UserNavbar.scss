@@ -2,7 +2,6 @@
 
 .user__navbar {
   background-color: $darker-background;
-  // background-color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10,6 +9,8 @@
   padding: 1rem;
   color: $btn-gray;
   position: relative;
+  position: sticky;
+  top: 0;
 
   .navbar__list {
     display: flex;
@@ -18,9 +19,9 @@
 
   .navbar__item {
     font-family: $primary-font;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 1rem;
 
     &:hover {
       color: $primary-color;
@@ -35,7 +36,6 @@
     cursor: pointer;
 
     &__image {
-      // background-color: #d0d2d4;
       border-radius: 50%;
     }
   }

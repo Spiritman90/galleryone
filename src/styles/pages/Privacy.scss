@@ -1,7 +1,7 @@
 @import "../variables/colors.scss";
 
 .privacy {
-  // margin: 26px 64px;
+  // margin: 1.625rem 4rem;
 
   &__lead {
     background-color: $darker-background;
@@ -11,24 +11,24 @@
   }
 
   &__text {
-    margin: 26px 64px;
+    margin: 1.625rem 4rem;
     font-family: $secondary-font;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 38px;
+    line-height: 2.375rem;
   }
 }
 .privacy__heading {
   display: grid;
   place-items: center;
   font-family: $secondary-font;
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 600;
-  line-height: 102px;
+  line-height: 6.375rem;
 }
 
 .policies {
-  margin: 26px 64px;
+  margin: 1.625rem 4rem;
 }
 
 .policy__texts {
@@ -40,25 +40,24 @@
 
 .policy {
   font-family: $secondary-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 2.375rem;
 }
 
 .policy__heading {
   color: #fbe7d2;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 2.375rem;
   margin-top: 1.3rem;
-  // margin-bottom: 3rem;
 }
 
 .text {
   font-family: $secondary-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 2.375rem;
   color: #fff;
 }
 
@@ -77,23 +76,20 @@
     display: flex;
     justify-content: space-around;
     justify-items: center;
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 0.125rem solid $primary-color;
   }
 
   &__stars {
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
-    margin-right: 20rem;
-    // align-items: center;
-    // justify-content: center;
   }
 
   &__heading {
     font-family: $secondary-font;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 600;
-    line-height: 58px;
+    line-height: 3.625rem;
     margin-bottom: 2.625rem;
   }
 }
@@ -104,11 +100,11 @@
   gap: 0.5rem;
   align-items: center;
   justify-items: center;
-  padding: 3rem 9rem;
+  padding: 3rem 11rem;
   font-family: $secondary-font;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 58px;
+  line-height: 3.625rem;
   color: #d0d2d4;
   margin: 3rem 0;
 
@@ -116,9 +112,9 @@
     border: none;
     background-color: inherit;
     font-family: $secondary-font;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 25px;
+    line-height: 1.5625rem;
     color: $primary-color;
     text-decoration: underline;
     cursor: pointer;

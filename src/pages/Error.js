@@ -1,9 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import ErrorIcon from "../assets/Error.svg";
 
 const Error = () => {
-  const navigate = useNavigate();
   return (
     <>
       <div className='error__page'>

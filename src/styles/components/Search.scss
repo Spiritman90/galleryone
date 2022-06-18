@@ -1,24 +1,24 @@
 @import "../../styles/variables/colors.scss";
 
 .search-input {
-  padding: 12px 12px 12px 58px;
+  padding: 0.75rem 0.75rem 0.75rem 3.625rem;
   width: 100%;
   outline: none;
   border-radius: 0.5rem;
-  border: 2px solid #d0d2d4;
+  border: 0.125rem solid #d0d2d4;
   background-color: inherit;
   color: #d0d2d4;
   font-size: 1rem;
   font-family: $primary-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 2.25rem;
 
   &::placeholder {
     font-family: "Inter" sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25rem;
     padding-left: 1rem;
   }
 }
@@ -30,5 +30,5 @@
 
 .search-icon {
   position: absolute;
-  inset: 18px auto auto 24px;
+  inset: 1.125rem auto auto 1.5rem;
 }

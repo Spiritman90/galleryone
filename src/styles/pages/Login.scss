@@ -6,11 +6,11 @@
   right: 46rem;
   font-family: $primary-font;
   font-size: 1.25rem;
-  line-height: 25.6px;
+  line-height: 1.625rem;
   color: $input-gray;
   background-color: $darker-background;
   padding: 0.5rem;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .login-password {
@@ -19,7 +19,7 @@
   right: 44.5rem;
   font-family: $primary-font;
   font-size: 1.25rem;
-  line-height: 25.6px;
+  line-height: 1.625rem;
   color: $input-gray;
   background-color: $darker-background;
   padding: 0.5rem;
@@ -34,27 +34,25 @@
     font-family: $secondary-font;
     font-size: 1.125rem;
     font-weight: 200;
-    line-height: 26px;
+    line-height: 1.625rem;
     color: $btn-gray;
     margin-right: 5rem;
 
     span {
       font-family: $secondary-font;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 700;
-      line-height: 26px;
+      line-height: 1.625rem;
       color: $primary-color;
     }
   }
 
   &__link {
     font-family: $secondary-font;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 1.625rem;
     color: $primary-color;
-    // display: grid;
-    // place-self: center start;
     margin-top: 1rem;
     margin-right: 18rem;
   }

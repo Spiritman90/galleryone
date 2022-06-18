@@ -26,47 +26,46 @@ const ProductDetails = () => {
   return (
     <section className='pdetails'>
       <div className='pdetails__container'>
-        <div className='pdetails__photo'>
+        <div className='pdetails__image-container'>
           <img src={detail1} alt='detail' className='pdetails__image' />
           <p className='pdetails__text'>Macbook Pro 2020</p>
           <p className='pdetails__price'>NGN 950,000</p>
         </div>
 
-        <div className='pdetails__gallery'>
-          <div className='pdetails__item'>
-            <img src={detail2} alt='item' className='pdetails__photo' />
-          </div>
-          <div className='pdetails__item'>
-            <img src={detail3} alt='item' className='pdetails__photo' />
-          </div>
-          <div className='pdetails__item'>
-            <img src={detail4} alt='item' className='pdetails__photo' />
-          </div>
-          <div className='pdetails__item'>
-            <img src={detail5} alt='item' className='pdetails__photo' />
-          </div>
+        {/* <div className='pdetails__gallery'> */}
+        {/* <div className='pdetails__item'> */}
+        <img src={detail2} alt='item' className='pdetails__photo' />
+        {/* </div> */}
+        {/* <div className='pdetails__item'> */}
+        <img src={detail3} alt='item' className='pdetails__photo' />
+        {/* </div> */}
+        {/* <div className='pdetails__item'> */}
+        <img src={detail4} alt='item' className='pdetails__photo' />
+        {/* </div> */}
+        {/* <div className='pdetails__item'> */}
+        <img src={detail5} alt='item' className='pdetails__photo' />
+        {/* </div> */}
+        {/* </div> */}
+        <div className='pdetails__buttons'>
+          <button
+            className='pdetails__buybtn'
+            onClick={() => navigate("/buy-now")}
+          >
+            Buy Now
+          </button>
+          <button
+            className='pdetails__bidbtn'
+            onClick={() => setShowBidModal(!showBidModaL)}
+          >
+            Make a bid
+          </button>
+          {showBidModaL && (
+            <Modal comp={"bid"} hideModal={hideModal}>
+              <Bid />
+            </Modal>
+          )}
 
-          <div className='pdetails__buttons'>
-            <button
-              className='pdetails__buybtn'
-              onClick={() => navigate("/buy-now")}
-            >
-              Buy Now
-            </button>
-            <button
-              className='pdetails__bidbtn'
-              onClick={() => setShowBidModal(!showBidModaL)}
-            >
-              Make a bid
-            </button>
-            {showBidModaL && (
-              <Modal comp={"bid"} hideModal={hideModal}>
-                <Bid />
-              </Modal>
-            )}
-
-            <button className='pdetails__add'>Add to cart</button>
-          </div>
+          <button className='pdetails__add'>Add to cart</button>
         </div>
       </div>
 

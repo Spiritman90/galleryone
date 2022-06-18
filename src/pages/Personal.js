@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import EditProfile from "../customicons/EditProfile";
 
 const Personal = () => {
   const [disable, setDisable] = useState(true);
+  const user = useSelector((state) => state.user);
+
   return (
     <section className='sell__information'>
       <div className='sell__padding'>
@@ -26,7 +29,7 @@ const Personal = () => {
               First name
               <input
                 type='text'
-                placeholder='Ada'
+                placeholder={user.firstName}
                 className='personal__input'
                 disabled={disable}
               />
@@ -36,7 +39,7 @@ const Personal = () => {
               Last name
               <input
                 type='text'
-                placeholder='Babalola'
+                placeholder={user.lastName}
                 className='personal__input'
                 disabled={disable}
               />
@@ -45,7 +48,7 @@ const Personal = () => {
               Email
               <input
                 type='email'
-                placeholder='ada@gmail.com'
+                placeholder={user.email}
                 className='personal__input'
                 disabled={disable}
               />
