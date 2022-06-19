@@ -1,1 +1,139 @@
 @import "../variables/colors.scss";
+.cart {
+  padding: 5.1875rem 4.4375rem;
+
+  &__flex {
+    display: flex;
+    gap: 1.5625rem;
+  }
+
+  &__a {
+    height: 47.8125rem;
+    width: 54rem;
+    border-radius: 0.625rem;
+  }
+
+  &__b {
+    height: 22.25rem;
+    width: 25.9375rem;
+    border-radius: 0.625rem;
+    background-color: $darker-background;
+  }
+
+  &__details {
+    background-color: $darker-background;
+    height: 10.625rem;
+    width: 54rem;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  // &__photo {
+  //   width: 100%;
+  // }
+
+  &__parent {
+    display: flex;
+    padding: 0.8125rem 4.5rem;
+    gap: 2rem;
+    color: $btn-gray;
+  }
+
+  &__text {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: $btn-gray;
+    margin-bottom: 0.8125rem;
+  }
+
+  &__icon {
+    display: flex;
+    place-items: center;
+    margin-right: -2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.0625rem;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: #636870;
+    border-radius: 50%;
+    padding: 0.1875rem 0.4375rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__unit {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+
+  &__container {
+    padding: 0.0625rem 1.25rem;
+  }
+
+  &__subtotal {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sub {
+    font-family: $primary-font;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.8125rem;
+    color: $btn-gray;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__sum {
+    font-family: $primary-font;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.8125rem;
+    color: $btn-gray;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__sum {
+    font-family: $primary-font;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.8125rem;
+    color: $btn-gray;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__due {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__fee {
+    color: #e2b93b;
+    font-family: $secondary-font;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 1.125rem;
+  }
+}
