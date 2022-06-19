@@ -24,10 +24,16 @@ const UserProfile = () => {
     <div className='user__profile'>
       <div className='user__balance'>
         <div className='wallet__balance'>
-          <Wallet />
-          <span>
-            <p>Wallet Balance</p>
-          </span>
+          <div>
+            <Wallet />
+          </div>
+          <div>
+            <span>
+              <p style={{ color: "#636870", fontWeight: "1rem" }}>
+                Wallet Balance
+              </p>
+            </span>
+          </div>
         </div>
         <h4>NGN 20, 000</h4>
       </div>

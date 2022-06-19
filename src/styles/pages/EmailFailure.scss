@@ -1,0 +1,46 @@
+@import "../variables/colors.scss";
+
+.email-failure__button {
+  margin-top: 3.9375rem;
+  margin-left: 14.5rem;
+}
+
+.email-failure__btn {
+  font-family: $secondary-font;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.8125rem;
+  color: $primary-color;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.email-failure__icon {
+  display: grid;
+  place-items: center;
+  margin-top: 10rem;
+}
+
+.email__failure__text {
+  color: #fff;
+  font-family: $secondary-font;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-top: 2rem;
+}
+
+.email__failure__text2 {
+  font-family: $secondary-font;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}

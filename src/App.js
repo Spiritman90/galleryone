@@ -20,6 +20,9 @@ import ForgotPasswordOne from "./pages/ForgotPasswordOne";
 import ProductDetails from "./pages/ProductDetails";
 import BuyNow from "./pages/BuyNow";
 import ForgotPasswordTwo from "./pages/ForgotPasswordTwo";
+import EmailSuccess from "./pages/EmailSuccess";
+import EmailFailure from "./pages/EmailFailure";
+import AddToCart from "./pages/AddToCart";
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
@@ -36,6 +39,7 @@ function App() {
           <Route path='/success' element={<Success />} />
           <Route path='/product-details' element={<ProductDetails />} />
           <Route path='/buy-now' element={<BuyNow />} />
+          <Route path='/cart' element={<AddToCart />} />
 
           <Route path='/sell' element={<SellerWrapper />}>
             <Route path='sell_form' element={<Sell />} />
@@ -49,6 +53,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/forgotpasswordone' element={<ForgotPasswordOne />} />
           <Route path='/forgotpasswordtwo' element={<ForgotPasswordTwo />} />
+          <Route path='/email-success' element={<EmailSuccess />} />
+          <Route path='/email-failure' element={<EmailFailure />} />
         </Route>
       </Routes>
     </BrowserRouter>

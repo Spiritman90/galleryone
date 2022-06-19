@@ -65,7 +65,12 @@ const ProductDetails = () => {
             </Modal>
           )}
 
-          <button className='pdetails__add'>Add to cart</button>
+          <button
+            className='pdetails__add'
+            onClick={() => navigate("/email-failure")}
+          >
+            Add to cart
+          </button>
         </div>
       </div>
 

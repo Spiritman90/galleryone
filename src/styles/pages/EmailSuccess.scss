@@ -1,0 +1,36 @@
+@import "../variables/colors.scss";
+.email-success__button {
+  margin-top: 3.9375rem;
+  margin-left: 14.5rem;
+}
+
+.email-success__btn {
+  font-family: $secondary-font;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.8125rem;
+  color: $primary-color;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.email-sucess__icon {
+  display: grid;
+  place-items: center;
+  margin-top: 12rem;
+  gap: 2.875rem;
+}
+
+.email__success__text {
+  color: #fff;
+  font-family: $secondary-font;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
