@@ -48,7 +48,7 @@ const Personal = () => {
               <input
                 type='email'
                 placeholder='ada@gmail.com'
-                className='personal__input'
+                className='personal__input personal__email'
                 disabled={disable}
               />
             </label>
@@ -57,7 +57,7 @@ const Personal = () => {
               <input
                 type='number'
                 placeholder='08023456784'
-                className='personal__input'
+                className='personal__input personal__number'
                 disabled={disable}
               />
             </label>
@@ -66,7 +66,7 @@ const Personal = () => {
               <input
                 type='text'
                 placeholder='123 ABC Street,off Akinola Kingsway road'
-                className='personal__input'
+                className='personal__input personal__address'
                 disabled={disable}
               />
             </label>
@@ -75,7 +75,7 @@ const Personal = () => {
               <input
                 type='text'
                 placeholder='11/12/1977'
-                className='personal__input'
+                className='personal__input personal__date'
                 disabled={disable}
               />
             </label>
@@ -85,7 +85,7 @@ const Personal = () => {
               <input
                 type='number'
                 placeholder='NIN'
-                className='personal__input'
+                className='personal__input personal__id'
                 disabled={disable}
               />
             </label>

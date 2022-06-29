@@ -42,15 +42,19 @@ const UserProfile = () => {
           className='user__account'
           onClick={() => navigate("/sell/profile")}
         >
-          <Avatar />
-          <p>My Account</p>
+          <div>
+            <Avatar />
+          </div>
+          <div>
+            <p className='user__text'>My Account</p>
+          </div>
         </div>
         <div
           className='user__wallet'
           onClick={() => setShowFundWallet(!showFundWallet)}
         >
           <Wallet2 />
-          <p>Fund Wallet</p>
+          <p className='user__text'>Fund Wallet</p>
         </div>
 
         {showFundWallet && (
@@ -61,7 +65,7 @@ const UserProfile = () => {
 
         <div onClick={() => setShowModal(!showModal)} className='user__logout'>
           <Logout />
-          <p>Logout</p>
+          <p className='user__text'>Logout</p>
         </div>
       </div>
       {showModal && (

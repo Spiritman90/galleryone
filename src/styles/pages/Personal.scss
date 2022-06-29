@@ -47,6 +47,23 @@
     outline: none;
     text-align: justify;
     border-bottom: 0.0625rem solid #636870;
-    // margin-left: 4rem;
+  }
+
+  &__email {
+    margin-left: 3rem;
+  }
+
+  &__number {
+    margin-left: -2.3rem;
+  }
+
+  &__address {
+    margin-left: 1.5rem;
+  }
+  &__date {
+    margin-left: -1.5rem;
+  }
+  &__id {
+    margin-left: 1.5rem;
   }
 }
