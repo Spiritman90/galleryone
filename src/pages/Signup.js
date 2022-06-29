@@ -1,30 +1,53 @@
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-// import { useSelector, useDispatch } from "react-redux";
-
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { register, reset } from "../redux/auth/authSlice";
+import Spinner from "../components/Spinner";
 import Google from "../customicons/Google";
 
 const Signup = () => {
-  const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const user = useSelector((state) => state.user);
-  // const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+  const userData = {
+    firstName,
+    lastName,
+    email,
+    password,
+  };
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess || user) {
+      navigate("/");
+    }
+    dispatch(reset);
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!password) {
+      toast.error("Please provide a password");
+    } else {
+      dispatch(register(userData));
+    }
+    if (isLoading) {
+      return <Spinner />;
+    }
+
     setFirstName("");
     setLastName("");
     setEmail("");
     setPassword("");
-
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(password);
   };
 
   return (
@@ -55,7 +78,7 @@ const Signup = () => {
           <label className='name__label'>
             <input
               type='text'
-              className='name__input'
+              className='name__input name__inputb'
               placeholder='First name'
               required
               onChange={(e) => setFirstName(e.target.value)}
@@ -63,7 +86,7 @@ const Signup = () => {
             />
           </label>
 
-          <label className='name__input'>
+          <label className='name__label'>
             <input
               className='name__input'
               type='text'
@@ -77,7 +100,7 @@ const Signup = () => {
 
         <label>
           <input
-            type='password'
+            type='email'
             placeholder='Email'
             required
             onChange={(e) => setEmail(e.target.value)}
@@ -95,12 +118,19 @@ const Signup = () => {
           />
         </label>
         <div className='buttons'>
-          <button className='create-btn'>Create an account</button>
+          {!isLoading && (
+            <button className='create-btn'>Create an account</button>
+          )}
+          {isLoading && (
+            <button className='create-btn' disabled>
+              Loading...
+            </button>
+          )}
           <button className='sign-btn' onClick={() => navigate("/login")}>
             Sign in
           </button>
           <hr className='line' />
-          <button className='google-btn'>
+          <button type='submit' className='google-btn'>
             {" "}
             <Google className='google' />
             Google sign up{" "}

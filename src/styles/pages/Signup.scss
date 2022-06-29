@@ -4,7 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin-top: -1rem;
+  margin-top: -1rem;
+
+  @media screen and (max-width: 528px) {
+    padding: 1rem;
+  }
 
   &__heading {
     h2 {
@@ -31,16 +35,18 @@
     }
   }
   input {
-    height: 4.25rem;
-    width: 29.125rem;
+    // height: 4.25rem;
+    // width: 29.125rem;
+    width: 100%;
     border-radius: 0.5rem;
     color: #828282;
     background-color: $darker-background;
     outline: none;
     font-family: $primary-font;
-    padding-left: 1rem;
     font-size: 1.5rem;
     border: 0.125rem solid #d0d2d4;
+    padding: 0.5rem 0.4rem;
+    padding-left: 1rem;
 
     &::placeholder {
       font-size: 1.25rem;
@@ -54,10 +60,15 @@
     display: flex;
     gap: 1rem;
   }
+  .name__label {
+    flex: 1;
+  }
 
   .name__input {
     height: 4.25rem;
-    width: 14.0625rem;
+    // width: 14.0625rem;
+    width: 100%;
+    // flex: 1;
     border-radius: 0.5rem;
   }
 
@@ -68,10 +79,10 @@
     gap: 1rem;
 
     .create-btn {
-      height: 4.25rem;
-      width: 28.9375rem;
+      // height: 4.25rem;
+      // width: 28.9375rem;
+      // width: 100%;
       border-radius: 0.5rem;
-      padding: 1.25rem, 6rem, 1.25rem, 6rem;
       background-color: $primary-color;
       border: none;
       font-family: $secondary-font;
@@ -81,6 +92,7 @@
       font-size: 1.25rem;
       font-weight: 700;
       color: $btn-text;
+      padding: 1.25rem 6rem;
 
       &:hover {
         filter: brightness(90%);
@@ -88,10 +100,11 @@
     }
 
     .sign-btn {
-      height: 4.25rem;
-      width: 29rem;
-      align-items: center;
-      justify-content: center;
+      // height: 4.25rem;
+      // width: 29rem;
+      width: 100%;
+      // align-items: center;
+      // justify-content: center;
       gap: 0.8125rem;
       border-radius: 0.5rem;
       border: 0.1875rem solid $primary-color;
@@ -102,10 +115,27 @@
       background-color: $darker-background;
       cursor: pointer;
       font-weight: 700;
+      padding: 1.25rem 6rem;
 
       &:hover {
         filter: brightness(90%);
       }
+    }
+
+    .login-btn {
+      border-radius: 0.5rem;
+      background-color: $primary-color;
+      border: none;
+      font-family: $secondary-font;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $btn-text;
+      padding: 1.25rem 6rem;
+      height: 4.25rem;
+      width: 29.125rem;
     }
 
     .line {
@@ -114,8 +144,9 @@
     }
 
     .google-btn {
-      height: 4.25rem;
-      width: 29.125rem;
+      // height: 4.25rem;
+      // width: 29.125rem;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -126,19 +157,15 @@
       font-size: 1.25rem;
       line-height: 1.75rem;
       background-color: $btn-gray;
-      background: $btn-gray;
       cursor: pointer;
       margin-top: 1rem;
       font-size: 1.25rem;
       font-weight: 700;
+      padding: 1rem 0;
 
       &:hover {
         filter: brightness(90%);
       }
-    }
-
-    .google {
-      background-color: $btn-gray;
     }
   }
   .full-name {

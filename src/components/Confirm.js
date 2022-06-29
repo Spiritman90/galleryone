@@ -1,8 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout, reset } from "../redux/auth/authSlice";
 const Confirm = ({ setShowModal }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+
+  const handleClick = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/signup");
+  };
   return (
     <div className='confirm'>
       <div className='confirm__heading'>
@@ -12,7 +21,7 @@ const Confirm = ({ setShowModal }) => {
         <button className='confirm__black' onClick={() => setShowModal(false)}>
           No, Cancel this
         </button>
-        <button className='confirm__orange' onClick={() => navigate("/login")}>
+        <button className='confirm__orange' onClick={handleClick}>
           Yes, Logout
         </button>
       </div>

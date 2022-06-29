@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import Sold from "../assets/Sold.jpg";
+// import Sold from "../assets/sold2.png";
 
 const SoldOut = () => {
   const navigate = useNavigate();

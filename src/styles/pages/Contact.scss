@@ -60,28 +60,34 @@
     margin-top: 8.75rem;
   }
 
+  // .lead h5 {
+  //   margin-top: 2rem;
+  // }
+
   .header__text {
     font-family: $secondary-font;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 3.1875rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
     display: grid;
     place-items: center;
   }
 
   .body__text {
     font-family: $secondary-font;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 2.375rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
   }
 
   .card__icon {
     position: absolute;
-    bottom: 15rem;
+    top: -7.5rem;
     right: 4rem;
-    margin-bottom: 3rem;
   }
 }
 

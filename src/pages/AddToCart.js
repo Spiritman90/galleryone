@@ -39,10 +39,9 @@ const AddToCart = () => {
 
               <div className='cart__info'>
                 <p className='cart__text'>
-                  Samsung Galaxy Tab A 8.0", 32GB, 5100mAh, 4G LTE GSM SM-T295
-                  (Black)
+                  Nike The Nike Polo Men's Gold Space Dot Slim Fit Polo
                 </p>
-                <p className='cart__price'>NGN 112,000</p>
+                <p className='cart__price'>NGN 29,250</p>
                 <div className='cart__buttons'>
                   <button className='cart__btn'>-</button>
                   <p className='cart__unit'>1</p>

@@ -14,15 +14,23 @@ import shirt from "../assets/shirt.jpg";
 import samnew from "../assets/samnew.jpg";
 import spider from "../assets/spider.jpg";
 import Cart from "../customicons/Cart";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <header className='header'>
       <Banner />
-      <Cart />
 
       <section className='offers'>
         <p className='offers__heading'>Best Offers </p>
+        <Link to='/cart' className='parent'>
+          <div className='bag-container'>
+            <Cart className='bag' />
+            <span className='bag-quantity'>
+              <span className='bag-unit'>3</span>
+            </span>
+          </div>
+        </Link>
         <div className='offers__card'>
           <ProductImage
             ImageSource={offer}
@@ -41,6 +49,7 @@ const Home = () => {
             Fabric 2021 - 5 Yards'
             price='20,500'
           />
+
           <ProductImage
             ImageSource={nike}
             details='Nike MENS TRAINING SHOES'

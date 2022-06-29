@@ -4,7 +4,6 @@ import EditProfile from "../customicons/EditProfile";
 
 const Personal = () => {
   const [disable, setDisable] = useState(true);
-  const user = useSelector((state) => state.user);
 
   return (
     <section className='sell__information'>
@@ -29,7 +28,7 @@ const Personal = () => {
               First name
               <input
                 type='text'
-                placeholder={user.firstName}
+                placeholder='Ada'
                 className='personal__input'
                 disabled={disable}
               />
@@ -39,7 +38,7 @@ const Personal = () => {
               Last name
               <input
                 type='text'
-                placeholder={user.lastName}
+                placeholder='Babalola'
                 className='personal__input'
                 disabled={disable}
               />
@@ -48,7 +47,7 @@ const Personal = () => {
               Email
               <input
                 type='email'
-                placeholder={user.email}
+                placeholder='ada@gmail.com'
                 className='personal__input'
                 disabled={disable}
               />

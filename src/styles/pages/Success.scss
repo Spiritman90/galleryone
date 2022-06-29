@@ -11,9 +11,13 @@
     margin-bottom: 16.25rem;
   }
 
+  &__photo {
+    margin-right: 3rem;
+  }
+
   &__text {
     font-family: $secondary-font;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 3.1875rem;
     color: $btn-gray;

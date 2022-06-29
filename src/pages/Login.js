@@ -1,20 +1,46 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { login, reset } from "../redux/auth/authSlice";
+import Spinner from "../components/Spinner";
 import Google from "../customicons/Google";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+  const userData = {
+    email,
+    password,
+  };
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess || user) {
+      navigate("/");
+    }
+    dispatch(reset);
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
+
+  const handleLogin = (e) => {
     e.preventDefault();
-
+    dispatch(login(userData));
     setEmail("");
     setPassword("");
-
-    console.log(email, password);
   };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <>
       <div className='auth-form'>
@@ -29,7 +55,7 @@ const Login = () => {
             <p>Password</p>
           </div>
         )}
-        <form className='form-group' onSubmit={handleSubmit}>
+        <form className='form-group' onSubmit={handleLogin}>
           <div className='auth-form__heading'>
             <h2>Sign In</h2>
             <p>Fill in your personal information below</p>
@@ -55,7 +81,15 @@ const Login = () => {
             />
           </label>
           <div className='buttons'>
-            <button className='create-btn'>Login</button>
+            {!isLoading && (
+              <button className='create-btn login-btn'>Login</button>
+            )}
+
+            {isLoading && (
+              <button className='create-btn login-btn' disabled>
+                Loading...
+              </button>
+            )}
             <button className='google-btn'>
               {" "}
               <Google className='google' />

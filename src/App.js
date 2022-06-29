@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -27,37 +29,40 @@ import AddToCart from "./pages/AddToCart";
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={userSignedIn ? <Layout /> : <Navigate to='/login' />}>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<Error />} />
-          <Route path='/liveauction' element={<LiveAuction />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/privacy' element={<Privacy />} />
-          <Route path='/success' element={<Success />} />
-          <Route path='/product-details' element={<ProductDetails />} />
-          <Route path='/buy-now' element={<BuyNow />} />
-          <Route path='/cart' element={<AddToCart />} />
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={userSignedIn ? <Layout /> : <Navigate to='/login' />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<Error />} />
+            <Route path='/liveauction' element={<LiveAuction />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/privacy' element={<Privacy />} />
+            <Route path='/success' element={<Success />} />
+            <Route path='/product-details' element={<ProductDetails />} />
+            <Route path='/buy-now' element={<BuyNow />} />
+            <Route path='/cart' element={<AddToCart />} />
 
-          <Route path='/sell' element={<SellerWrapper />}>
-            <Route path='sell_form' element={<Sell />} />
-            <Route path='profile' element={<Personal />} />
-            <Route path='history' element={<History />} />
-            <Route path='inbox' element={<Inbox />} />
+            <Route path='/sell' element={<SellerWrapper />}>
+              <Route path='sell_form' element={<Sell />} />
+              <Route path='profile' element={<Personal />} />
+              <Route path='history' element={<History />} />
+              <Route path='inbox' element={<Inbox />} />
+            </Route>
           </Route>
-        </Route>
-        <Route element={<AuthWrapper />}>
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/forgotpasswordone' element={<ForgotPasswordOne />} />
-          <Route path='/forgotpasswordtwo' element={<ForgotPasswordTwo />} />
-          <Route path='/email-success' element={<EmailSuccess />} />
-          <Route path='/email-failure' element={<EmailFailure />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+          <Route element={<AuthWrapper />}>
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/forgotpasswordone' element={<ForgotPasswordOne />} />
+            <Route path='/forgotpasswordtwo' element={<ForgotPasswordTwo />} />
+            <Route path='/email-success' element={<EmailSuccess />} />
+            <Route path='/email-failure' element={<EmailFailure />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <ToastContainer />
+    </>
   );
 }
 
