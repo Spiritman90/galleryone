@@ -26,9 +26,14 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
+import { useSelector, useDispatch } from "react-redux";
+
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
+   const { user } = useSelector(
+    (state) => state.auth
+  );
   return (
     <>
       <BrowserRouter>

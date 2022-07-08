@@ -1,8 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import { useSelector} from "react-redux";
+
 import ValidEmail from "../customicons/ValidEmail";
 
 const EmailSuccess = () => {
+   const { user } = useSelector(
+    (state) => state.auth
+  );
   const navigate = useNavigate();
   return (
     <section className='email-sucess'>
@@ -14,7 +19,7 @@ const EmailSuccess = () => {
 
       <div className='email-sucess__icon'>
         <ValidEmail />
-        <p className='email__success__text'>You’re now verified</p>
+        <p className='email__success__text'>{user?.message}</p>
       </div>
     </section>
   );

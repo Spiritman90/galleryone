@@ -10,7 +10,6 @@ const register = async (userData) => {
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
-  console.log(response);
   return response.data;
 };
 
@@ -31,6 +30,10 @@ const logout = async () => {
 //Verify user
 const verify = async (userData) => {
   const response = await axios.post(VERIFY_URL, userData);
+  if (response.data) {
+    localStorage.setItem("user", JSON.stringify(response.data));
+  }
+  
   return response.data;
 };
 

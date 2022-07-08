@@ -118,7 +118,7 @@ const Signup = () => {
         <label>
           <input
             type='text'
-            placeholder='Phone number'
+            placeholder='+23480...'
             // required
             onChange={(e) => setphone_number(e.target.value)}
             value={phone_number}

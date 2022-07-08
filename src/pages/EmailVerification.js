@@ -5,17 +5,21 @@ import { useNavigate } from "react-router";
 import { verify, reset } from "../redux/auth/authSlice";
 import Spinner from "../components/Spinner";
 const EmailVerification = () => {
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
   const [email, setEmail] = useState("");
   const [code, setCode] = useState({
     first: "",
     second: "",
     third: "",
+    fourth: "",
     fifth: "",
     sixth: "",
   });
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-  );
+
+  const codeToString =(code.first+code.second+code.third+code.fourth+code.fifth+code.sixth).toString();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -39,16 +43,17 @@ const EmailVerification = () => {
     }
 
     if (isSuccess) {
-      navigate("/login");
+      navigate("/email-success");
     }
 
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
-  const handleVerify = () => {
+  const handleVerify = (e) => {
+    e.preventDefault();
     const verifyData = {
       email: email,
-      ConfirmCode: code,
+      ConfirmCode: codeToString,
     };
 
     dispatch(verify(verifyData));
@@ -56,7 +61,7 @@ const EmailVerification = () => {
     if (isLoading) {
       return <Spinner />;
     }
-    // navigate("/login")
+    navigate("/email-success");
     setEmail("");
     setCode("");
   };
@@ -88,8 +93,10 @@ const EmailVerification = () => {
               <label className='email__otp-label' key={item.id}>
                 <input
                   type='text'
-                  // inputMode='numeric'
-                  // pattern='\d{1}'
+                  inputMode='numeric'
+                  pattern='\d{1}'
+                  maxLength='1'
+                  id='partitioned'
                   className='email__otp-input'
                   name={item.name}
                   onChange={(e) => receiveCode(e)}
@@ -100,7 +107,7 @@ const EmailVerification = () => {
         </div>
         <p className='email__otp-resend'>Resend OTP?</p>
         <div className='email__button'>
-          {!isLoading && <button className='email__btn-verify'>Verify</button>}
+          {!isLoading && <button className='email__btn-verify' type='submit'>Verify</button>}
           {isLoading && (
             <button className='email__btn-verify' disabled>
               Please wait...
