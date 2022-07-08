@@ -17,7 +17,8 @@
   width: 4rem;
   height: 4rem;
   border: 0.5rem solid;
-  border-color: #000 transparent #555 transparent;
+  // border-color: #000 transparent #555 transparent;
+  border-color: $primary-color $primary-color transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }

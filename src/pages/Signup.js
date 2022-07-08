@@ -1,25 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import { useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { register, reset } from "../redux/auth/authSlice";
 import Spinner from "../components/Spinner";
-import Google from "../customicons/Google";
+// import Google from "../customicons/Google";
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [first_name, setfirst_name] = useState("");
+  const [last_name, setlast_name] = useState("");
   const [email, setEmail] = useState("");
+  const [phone_number, setphone_number] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   );
+
   const userData = {
-    firstName,
-    lastName,
+    first_name,
+    last_name,
     email,
+    phone_number,
     password,
   };
 
@@ -27,10 +30,12 @@ const Signup = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess || user) {
-      navigate("/");
+
+    if (isSuccess) {
+      navigate("/email-verification");
     }
-    dispatch(reset);
+
+    dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const handleSubmit = (e) => {
@@ -38,16 +43,18 @@ const Signup = () => {
     if (!password) {
       toast.error("Please provide a password");
     } else {
+      dispatch(reset());
       dispatch(register(userData));
     }
     if (isLoading) {
       return <Spinner />;
     }
 
-    setFirstName("");
-    setLastName("");
+    setfirst_name("");
+    setlast_name("");
     setEmail("");
     setPassword("");
+    setphone_number("");
   };
 
   return (
@@ -80,9 +87,9 @@ const Signup = () => {
               type='text'
               className='name__input name__inputb'
               placeholder='First name'
-              required
-              onChange={(e) => setFirstName(e.target.value)}
-              value={firstName}
+              // required
+              onChange={(e) => setfirst_name(e.target.value)}
+              value={first_name}
             />
           </label>
 
@@ -91,9 +98,9 @@ const Signup = () => {
               className='name__input'
               type='text'
               placeholder='Last name'
-              required
-              onChange={(e) => setLastName(e.target.value)}
-              value={lastName}
+              // required
+              onChange={(e) => setlast_name(e.target.value)}
+              value={last_name}
             />
           </label>
         </div>
@@ -102,7 +109,7 @@ const Signup = () => {
           <input
             type='email'
             placeholder='Email'
-            required
+            // required
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
@@ -110,9 +117,19 @@ const Signup = () => {
 
         <label>
           <input
+            type='text'
+            placeholder='Phone number'
+            // required
+            onChange={(e) => setphone_number(e.target.value)}
+            value={phone_number}
+          />
+        </label>
+
+        <label>
+          <input
             type='password'
             placeholder='Password'
-            required
+            // required
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
@@ -130,11 +147,11 @@ const Signup = () => {
             Sign in
           </button>
           <hr className='line' />
-          <button type='submit' className='google-btn'>
+          {/* <button type='submit' className='google-btn'>
             {" "}
             <Google className='google' />
             Google sign up{" "}
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

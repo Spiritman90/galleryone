@@ -25,6 +25,7 @@ import ForgotPasswordTwo from "./pages/ForgotPasswordTwo";
 import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
+import EmailVerification from "./pages/EmailVerification";
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(true);
@@ -40,7 +41,7 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/success' element={<Success />} />
-            <Route path='/product-details' element={<ProductDetails />} />
+            <Route path='/product-details/:id' element={<ProductDetails />} />
             <Route path='/buy-now' element={<BuyNow />} />
             <Route path='/cart' element={<AddToCart />} />
 
@@ -56,6 +57,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/forgotpasswordone' element={<ForgotPasswordOne />} />
             <Route path='/forgotpasswordtwo' element={<ForgotPasswordTwo />} />
+            <Route path='/email-verification' element={<EmailVerification />} />
             <Route path='/email-success' element={<EmailSuccess />} />
             <Route path='/email-failure' element={<EmailFailure />} />
           </Route>

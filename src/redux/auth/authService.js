@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const SIGNUP_URL = " https://gallery-one.herokuapp.com/signUp";
-const LOGIN_URL = " https://gallery-one.herokuapp.com/signIn";
+const SIGNUP_URL = "https://gallery-one-app.herokuapp.com/api/signUp";
+const VERIFY_URL = "https://gallery-one-app.herokuapp.com/api/confirmSignUp";
+const LOGIN_URL = "https://gallery-one-app.herokuapp.com/api/signIn";
 
 //Register user
 const register = async (userData) => {
@@ -9,6 +10,7 @@ const register = async (userData) => {
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
+  console.log(response);
   return response.data;
 };
 
@@ -26,10 +28,17 @@ const logout = async () => {
   localStorage.removeItem("user");
 };
 
+//Verify user
+const verify = async (userData) => {
+  const response = await axios.post(VERIFY_URL, userData);
+  return response.data;
+};
+
 const authService = {
   register,
   logout,
   login,
+  verify,
 };
 
 export default authService;

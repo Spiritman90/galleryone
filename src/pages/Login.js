@@ -25,10 +25,10 @@ const Login = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess || user) {
+    if (isSuccess) {
       navigate("/");
     }
-    dispatch(reset);
+    dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const handleLogin = (e) => {
@@ -44,17 +44,17 @@ const Login = () => {
   return (
     <>
       <div className='auth-form'>
-        {email.length !== 0 && (
+        {/* {email.length !== 0 && (
           <div className='login-email'>
             <p>Email</p>
           </div>
-        )}
+        )} */}
 
-        {password.length !== 0 && (
+        {/* {password.length !== 0 && (
           <div className='login-password'>
             <p>Password</p>
           </div>
-        )}
+        )} */}
         <form className='form-group' onSubmit={handleLogin}>
           <div className='auth-form__heading'>
             <h2>Sign In</h2>

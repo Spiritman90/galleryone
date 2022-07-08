@@ -1,0 +1,119 @@
+@import "../variables/colors.scss";
+
+.email {
+  margin: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__lead {
+    display: grid;
+    place-items: center;
+  }
+
+  &__heading {
+    font-family: $secondary-font;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+    color: #fff;
+  }
+
+  &__created {
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    margin-top: 0.9rem;
+  }
+
+  &__input1 {
+    height: 4.25rem;
+    width: 55.75rem;
+    // width: 100%;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    outline: none;
+    background-color: $darker-background;
+    color: $input-gray;
+    border: 0.125rem solid #d0d2d4;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    // margin-top: 4.6875rem;
+    margin-top: 2rem;
+    margin-bottom: 3.8125rem;
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  &__otp {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__otp-text {
+    color: #fff;
+    font: $secondary-font;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    margin-bottom: -4rem;
+  }
+
+  &__otp-input {
+    height: 5.875rem;
+    width: 5.4375rem;
+    // width: 100%;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    outline: none;
+    background-color: $darker-background;
+    color: $input-gray;
+    border: 0.125rem solid #d0d2d4;
+    font-family: $secondary-font;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    margin-top: 4.6875rem;
+    margin-bottom: 3.8125rem;
+    padding-left: 2rem;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  &__otp-resend {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    color: #2f80ed;
+  }
+
+  &__button {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+  }
+
+  &__btn-verify {
+    padding: 1.5rem 8rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    color: #2f1b06;
+    cursor: pointer;
+  }
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
