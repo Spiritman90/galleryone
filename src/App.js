@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
@@ -25,34 +25,55 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
-// import { useSelector} from "react-redux";
-
+import { useSelector } from "react-redux";
 
 function App() {
-  //  const { user } = useSelector(
-  //   (state) => state.auth
-  // );
+  const { user } = useSelector((state) => state.auth);
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout/>}>
+          <Route element={<Layout />}>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='*' element={<Error />} />
-            <Route path='/liveauction' element={<LiveAuction />} />
+            <Route
+              path='/liveauction'
+              element={user ? <LiveAuction /> : <Navigate to='/signup' />}
+            />
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/success' element={<Success />} />
-            <Route path='/product-details/:id' element={<ProductDetails />} />
-            <Route path='/buy-now' element={<BuyNow />} />
-            <Route path='/cart' element={<AddToCart />} />
+            <Route
+              path='/product-details/:id'
+              element={user ? <ProductDetails /> : <Navigate to='/signup' />}
+            />
+            <Route
+              path='/buy-now'
+              element={user ? <BuyNow /> : <Navigate to='/signup' />}
+            />
+            <Route
+              path='/cart'
+              element={user ? <AddToCart /> : <Navigate to='/signup' />}
+            />
 
             <Route path='/sell' element={<SellerWrapper />}>
-              <Route path='sell_form' element={<Sell />} />
-              <Route path='profile' element={<Personal />} />
-              <Route path='history' element={<History />} />
-              <Route path='inbox' element={<Inbox />} />
+              <Route
+                path='sell_form'
+                element={user ? <Sell /> : <Navigate to='/signup' />}
+              />
+              <Route
+                path='profile'
+                element={user ? <Personal /> : <Navigate to='/signup' />}
+              />
+              <Route
+                path='history'
+                element={user ? <History /> : <Navigate to='/signup' />}
+              />
+              <Route
+                path='inbox'
+                element={user ? <Inbox /> : <Navigate to='/signup' />}
+              />
             </Route>
           </Route>
           <Route element={<AuthWrapper />}>

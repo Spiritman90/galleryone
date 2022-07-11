@@ -16,6 +16,8 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cart/cartSlice";
 
 const ProductDetails = () => {
+  // const { user } = useSelector((state) => state.auth);
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [showBidModaL, setShowBidModal] = useState(false);
