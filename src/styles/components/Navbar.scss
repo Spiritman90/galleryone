@@ -5,7 +5,7 @@
   padding: 1rem;
   position: sticky;
   top: 0;
-  z-index:10;
+  // z-index:10;
 
   display: grid;
   grid-template-columns: 1fr [logoStart] max-content [logoEnd] 1fr [searchStart] 6fr[searchEnd] 1fr [buttonStart] 5.76fr [buttonEnd] 0.85fr;

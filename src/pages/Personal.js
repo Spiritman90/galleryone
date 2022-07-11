@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import EditProfile from "../customicons/EditProfile";
 
 const Personal = () => {

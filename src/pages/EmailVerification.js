@@ -8,6 +8,7 @@ const EmailVerification = () => {
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   );
+
   const [email, setEmail] = useState("");
   const [code, setCode] = useState({
     first: "",
@@ -18,7 +19,14 @@ const EmailVerification = () => {
     sixth: "",
   });
 
-  const codeToString =(code.first+code.second+code.third+code.fourth+code.fifth+code.sixth).toString();
+  const codeToString = (
+    code.first +
+    code.second +
+    code.third +
+    code.fourth +
+    code.fifth +
+    code.sixth
+  ).toString();
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -93,10 +101,11 @@ const EmailVerification = () => {
               <label className='email__otp-label' key={item.id}>
                 <input
                   type='text'
-                  inputMode='numeric'
-                  pattern='\d{1}'
-                  maxLength='1'
-                  id='partitioned'
+                  // inputMode='numeric'
+                  // pattern='\d{1}'
+                  // id='partitioned'
+                  autoComplete='off'
+                  maxLength={1}
                   className='email__otp-input'
                   name={item.name}
                   onChange={(e) => receiveCode(e)}
@@ -105,9 +114,13 @@ const EmailVerification = () => {
             );
           })}
         </div>
-        <p className='email__otp-resend'>Resend OTP?</p>
+        <button className='email__otp-resend' onClick={handleVerify}>Resend OTP?</button>
         <div className='email__button'>
-          {!isLoading && <button className='email__btn-verify' type='submit'>Verify</button>}
+          {!isLoading && (
+            <button className='email__btn-verify' type='submit'>
+              Verify
+            </button>
+          )}
           {isLoading && (
             <button className='email__btn-verify' disabled>
               Please wait...

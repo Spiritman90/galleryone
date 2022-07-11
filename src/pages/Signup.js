@@ -1,4 +1,4 @@
-import { useState, useEffect, useTransition } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
@@ -128,7 +128,7 @@ const Signup = () => {
         <label>
           <input
             type='password'
-            placeholder='Password'
+            placeholder='Example: @Galleryone90'
             // required
             onChange={(e) => setPassword(e.target.value)}
             value={password}

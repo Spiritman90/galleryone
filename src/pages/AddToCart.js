@@ -95,7 +95,7 @@ const AddToCart = () => {
 
                 <div className='buynow__subtotal'>
                   <p className='cart__sub'>Delivery fee</p>
-                  <p className='cart__sum'>NGN 1,500</p>
+                  <p className='cart__sum'>NGN 500</p>
                 </div>
               </div>
               <hr className=' cart__line' />
@@ -103,7 +103,7 @@ const AddToCart = () => {
               <div className='cart__grand'>
                 <div className='cart__due'>
                   <p className='cart__fee'>Total Due</p>
-                  <p className='cart__fee'>NGN {cart.cartTotalAmount + 1500}</p>
+                  <p className='cart__fee'>NGN {cart.cartTotalAmount + 500}</p>
                 </div>
               </div>
             </div>

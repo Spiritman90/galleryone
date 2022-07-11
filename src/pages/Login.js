@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { login, reset } from "../redux/auth/authSlice";
 import Spinner from "../components/Spinner";
-import Google from "../customicons/Google";
+// import Google from "../customicons/Google";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -65,7 +65,7 @@ const Login = () => {
             <input
               type='email'
               placeholder='Email'
-              required
+              // required
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               disabled={false}
@@ -75,14 +75,14 @@ const Login = () => {
             <input
               type='password'
               placeholder='Password'
-              required
+              // required
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
           </label>
           <div className='buttons'>
             {!isLoading && (
-              <button className='create-btn login-btn'>Login</button>
+              <button className='create-btn login-btn' type='submit'>Login</button>
             )}
 
             {isLoading && (
@@ -90,11 +90,11 @@ const Login = () => {
                 Loading...
               </button>
             )}
-            <button className='google-btn'>
+            {/* <button className='google-btn'>
               {" "}
               <Google className='google' />
               Google login{" "}
-            </button>
+            </button> */}
           </div>
         </form>
       </div>

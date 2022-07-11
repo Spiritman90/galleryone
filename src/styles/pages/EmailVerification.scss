@@ -93,6 +93,13 @@
     font-weight: 500;
     line-height: 1.375rem;
     color: #2f80ed;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+
+    :hover {
+      filter: brightness(90%);
+    }
   }
 
   &__button {

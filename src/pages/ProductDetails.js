@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
-    navigate("/cart");
+    // navigate("/cart");
   };
 
   return (

@@ -1,9 +1,9 @@
 import Logo from "../customicons/Logo";
 import SearhBar from "./SearhBar";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import UserNavbar from "./UserNavbar";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 const Navbar = () => {

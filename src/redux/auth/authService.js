@@ -22,11 +22,6 @@ const login = async (userData) => {
   return response.data;
 };
 
-//Logout user
-const logout = async () => {
-  localStorage.removeItem("user");
-};
-
 //Verify user
 const verify = async (userData) => {
   const response = await axios.post(VERIFY_URL, userData);
@@ -36,6 +31,11 @@ const verify = async (userData) => {
   
   return response.data;
 };
+//Logout user
+const logout = async () => {
+  localStorage.removeItem("user");
+};
+
 
 const authService = {
   register,

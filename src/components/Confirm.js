@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logout, reset } from "../redux/auth/authSlice";
 const Confirm = ({ setShowModal }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
 
   const handleClick = () => {
     dispatch(logout());

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
@@ -6,7 +6,6 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Layout from "./components/Layout";
 import AuthWrapper from "./components/AuthWrapper";
-import { useState } from "react";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import LiveAuction from "./pages/LiveAuction";
@@ -26,19 +25,18 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector} from "react-redux";
 
 
 function App() {
-  const [userSignedIn, setUserSignedIn] = useState(true);
-   const { user } = useSelector(
-    (state) => state.auth
-  );
+  //  const { user } = useSelector(
+  //   (state) => state.auth
+  // );
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={userSignedIn ? <Layout /> : <Navigate to='/login' />}>
+          <Route element={<Layout/>}>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='*' element={<Error />} />

@@ -11,7 +11,7 @@
   position: relative;
   position: sticky;
   top: 0;
-  z-index: 10;
+  // z-index: 10;
 
   .navbar__list {
     display: flex;
@@ -39,5 +39,25 @@
     &__image {
       border-radius: 50%;
     }
+  }
+
+  .bagg-container {
+    display: flex;
+  }
+
+  .bagg-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5625rem;
+    width: 1.5625rem;
+    background: #eb5757;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: $secondary-font;
+    color: $btn-gray;
+    line-height: 1.625rem;
+    // margin-left: 2.5rem;
   }
 }

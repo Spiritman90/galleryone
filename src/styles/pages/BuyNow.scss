@@ -5,19 +5,7 @@
 
   &__flex {
     display: flex;
-  }
-
-  &__a {
-    height: 47.8125rem;
-    width: 54rem;
-    border-radius: 0.625rem;
-  }
-
-  &__b {
-    height: 53.9375rem;
-    width: 25.9375rem;
-    border-radius: 0.625rem;
-    background-color: $darker-background;
+    gap: 1.5625rem;
   }
 
   &__address {
@@ -27,6 +15,7 @@
     border-radius: 0.625rem;
     margin-bottom: 1rem;
     cursor: pointer;
+    // flex: 1;
   }
 
   &__text {
@@ -63,6 +52,9 @@
     line-height: 2.25rem;
     color: $input-gray;
     margin-bottom: 1rem;
+    &:focus {
+      border-color: $primary-color;
+    }
   }
 
   &__label2 {
@@ -83,6 +75,9 @@
     line-height: 2.25rem;
     color: $input-gray;
     margin-bottom: 1rem;
+    &:focus {
+      border-color: $primary-color;
+    }
   }
 
   &__button {
@@ -145,8 +140,20 @@
     color: $input-gray;
   }
 
+  &__b {
+    height: 53.9375rem;
+    // width: 25.9375rem;
+    // flex: 1;
+    border-radius: 0.625rem;
+    padding-bottom: 3rem;
+    background-color: $darker-background;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
   &__container {
     padding: 0.0625rem 1.25rem;
+    // flex: 1;
   }
 
   &__order {
@@ -156,11 +163,12 @@
     line-height: 2.375rem;
     color: #fff;
     margin-bottom: 1.125rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   &__photo {
     width: 100%;
+    border-radius: 0.3125rem;
   }
 
   &__item {
