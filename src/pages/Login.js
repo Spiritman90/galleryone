@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { login, reset } from "../redux/auth/authSlice";
-import Spinner from "../components/Spinner";
+// import Spinner from "../components/Spinner";
 // import Google from "../customicons/Google";
 
 const Login = () => {
@@ -38,9 +38,9 @@ const Login = () => {
     setPassword("");
   };
 
-  if (isLoading) {
-    return <Spinner />;
-  }
+  // if (isLoading) {
+  //   return <Spinner />;
+  // }
   return (
     <>
       <div className='auth-form'>
@@ -82,12 +82,14 @@ const Login = () => {
           </label>
           <div className='buttons'>
             {!isLoading && (
-              <button className='create-btn login-btn' type='submit'>Login</button>
+              <button className='create-btn login-btn' type='submit'>
+                Login
+              </button>
             )}
 
             {isLoading && (
               <button className='create-btn login-btn' disabled>
-                Loading...
+                Logging you in...
               </button>
             )}
             {/* <button className='google-btn'>
@@ -104,7 +106,7 @@ const Login = () => {
           <p className='dont__text'>
             Don’t have an account?{" "}
             <span>
-              <Link to='/signup'>Create an account</Link>
+              <Link to='/signup'>Sign up</Link>
             </span>{" "}
           </p>
         </div>

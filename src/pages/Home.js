@@ -10,8 +10,8 @@ import Spinner from "../components/Spinner";
 
 const Home = () => {
   const [data, isPending, error] = useFetch(
-    // "https://gallery-one-app.herokuapp.com/api/getAllProduct"
-    "https://fakestoreapi.com/products"
+    "https://gallery-one-app.herokuapp.com/api/getAllProduct"
+    // "https://fakestoreapi.com/products"
   );
 
   // const { cartTotalQuantity } = useSelector((state) => state.cart);
@@ -20,22 +20,14 @@ const Home = () => {
       <Banner />
       <section className='offers'>
         <p className='offers__heading'>Best Offers </p>
-        {/* <Link to='/cart' className='parent'>
-          <div className='bag-container'>
-            <Cart className='bag' />
-            <span className='bag-quantity'>
-              <span className='bag-unit'>{cartTotalQuantity}</span>
-            </span>
-          </div>
-        </Link> */}
         {isPending && <Spinner />}
         {error && <Error />}
         <div className='offers__card'>
           {data &&
             data.map((product) => (
-              <Link to={`/product-details/${product.id}`} key={product.id}>
+              <Link to={`/product-details/${product._id}`} key={product._id}>
                 <ProductImage
-                  ImageSource={product.image}
+                  ImageSource={product.avaterMainUrl}
                   title={product.title}
                   price={product.price}
                 />

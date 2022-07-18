@@ -177,6 +177,9 @@
     border: 0.125rem solid #d0d2d4;
     color: #828282;
     text-transform: capitalize;
+    &:focus {
+      border: 0.125rem solid $primary-color;
+    }
   }
 
   &__textarea {
@@ -190,6 +193,9 @@
     border: 0.125rem solid #d0d2d4;
     color: #828282;
     text-transform: capitalize;
+    &:focus {
+      border: 0.125rem solid $primary-color;
+    }
   }
 
   &__next {

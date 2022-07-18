@@ -28,7 +28,7 @@
 .dont {
   display: grid;
   place-items: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   &__text {
     font-family: $secondary-font;
@@ -36,7 +36,7 @@
     font-weight: 200;
     line-height: 1.625rem;
     color: $btn-gray;
-    margin-right: 7rem;
+    margin-right: 12rem;
 
     span {
       font-family: $secondary-font;
@@ -55,5 +55,15 @@
     color: $primary-color;
     margin-top: 1rem;
     margin-right: 19rem;
+  }
+
+  @media screen and (max-width: 528px) {
+    width: 100%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+    &__link {
+      display: none;
+    }
   }
 }

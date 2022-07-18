@@ -54,6 +54,9 @@
       font-family: $primary-font;
       font-weight: 400;
     }
+    &:focus {
+      border: 0.125rem solid $primary-color;
+    }
   }
 
   .name__auth {
@@ -81,7 +84,7 @@
     .create-btn {
       // height: 4.25rem;
       // width: 28.9375rem;
-      // width: 100%;
+      width: 100%;
       border-radius: 0.5rem;
       background-color: $primary-color;
       border: none;
@@ -103,8 +106,6 @@
       // height: 4.25rem;
       // width: 29rem;
       width: 100%;
-      // align-items: center;
-      // justify-content: center;
       gap: 0.8125rem;
       border-radius: 0.5rem;
       border: 0.1875rem solid $primary-color;
@@ -123,6 +124,9 @@
     }
 
     .login-btn {
+      // height: 4.25rem;
+      width: 29.125rem;
+      // width: 100%;
       border-radius: 0.5rem;
       background-color: $primary-color;
       border: none;
@@ -134,8 +138,10 @@
       font-weight: 700;
       color: $btn-text;
       padding: 1.25rem 6rem;
-      height: 4.25rem;
-      width: 29.125rem;
+
+      @media screen and (max-width: 528px) {
+        width: 100%;
+      }
     }
 
     .line {
@@ -143,30 +149,30 @@
       margin-top: 1rem;
     }
 
-    .google-btn {
-      // height: 4.25rem;
-      // width: 29.125rem;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8125rem;
-      border-radius: 0.5rem;
-      border: none;
-      font-family: $secondary-font;
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-      background-color: $btn-gray;
-      cursor: pointer;
-      margin-top: 1rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-      padding: 1rem 0;
+    // .google-btn {
+    //   // height: 4.25rem;
+    //   // width: 29.125rem;
+    //   width: 100%;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   gap: 0.8125rem;
+    //   border-radius: 0.5rem;
+    //   border: none;
+    //   font-family: $secondary-font;
+    //   font-size: 1.25rem;
+    //   line-height: 1.75rem;
+    //   background-color: $btn-gray;
+    //   cursor: pointer;
+    //   margin-top: 1rem;
+    //   font-size: 1.25rem;
+    //   font-weight: 700;
+    //   padding: 1rem 0;
 
-      &:hover {
-        filter: brightness(90%);
-      }
-    }
+    //   &:hover {
+    //     filter: brightness(90%);
+    //   }
+    // }
   }
   .full-name {
     position: absolute;

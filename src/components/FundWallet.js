@@ -49,11 +49,7 @@ const FundWallet = () => {
           </label>
 
           <label htmlFor='' className='fund__label2'>
-            <input
-              type='number'
-              className='fund__input2'
-              placeholder='Expiry '
-            />
+            <input type='text' className='fund__input2' placeholder='Expiry ' />
           </label>
         </div>
 

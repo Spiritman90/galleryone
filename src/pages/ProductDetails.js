@@ -13,7 +13,7 @@ import useObject from "../hooks/useObject";
 import Spinner from "../components/Spinner";
 import Error from "../pages/Error";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cart/cartSlice";
+import { addToCart, getTotals } from "../redux/cart/cartSlice";
 
 const ProductDetails = () => {
   // const { user } = useSelector((state) => state.auth);
@@ -28,12 +28,13 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   const [data, isPending, error] = useObject(
-    `https://fakestoreapi.com/products/${id}`
+    `https://gallery-one-app.herokuapp.com/api/getProductById/${id}`
+    // `https://fakestoreapi.com/products/${id}`
   );
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
-    // navigate("/cart");
+    dispatch(getTotals());
   };
 
   return (
@@ -42,14 +43,26 @@ const ProductDetails = () => {
         {isPending && <Spinner />}
         {error && <Error />}
         <div className='pdetails__image-container'>
-          <img src={data.image} alt='detail' className='pdetails__image' />
-          <p className='pdetails__text'>{data.title}</p>
-          <p className='pdetails__price'>NGN {data.price}</p>
+          <img
+            src={data?.avaterMainUrl}
+            alt='detail'
+            className='pdetails__image'
+          />
+          <p className='pdetails__text'>{data?.title}</p>
+          <p className='pdetails__price'>NGN {data?.price}</p>
         </div>
-        <img src={data.image} alt='item' className='pdetails__photo' />
-        <img src={data.image} alt='item' className='pdetails__photo' />
-        <img src={data.image} alt='item' className='pdetails__photo' />
-        <img src={data.image} alt='item' className='pdetails__photo' />
+        <img
+          src={data?.avaterFrontUrl}
+          alt='item'
+          className='pdetails__photo'
+        />
+        <img src={data?.avaterBackUrl} alt='item' className='pdetails__photo' />
+        <img
+          src={data?.avaterRightUrl}
+          alt='item'
+          className='pdetails__photo'
+        />
+        <img src={data?.avaterLeftUrl} alt='item' className='pdetails__photo' />
         <div className='pdetails__buttons'>
           <button
             className='pdetails__buybtn'
@@ -83,7 +96,7 @@ const ProductDetails = () => {
           <h3 className='pdetails__describe'>Description</h3>
         </div>
         <div className='pdetails__body'>
-          <p className='pdetails__info'>{data.description}</p>
+          <p className='pdetails__info'>{data?.description}</p>
         </div>
       </div>
 

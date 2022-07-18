@@ -75,7 +75,7 @@ const Sell = () => {
 
                 <label className='sell__labels'>
                   <input
-                    type='number'
+                    type='text'
                     placeholder='Item price'
                     className='sell__inputs'
                   />

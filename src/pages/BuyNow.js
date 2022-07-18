@@ -155,10 +155,10 @@ const BuyNow = () => {
                 <h3 className='buynow__order'>Your order</h3>
               </div>
               {cart.cartItems?.map((cartItem) => (
-                <React.Fragment key={cartItem.id}>
+                <div className='buynow__wrap' key={cartItem._id}>
                   <div className='buynow__image'>
                     <img
-                      src={cartItem.image}
+                      src={cartItem.avaterMainUrl}
                       alt='order'
                       className='buynow__photo'
                     />
@@ -172,7 +172,7 @@ const BuyNow = () => {
                     </p>
                   </div>
                   <hr className=' buynow__line' />
-                </React.Fragment>
+                </div>
               ))}
 
               <div className='buynow__total'>

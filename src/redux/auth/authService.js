@@ -3,6 +3,9 @@ import axios from "axios";
 const SIGNUP_URL = "https://gallery-one-app.herokuapp.com/api/signUp";
 const VERIFY_URL = "https://gallery-one-app.herokuapp.com/api/confirmSignUp";
 const LOGIN_URL = "https://gallery-one-app.herokuapp.com/api/signIn";
+const PASSWORD_URL = "https://gallery-one-app.herokuapp.com/api/forgotPassword";
+const CONFIRM_PASSWORD_URL =
+  "https://gallery-one-app.herokuapp.com/api/confirmForgotPassword";
 
 //Register user
 const register = async (userData) => {
@@ -28,7 +31,7 @@ const verify = async (userData) => {
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
-  
+
   return response.data;
 };
 //Logout user
@@ -36,12 +39,32 @@ const logout = async () => {
   localStorage.removeItem("user");
 };
 
+//ResetPassword
+const resetPassword = async (userData) => {
+  const response = await axios.post(PASSWORD_URL, userData);
+  if (response.data) {
+    localStorage.setItem("user", JSON.stringify(response.data));
+  }
+  console.log(response);
+  return response.data;
+};
+
+//Confirm Password
+const confirmPassword = async (userData) => {
+  const response = await axios.post(CONFIRM_PASSWORD_URL, userData);
+  if (response.data) {
+    localStorage.setItem("user", JSON.stringify(response.data));
+  }
+  return response.data;
+};
 
 const authService = {
   register,
   logout,
   login,
   verify,
+  resetPassword,
+  confirmPassword,
 };
 
 export default authService;

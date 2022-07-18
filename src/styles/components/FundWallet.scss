@@ -59,6 +59,9 @@
     padding-left: 1rem;
     outline: none;
     color: #d0d2d4;
+    &:focus {
+      border: 0.125rem solid $primary-color;
+    }
   }
 
   &__special {
@@ -81,6 +84,9 @@
     padding-left: 1rem;
     outline: none;
     color: #d0d2d4;
+    &:focus {
+      border: 0.125rem solid $primary-color;
+    }
   }
 
   &__button {

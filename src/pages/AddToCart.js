@@ -13,6 +13,7 @@ import {
 const AddToCart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  console.log(cart);
 
   useEffect(() => {
     dispatch(getTotals());
@@ -27,6 +28,7 @@ const AddToCart = () => {
   };
   const handleIncreaseCart = (cartItem) => {
     dispatch(addToCart(cartItem));
+    dispatch(getTotals());
   };
   return (
     <section className='cart'>
@@ -44,12 +46,12 @@ const AddToCart = () => {
         <div className='cart__flex'>
           <div className='cart__a'>
             <p className='cart__header'>My cart</p>
-            {cart.cartItems?.map((cartItem) => (
-              <React.Fragment key={cartItem.id}>
+            {cart.cartItems.map((cartItem) => (
+              <React.Fragment key={cartItem._id}>
                 <div className='cart__details'>
                   <div className='cart__parent'>
                     <img
-                      src={cartItem.image}
+                      src={cartItem.avaterMainUrl}
                       alt='cart'
                       className='cart__photo'
                     />
@@ -74,12 +76,12 @@ const AddToCart = () => {
                         </button>
                       </div>
                     </div>
-                    <div
-                      className='cart__icon'
-                      onClick={() => handleRemoveFromCart(cartItem)}
-                    >
-                      <DeleteIcon />
-                    </div>
+                  </div>
+                  <div
+                    className='cart__icon'
+                    onClick={() => handleRemoveFromCart(cartItem)}
+                  >
+                    <DeleteIcon />
                   </div>
                 </div>
               </React.Fragment>
@@ -92,7 +94,6 @@ const AddToCart = () => {
                   <p className='cart__sub'>Total Item Cost</p>
                   <p className='cart__sum'>NGN{cart.cartTotalAmount}</p>
                 </div>
-
                 <div className='buynow__subtotal'>
                   <p className='cart__sub'>Delivery fee</p>
                   <p className='cart__sum'>NGN 500</p>

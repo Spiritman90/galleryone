@@ -4,46 +4,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { verify, reset } from "../redux/auth/authSlice";
 import Spinner from "../components/Spinner";
+import { PinInput } from "react-input-pin-code";
 const EmailVerification = () => {
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   );
 
-  const [email, setEmail] = useState("");
-  const [code, setCode] = useState({
-    first: "",
-    second: "",
-    third: "",
-    fourth: "",
-    fifth: "",
-    sixth: "",
-  });
-
-  const codeToString = (
-    code.first +
-    code.second +
-    code.third +
-    code.fourth +
-    code.fifth +
-    code.sixth
-  ).toString();
+  const [data, setData] = useState({ email: "", ConfirmCode: "" });
+  const [values, setValues] = useState(["", "", "", "", "", ""]);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const codeInput = [
-    { id: 1, name: "first" },
-    { id: 2, name: "second" },
-    { id: 3, name: "third" },
-    { id: 4, name: "fourth" },
-    { id: 5, name: "fifth" },
-    { id: 6, name: "sixth" },
-  ];
-
-  const receiveCode = (e) => {
-    e.preventDefault();
-    setCode({ ...code, [e.target.name]: e.target.value });
-  };
 
   useEffect(() => {
     if (isError) {
@@ -57,21 +28,19 @@ const EmailVerification = () => {
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
+  const onPinInputChange = (value, index, pinVal) => {
+    setValues([...pinVal]);
+    setData((prev) => ({ ...prev, ConfirmCode: pinVal.join("") }));
+  };
+
   const handleVerify = (e) => {
     e.preventDefault();
-    const verifyData = {
-      email: email,
-      ConfirmCode: codeToString,
-    };
-
-    dispatch(verify(verifyData));
+    dispatch(verify(data));
     dispatch(reset());
     if (isLoading) {
       return <Spinner />;
     }
     navigate("/email-success");
-    setEmail("");
-    setCode("");
   };
 
   return (
@@ -90,31 +59,42 @@ const EmailVerification = () => {
             type='text'
             className='email__input1'
             placeholder='Enter email'
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            onChange={(e) =>
+              setData((prev) => ({ ...prev, email: e.target.value }))
+            }
+            value={data.email}
           />
         </label>
         <p className='email__otp-text'>Enter OTP</p>
         <div className='email__otp'>
-          {codeInput.map((item) => {
-            return (
-              <label className='email__otp-label' key={item.id}>
-                <input
-                  type='text'
-                  // inputMode='numeric'
-                  // pattern='\d{1}'
-                  // id='partitioned'
-                  autoComplete='off'
-                  maxLength={1}
-                  className='email__otp-input'
-                  name={item.name}
-                  onChange={(e) => receiveCode(e)}
-                />
-              </label>
-            );
-          })}
+          <PinInput
+            inputClassName='email__otp-input'
+            inputStyle={{
+              width: 87,
+              height: 94,
+              padding: 0,
+              backgroundColor: "#07090D",
+              // border: "1px solid #BDBDBD",
+              // outline: "none",
+            }}
+            containerClassName='email__otp'
+            // containerStyle={{ flex: "1" }}
+            type='number'
+            inputMode='numeric'
+            length={6}
+            placeholder={""}
+            values={values}
+            mask={true}
+            focusBorderColor='#eb861e'
+            size='lg'
+            onChange={onPinInputChange}
+            background='red'
+            borderColor='#BDBDBD'
+          />
         </div>
-        <button className='email__otp-resend' onClick={handleVerify}>Resend OTP?</button>
+        <button className='email__otp-resend' onClick={handleVerify}>
+          Resend OTP?
+        </button>
         <div className='email__button'>
           {!isLoading && (
             <button className='email__btn-verify' type='submit'>

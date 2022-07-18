@@ -11,6 +11,7 @@ const initialState = {
   isLoading: false,
   error: null,
   message: "",
+  isConfirmPassword: false,
 };
 
 //Register user
@@ -60,6 +61,39 @@ export const verify = createAsyncThunk(
     }
   }
 );
+// Reset Password
+export const resetPassword = createAsyncThunk(
+  "auth/resetPassword",
+  async (userData, thunkAPI) => {
+    try {
+      return await authService.resetPassword(userData);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+export const confirmPassword = createAsyncThunk(
+  "auth/confirmPassword",
+  async (userData, thunkAPI) => {
+    try {
+      return await authService.confirmPassword(userData);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 //Log user out
 export const logout = createAsyncThunk("auth/logout", async () => {
@@ -75,6 +109,7 @@ export const authSlice = createSlice({
       state.isSuccess = false;
       state.isError = false;
       state.message = "";
+      state.isConfirmPassword = false;
     },
   },
   extraReducers: (builder) => {
@@ -122,6 +157,35 @@ export const authSlice = createSlice({
         state.user = null;
       })
       .addCase(logout.fulfilled, (state) => {
+        state.user = null;
+      })
+      .addCase(resetPassword.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(resetPassword.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(resetPassword.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.user = null;
+      })
+      .addCase(confirmPassword.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(confirmPassword.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.isConfirmPassword = true;
+        state.user = action.payload;
+      })
+      .addCase(confirmPassword.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
         state.user = null;
       });
   },

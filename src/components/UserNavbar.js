@@ -30,7 +30,9 @@ const UserNavbar = () => {
           <li className='navbar__item'>Sell an Item</li>
         </NavLink>
       </ul>
-      <SearhBar />
+      <div className='search-bar'>
+        <SearhBar />
+      </div>
       <Link to='/cart'>
         <div className='bagg-container'>
           <Bag className='bagg' />

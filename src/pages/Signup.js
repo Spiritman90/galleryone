@@ -8,8 +8,8 @@ import Spinner from "../components/Spinner";
 
 const Signup = () => {
   const [first_name, setfirst_name] = useState("");
-  const [last_name, setlast_name] = useState("");
   const [email, setEmail] = useState("");
+  const [last_name, setlast_name] = useState("");
   const [phone_number, setphone_number] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -140,7 +140,7 @@ const Signup = () => {
           )}
           {isLoading && (
             <button className='create-btn' disabled>
-              Loading...
+              Creating your account...
             </button>
           )}
           <button className='sign-btn' onClick={() => navigate("/login")}>
