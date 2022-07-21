@@ -75,7 +75,6 @@ const cartSlice = createSlice({
         (cartTotal, cartItem) => {
           const { price, cartQuantity } = cartItem;
           const itemTotal = price * cartQuantity;
-          console.log(price, cartQuantity);
 
           cartTotal.total += itemTotal;
           cartTotal.quantity += cartQuantity;
