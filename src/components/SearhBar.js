@@ -27,8 +27,8 @@ const SearhBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label className='search-label'>
+    <form onSubmit={handleSubmit} className='search-label'>
+      <label>
         <input
           type='text'
           placeholder='Search'

@@ -1,17 +1,12 @@
 import Logo from "../customicons/Logo";
 import SearhBar from "./SearhBar";
 import { Link, useNavigate } from "react-router-dom";
-// import { useState } from "react";
 import UserNavbar from "./UserNavbar";
 import { useSelector } from "react-redux";
 
-
 const Navbar = () => {
-   const { user } = useSelector(
-    (state) => state.auth
-  );
+  const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
-  // const [userLoggedIn, setUserLoggedIn] = useState(true);
 
   return (
     <>
