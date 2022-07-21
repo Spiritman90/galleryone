@@ -22,7 +22,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchAllProducts(data));
-  }, [data, dispatch]);
+  }, [data]);
 
   // const { cartTotalQuantity } = useSelector((state) => state.cart);
   return (

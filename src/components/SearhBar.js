@@ -18,7 +18,7 @@ const SearhBar = () => {
 
   useEffect(() => {
     dispatch(searchResult(searchedProduct));
-  }, [searchTerm, dispatch, searchedProduct]);
+  }, [searchTerm]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
