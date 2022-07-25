@@ -4,12 +4,17 @@ import SearchIcon from "../customicons/SearchIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { searchResult } from "../redux/productSlice";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 
 const SearhBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { allProducts } = useSelector((state) => state.products);
 
   const searchedProduct = allProducts?.filter((product) => {
+    if (searchTerm === "") {
+      return allProducts;
+    }
+
     return product.title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
@@ -23,7 +28,7 @@ const SearhBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearchTerm("");
-    navigate("/login");
+    navigate("/search-results");
   };
 
   return (

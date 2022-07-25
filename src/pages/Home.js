@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Banner from "../components/Banner";
 import ProductImage from "../components/ProductImage";
 import Error from "../pages/Error";
-// import Cart from "../customicons/Cart";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Spinner from "../components/Spinner";
@@ -12,7 +11,6 @@ import { fetchAllProducts } from "../redux/productSlice";
 const Home = () => {
   const [data, isPending, error] = useFetch(
     "https://gallery-one-app.herokuapp.com/api/getAllProduct"
-    // "https://fakestoreapi.com/products"
   );
 
   const dispatch = useDispatch();
@@ -24,7 +22,6 @@ const Home = () => {
     dispatch(fetchAllProducts(data));
   }, [data]);
 
-  // const { cartTotalQuantity } = useSelector((state) => state.cart);
   return (
     <header className='header'>
       <Banner />

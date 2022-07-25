@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { register, reset } from "../redux/auth/authSlice";
 import Spinner from "../components/Spinner";
-// import Google from "../customicons/Google";
 
 const Signup = () => {
   const [first_name, setfirst_name] = useState("");

@@ -26,6 +26,8 @@ import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
 import { useSelector } from "react-redux";
+import SearchResults from "./pages/SearchResults";
+import Paid from "./pages/Paid";
 
 function App() {
   const { user } = useSelector((state) => state.auth);
@@ -44,6 +46,8 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/success' element={<Success />} />
+            <Route path='/paid' element={<Paid />} />
+            <Route path='/search-results' element={<SearchResults />} />
             <Route
               path='/product-details/:id'
               element={user ? <ProductDetails /> : <Navigate to='/signup' />}

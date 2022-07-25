@@ -1,0 +1,34 @@
+@import "../variables/colors.scss";
+
+.search-result {
+  margin: 4rem;
+
+  &__lead {
+    margin-bottom: 9.375rem;
+  }
+
+  &__heading {
+    font-family: $secondary-font;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3.1875rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+
+    & span {
+      font-family: $secondary-font;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2.375rem;
+      color: #fff;
+    }
+  }
+}

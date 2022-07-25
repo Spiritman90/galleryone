@@ -33,11 +33,11 @@ a {
 @import "./styles/components/FundWallet.scss";
 @import "./styles/components/SoldOut.scss";
 @import "./styles/components/SuccessfulBid.scss";
-@import "./styles/components/Paid.scss";
 @import "./styles/components/Bid.scss";
 @import "./styles/components/ReviewCard.scss";
 @import "./styles/components/Spinner.scss";
 
+@import "./styles/pages/Paid.scss";
 @import "./styles/pages/Signup.scss";
 @import "./styles/pages/Login.scss";
 @import "./styles/pages/Home.scss";
@@ -61,6 +61,7 @@ a {
 @import "./styles/pages/EmailFailure.scss";
 @import "./styles/pages/AddToCart.scss";
 @import "./styles/pages/EmailVerification.scss";
+@import "./styles/pages/SearchResults.scss";
 
 html {
   font-size: 14px;
