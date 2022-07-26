@@ -4,7 +4,7 @@ import SearchIcon from "../customicons/SearchIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { searchResult } from "../redux/productSlice";
 import { useNavigate } from "react-router";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const SearhBar = () => {
   const [searchTerm, setSearchTerm] = useState("");

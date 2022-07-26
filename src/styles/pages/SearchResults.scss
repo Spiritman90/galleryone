@@ -31,4 +31,14 @@
       color: #fff;
     }
   }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    & .product__photo {
+      height: 16rem;
+    }
+  }
 }
