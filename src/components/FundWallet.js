@@ -1,7 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
+
+import { fundWallet, reset } from "../redux/wallet/walletSlice";
 
 const FundWallet = () => {
   const [showReply, setShowReply] = useState(false);
+  const [amount, setAmount] = useState("");
+  const { walletBalance, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.wallet
+  );
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess) {
+      toast.success("Successful payment");
+      navigate("/");
+    }
+
+    dispatch(reset());
+  }, [walletBalance, isError, isSuccess, message, navigate, dispatch]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!amount) {
+      toast.error("Please enter an amount");
+    } else {
+      dispatch(reset());
+      dispatch(fundWallet(amount));
+    }
+
+    setAmount("");
+  };
+
   return (
     <section className='fund'>
       <div className='fund__lead'>
@@ -10,7 +48,7 @@ const FundWallet = () => {
 
       <div className='fund__text'>
         <p className='fund__amount'>
-          Fund with a minimum of 100,000 to continue
+          Fund with a minimum of 10,000 to continue
         </p>
       </div>
 
@@ -26,35 +64,28 @@ const FundWallet = () => {
         </div>
       )}
 
-      <form className='fund__form'>
+      <form className='fund__form' onSubmit={handleSubmit}>
         <label className='fund__label'>
           <input
             type='text'
             className='fund__input'
-            placeholder='Cardholder name'
+            placeholder='Amount'
+            onChange={(e) => setAmount(e.target.value)}
+            value={amount}
           />
         </label>
-
-        <label className='fund__label'>
-          <input
-            type='number'
-            className='fund__input'
-            placeholder='Cardholder number'
-          />
-        </label>
-
-        <div className='fund__special'>
-          <label htmlFor='' className='fund__label2'>
-            <input type='number' className='fund__input2' placeholder='CVV' />
-          </label>
-
-          <label htmlFor='' className='fund__label2'>
-            <input type='text' className='fund__input2' placeholder='Expiry ' />
-          </label>
-        </div>
 
         <div className='fund__button'>
-          <button className='fund__btn'>Pay 100, 000</button>
+          {!isLoading && (
+            <button className='fund__btn' type='submit'>
+              Pay {amount}
+            </button>
+          )}
+          {isLoading && (
+            <button className='fund__btn' type='submit'>
+              Processing payment...
+            </button>
+          )}
         </div>
       </form>
     </section>

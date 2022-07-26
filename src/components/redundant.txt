@@ -1,0 +1,17 @@
+{/* <label className='fund__label'>
+          <input
+            type='number'
+            className='fund__input'
+            placeholder='Cardholder number'
+          />
+        </label> */}
+
+        {/* <div className='fund__special'>
+          <label htmlFor='' className='fund__label2'>
+            <input type='number' className='fund__input2' placeholder='CVV' />
+          </label>
+
+          <label htmlFor='' className='fund__label2'>
+            <input type='text' className='fund__input2' placeholder='Expiry ' />
+          </label>
+        </div> */}

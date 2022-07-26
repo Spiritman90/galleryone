@@ -7,10 +7,12 @@ import { useNavigate } from "react-router";
 import Modal from "../components/Modal";
 import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
+import { useSelector } from "react-redux";
 
 const UserProfile = () => {
   const [showModal, setShowModal] = useState(false);
   const [showFundWallet, setShowFundWallet] = useState(false);
+  const { walletBalance } = useSelector((state) => state.wallet);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -35,7 +37,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN 20, 000</h4>
+        <h4>NGN {walletBalance}</h4>
       </div>
       <div className='user__actions'>
         <div
