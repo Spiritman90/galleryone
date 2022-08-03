@@ -12,7 +12,7 @@ const fundWallet = async (token, data) => {
   //   },
   // };
   const response = await axios.post({
-    url: FUND_URL,
+    FUND_URL,
     data,
     headers: {
       "Content-Type": "application/json",
