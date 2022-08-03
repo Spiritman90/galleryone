@@ -27,7 +27,7 @@ const SearhBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/search-results");
-    setSearchTerm("");
+    // setSearchTerm("");
   };
 
   return (
