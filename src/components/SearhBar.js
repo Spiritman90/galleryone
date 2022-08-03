@@ -11,11 +11,10 @@ const SearhBar = () => {
   const { allProducts } = useSelector((state) => state.products);
 
   const searchedProduct = allProducts?.filter((product) => {
-    if (searchTerm === "") {
-      return allProducts;
-    }
-
-    return product.title.toLowerCase().includes(searchTerm.toLowerCase());
+    return (
+      product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      searchTerm !== ""
+    );
   });
 
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ const SearhBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchTerm("");
+    // setSearchTerm("");
     navigate("/search-results");
   };
 

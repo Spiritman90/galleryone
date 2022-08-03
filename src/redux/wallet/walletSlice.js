@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import walletService from "./walletService";
 
 const initialState = {
-  walletBalance: "0, 000",
+  walletBalance: 0,
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -12,9 +12,9 @@ const initialState = {
 
 export const fundWallet = createAsyncThunk(
   "wallet/fundWallet",
-  async (amount, thunkAPI) => {
+  async (data, thunkAPI) => {
     try {
-      return await walletService.fundWallet(amount);
+      return await walletService.fundWallet(data);
     } catch (error) {
       const message =
         (error.response &&

@@ -11,7 +11,8 @@ const SearchResults = () => {
       <div className='search-result__lead'>
         <h2 className='search-result__heading'>Search Results</h2>
         <p className='search-result__text'>
-          4,400+ <span>results for</span> “Macbook Pro”
+          {searchedProducts?.length - 1}+ <span>results for</span>{" "}
+          {searchedProducts?.[0]?.title}
         </p>
       </div>
       <div className='search-result__products'>

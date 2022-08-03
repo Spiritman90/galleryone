@@ -37,6 +37,7 @@ const ProductDetails = () => {
     dispatch(getTotals());
   };
 
+
   return (
     <section className='pdetails'>
       <div className='pdetails__container'>

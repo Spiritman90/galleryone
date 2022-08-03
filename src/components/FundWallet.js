@@ -12,6 +12,12 @@ const FundWallet = () => {
     (state) => state.wallet
   );
 
+  const data = {
+    amount,
+  };
+
+  console.log(data);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -34,7 +40,7 @@ const FundWallet = () => {
       toast.error("Please enter an amount");
     } else {
       dispatch(reset());
-      dispatch(fundWallet(amount));
+      dispatch(fundWallet(data));
     }
 
     setAmount("");
