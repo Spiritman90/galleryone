@@ -22,6 +22,8 @@ const Home = () => {
     dispatch(fetchAllProducts(data));
   }, [data]);
 
+  //comment
+
   return (
     <header className='header'>
       <Banner />
