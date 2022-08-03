@@ -2,16 +2,24 @@ import axios from "axios";
 
 const FUND_URL =
   "https://gallery-one-app.herokuapp.com/api/transaction/initialize";
+// "http://localhost:5000/api/transaction/initialize";
 
 //Fund Wallet
 const fundWallet = async (token, data) => {
-  const config = {
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${token}`,
+  //   },
+  // };
+  const response = await axios.post({
+    url: FUND_URL,
+    data,
     headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
       Authorization: `Bearer ${token}`,
     },
-  };
-  const response = await axios.post(FUND_URL, data, config);
-  console.log(response);
+  });
   if (response.data) {
     localStorage.setItem("walletBalance", JSON.stringify(response.data));
   }
@@ -23,3 +31,11 @@ const walletService = {
 };
 
 export default walletService;
+
+// const response = await axios({
+//   url: 'https://api.paystack.co/transaction/initialize', method: "post",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Accept: "application/json",
+//     Authorization: `Bearer ${process.env.PAYSTACK_SECRETKEY}`
+//   },
