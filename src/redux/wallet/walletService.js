@@ -17,7 +17,7 @@ const fundWallet = async (token, data) => {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
   });
   if (response.data) {
