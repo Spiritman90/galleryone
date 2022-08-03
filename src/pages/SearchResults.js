@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ProductImage from "../components/ProductImage";
 
 const SearchResults = () => {
   const { searchedProducts } = useSelector((state) => state.products);
 
-  console.log(searchedProducts);
   return (
     <section className='search-result'>
       <div className='search-result__lead'>
@@ -18,11 +18,13 @@ const SearchResults = () => {
       <div className='search-result__products'>
         {searchedProducts?.map((product) => (
           <div className='search-result__wrapped' key={product._id}>
-            <ProductImage
-              title={product.title}
-              price={product.price}
-              ImageSource={product.avaterMainUrl}
-            />
+            <Link to={`/product-details/${product._id}`}>
+              <ProductImage
+                title={product.title}
+                price={product.price}
+                ImageSource={product.avaterMainUrl}
+              />
+            </Link>
           </div>
         ))}
       </div>

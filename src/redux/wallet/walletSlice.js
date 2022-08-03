@@ -14,7 +14,8 @@ export const fundWallet = createAsyncThunk(
   "wallet/fundWallet",
   async (data, thunkAPI) => {
     try {
-      return await walletService.fundWallet(data);
+      const token = thunkAPI.getState().auth.IdToken;
+      return await walletService.fundWallet(token, data);
     } catch (error) {
       const message =
         (error.response &&
