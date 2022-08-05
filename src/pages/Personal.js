@@ -4,6 +4,7 @@ import EditProfile from "../customicons/EditProfile";
 
 const Personal = () => {
   const [disable, setDisable] = useState(true);
+  // const { user } = useSelector((state) => state.auth);
 
   return (
     <section className='sell__information'>

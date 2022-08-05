@@ -13,7 +13,6 @@ import {
 const AddToCart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(cart);
 
   useEffect(() => {
     dispatch(getTotals());

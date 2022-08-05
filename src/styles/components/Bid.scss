@@ -12,6 +12,7 @@
     line-height: 1.75rem;
     color: #fff;
     margin-bottom: 0.5rem;
+    margin-left: 2rem;
   }
 
   &__text {
@@ -42,6 +43,10 @@
     border: 0.125rem solid #d0d2d4;
     color: #d0d2d4;
     margin-bottom: 2rem;
+
+    &:focus {
+      border: 0.125rem solid $primary-color;
+    }
   }
 
   &__btn {

@@ -29,14 +29,12 @@ const ProductDetails = () => {
 
   const [data, isPending, error] = useObject(
     `https://gallery-one-app.herokuapp.com/api/getProductById/${id}`
-    // `https://fakestoreapi.com/products/${id}`
   );
 
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
     dispatch(getTotals());
   };
-
 
   return (
     <section className='pdetails'>
