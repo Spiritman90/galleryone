@@ -15,7 +15,6 @@ const FundWallet = () => {
 
   const data = {
     amount,
-    add,
   };
 
   console.log(data);
