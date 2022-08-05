@@ -10,6 +10,7 @@ const fundWallet = async (token, data) => {
       Authorization: `Bearer ${token}`,
     },
   };
+
   const response = await axios.post(FUND_URL, config, data);
   if (response.data) {
     localStorage.setItem("walletBalance", JSON.stringify(response.data));
