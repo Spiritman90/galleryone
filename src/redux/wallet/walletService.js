@@ -14,6 +14,8 @@ const fundWallet = async (token, data) => {
   if (response.data) {
     localStorage.setItem("walletBalance", JSON.stringify(response.data));
   }
+
+  console.log(response);
   return response.data;
 };
 

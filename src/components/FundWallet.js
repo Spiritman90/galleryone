@@ -11,9 +11,11 @@ const FundWallet = () => {
   const { walletBalance, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
+  const { token } = useSelector((state) => state.auth.user);
 
   const data = {
     amount,
+    add,
   };
 
   console.log(data);
@@ -40,7 +42,7 @@ const FundWallet = () => {
       toast.error("Please enter an amount");
     } else {
       dispatch(reset());
-      dispatch(fundWallet(data));
+      dispatch(fundWallet(data, token));
     }
 
     setAmount("");
