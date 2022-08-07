@@ -7,7 +7,7 @@ const FUND_URL =
 const fundWallet = async (token, data) => {
   const config = {
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     },
   };
 
@@ -16,7 +16,6 @@ const fundWallet = async (token, data) => {
     localStorage.setItem("walletBalance", JSON.stringify(response.data));
   }
 
-  console.log(response);
   return response.data;
 };
 
