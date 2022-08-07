@@ -7,7 +7,7 @@ const FUND_URL =
 const fundWallet = async (token, data) => {
   const config = {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: token,
     },
   };
 
