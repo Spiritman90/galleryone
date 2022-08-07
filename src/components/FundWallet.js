@@ -42,7 +42,7 @@ const FundWallet = () => {
       toast.error("Please enter an amount");
     } else {
       dispatch(reset());
-      dispatch(fundWallet(user?.AccessToken, data));
+      dispatch(fundWallet(user, data));
     }
 
     setAmount("");
