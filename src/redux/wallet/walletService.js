@@ -11,7 +11,7 @@ const fundWallet = async (token, data) => {
     },
   };
 
-  const response = await axios.post(FUND_URL, config, data);
+  const response = await axios.post(FUND_URL, data, config);
   if (response.data) {
     localStorage.setItem("walletBalance", JSON.stringify(response.data));
   }

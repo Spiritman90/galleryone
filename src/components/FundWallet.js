@@ -18,7 +18,7 @@ const FundWallet = () => {
     amount,
   };
 
-  console.log(data);
+  // console.log(data);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const FundWallet = () => {
 
     if (isSuccess) {
       toast.success("Successful payment");
-      navigate("/");
+      // navigate("/");
     }
 
     dispatch(reset());
@@ -42,7 +42,7 @@ const FundWallet = () => {
       toast.error("Please enter an amount");
     } else {
       dispatch(reset());
-      dispatch(fundWallet(user, data));
+      dispatch(fundWallet(user?.AccessToken, data));
     }
 
     setAmount("");
