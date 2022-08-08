@@ -26,7 +26,7 @@ const Verify = () => {
             </label>
             <label className='verify__label'>
               <input
-                type='number'
+                type='text'
                 className='verify__validate'
                 placeholder='NIN'
                 // required

@@ -12,7 +12,7 @@
     line-height: 1.75rem;
     color: #fff;
     margin-bottom: 0.5rem;
-    margin-left: 2rem;
+    // margin-left: rem;
   }
 
   &__text {
@@ -31,10 +31,10 @@
 
   &__input {
     height: 4.25rem;
-    width: 18.0625rem;
+    width: 23.6875rem;
     padding-left: 1rem;
     border-radius: 0.5rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     outline: none;
     font-family: $primary-font;
     font-size: 1.25rem;
@@ -51,7 +51,7 @@
 
   &__btn {
     height: 4.25rem;
-    width: 18.0625rem;
+    width: 23.6875rem;
     background-color: $primary-color;
     font-family: $secondary-font;
     font-size: 1.25rem;

@@ -1,11 +1,11 @@
 @import "../variables/colors.scss";
 
 .verify__input {
-  height: 12.438rem;
+  height: 7.4375rem;
   width: 51.74rem;
   border-radius: 1.25rem;
   border: 0.125rem solid #636870;
-  background: $darker-background;
+  background: inherit;
 }
 
 .verify__heading {
@@ -32,7 +32,7 @@
     border-radius: 0.5rem;
     border: 0.125rem solid #d0d2d4;
     outline: none;
-    background: $darker-background;
+    background: $input-background;
     font-family: $primary-font;
     font-size: 1.25rem;
     font-weight: 400;
@@ -48,7 +48,7 @@
   border-radius: 0.5rem;
   border: 0.125rem solid #d0d2d4;
   outline: none;
-  background: $darker-background;
+  background: $input-background;
   font-family: $primary-font;
   font-size: 1.25rem;
   font-weight: 400;

@@ -1,6 +1,5 @@
 import React from "react";
 import check from "../assets/Check.png";
-// import crypto from "crypto";
 
 const PaymentConfirmation = () => {
   return (

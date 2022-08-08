@@ -5,6 +5,7 @@ import sim3 from "../assets/sim3.png";
 import sim4 from "../assets/sim4.png";
 import Modal from "../components/Modal";
 import Bid from "../components/Bid";
+// import SuccessfulBid from "../components/SuccessfulBid";
 import ReviewCard from "../components/ReviewCard";
 import ReviewYellow from "../customicons/ReviewYellow";
 import ReviewGray from "../customicons/ReviewGray";

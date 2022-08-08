@@ -26,6 +26,7 @@
       border-radius: 0.625rem;
       border-radius: 0.625rem;
       padding: 1rem;
+      color: #535353;
 
       &:hover {
         filter: brightness(90%);
@@ -41,7 +42,7 @@
   }
 
   &__information {
-    background-color: $darker-background;
+    background-color: #333333;
     color: white;
     border-radius: 0.625rem;
     flex: 1;
@@ -169,7 +170,7 @@
   &__inputs {
     border-radius: 0.5rem;
     padding: 1rem 38rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     outline: none;
     font-family: $primary-font;
     padding-left: 1rem;
@@ -185,7 +186,7 @@
   &__textarea {
     border-radius: 0.5rem;
     padding: 2rem 38rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     outline: none;
     font-family: $primary-font;
     padding-left: 1rem;

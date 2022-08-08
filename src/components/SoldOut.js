@@ -15,7 +15,7 @@ const SoldOut = () => {
       </div>
 
       <div className='soldout__button'>
-        <button className='soldout__btn' onClick={() => navigate("./")}>
+        <button className='soldout__btn' onClick={() => navigate("/")}>
           Back to Home page
         </button>
       </div>

@@ -9,7 +9,7 @@
   }
 
   &__address {
-    background-color: $darker-background;
+    background-color: $background-color-minor;
     height: 7.625rem;
     width: 47.125rem;
     border-radius: 0.625rem;
@@ -44,7 +44,7 @@
     border-radius: 0.5rem;
     border: 0.125rem solid #d0d2d4;
     padding-left: 1rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     outline: none;
     font-family: $primary-font;
     font-size: 1.25rem;
@@ -67,7 +67,7 @@
     border-radius: 0.5rem;
     border: 0.125rem solid #d0d2d4;
     padding-left: 1rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     outline: none;
     font-family: $primary-font;
     font-size: 1.25rem;
@@ -111,7 +111,7 @@
     border-radius: 0.5rem;
     outline: none;
     padding-left: 1rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     border: 0.125rem solid #d0d2d4;
     font-family: $primary-font;
     font-size: 1.25rem;
@@ -134,7 +134,7 @@
     border-radius: 0.5rem;
     outline: none;
     padding-left: 1rem;
-    background-color: $darker-background;
+    background-color: $input-background;
     border: 0.125rem solid #d0d2d4;
     font-family: $primary-font;
     font-size: 1.25rem;
@@ -152,7 +152,7 @@
     flex: 1;
     border-radius: 0.625rem;
     padding-bottom: 3rem;
-    background-color: $darker-background;
+    background-color: $background-color-minor;
     overflow: hidden;
     overflow-y: scroll;
   }

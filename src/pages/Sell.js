@@ -33,7 +33,7 @@ const Sell = () => {
                 <button className='sell__button'>Upload Photo</button>
               </div>
 
-              <div className='sell__radio'>
+              {/* <div className='sell__radio'>
                 <form className='sell__check'>
                   <div className='sell__item'>
                     <input
@@ -61,7 +61,7 @@ const Sell = () => {
                     </p>
                   </div>
                 </form>
-              </div>
+              </div> */}
             </div>
             <div className='sell__form'>
               <form className='sell__block'>
@@ -77,6 +77,13 @@ const Sell = () => {
                   <input
                     type='text'
                     placeholder='Item price'
+                    className='sell__inputs'
+                  />
+                </label>
+                <label className='sell__labels'>
+                  <input
+                    type='text'
+                    placeholder='Item category'
                     className='sell__inputs'
                   />
                 </label>

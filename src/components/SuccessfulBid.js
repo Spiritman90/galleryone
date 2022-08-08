@@ -1,7 +1,9 @@
 import React from "react";
 import sold from "../assets/sold2.png";
+import { useNavigate } from "react-router";
 
 const SuccessfulBid = () => {
+  const navigate = useNavigate();
   return (
     <section className='successful'>
       <div className='successful__image'>
@@ -17,8 +19,15 @@ const SuccessfulBid = () => {
       </div>
 
       <div className='successful__buttons'>
-        <button className='successful__dark'>Payment checkout</button>
-        <button className='successful__orange'>Pay with wallet</button>
+        <button
+          className='successful__dark'
+          onClick={() => navigate("/buy-now")}
+        >
+          Payment checkout
+        </button>
+        <button className='successful__orange' onClick={() => navigate("/")}>
+          Pay with wallet
+        </button>
       </div>
     </section>
   );

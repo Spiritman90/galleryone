@@ -1,13 +1,13 @@
 import React from "react";
 // import { useNavigate } from "react-router";
-import ErrorIcon from "../assets/Error.svg";
+import Placard from "../customicons/Placard";
 
 const Error = () => {
   return (
     <>
       <div className='error__page'>
         <div className='error__image'>
-          <img src={ErrorIcon} alt='icon' />
+          <Placard />
         </div>
         <h4 className='error__heading'>Oops! We did not find anything</h4>
         {/* <button onClick={() => navigate("/")} className='error__btn'>
