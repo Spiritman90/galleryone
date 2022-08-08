@@ -5,6 +5,9 @@
 
   &__lead {
     margin-bottom: 9.375rem;
+    background-color: $background-color-minor;
+    margin-top: -2rem;
+    padding: 1rem;
   }
 
   &__heading {
@@ -36,6 +39,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    margin-top: -8rem;
+    background-color: $background-color-minor;
+    padding: 1.5rem;
 
     & .product__photo {
       height: 16rem;

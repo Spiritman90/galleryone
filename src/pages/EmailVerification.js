@@ -70,8 +70,8 @@ const EmailVerification = () => {
           <PinInput
             inputClassName='email__otp-input'
             inputStyle={{
-              width: 87,
-              height: 94,
+              width: 64,
+              height: 64,
               padding: 0,
               backgroundColor: "#07090D",
               // border: "1px solid #BDBDBD",

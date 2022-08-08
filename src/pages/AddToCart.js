@@ -105,6 +105,12 @@ const AddToCart = () => {
                   <p className='cart__fee'>Total Due</p>
                   <p className='cart__fee'>NGN {cart.cartTotalAmount + 500}</p>
                 </div>
+
+                <div className='cart__button'>
+                  <button className='cart__pay-btn'>
+                    Pay NGN {cart.cartTotalAmount + 500}
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -94,7 +94,7 @@
   }
 
   .live {
-    background-color: #0e131b;
+    background-color: $background-color-minor;
     margin-top: 2rem;
     padding: 1rem;
     color: $btn-gray;
@@ -144,7 +144,7 @@
       line-height: 2.375rem;
 
       &:nth-child(odd) {
-        background-color: #121721;
+        background-color: #616161;
       }
     }
     &__time {

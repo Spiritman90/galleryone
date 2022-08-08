@@ -106,7 +106,7 @@ const Login = () => {
           <p className='dont__text'>
             Don’t have an account?{" "}
             <span>
-              <Link to='/signup'>Sign up</Link>
+              <Link to='/signup'>Create an account</Link>
             </span>{" "}
           </p>
         </div>

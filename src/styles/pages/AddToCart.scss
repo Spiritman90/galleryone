@@ -37,12 +37,12 @@
     // width: 25.9375rem;
     width: 100%;
     border-radius: 0.625rem;
-    background-color: $darker-background;
+    background-color: $background-color-minor;
     margin-top: 4rem;
   }
 
   &__details {
-    background-color: $darker-background;
+    background-color: $background-color-minor;
     height: 10.625rem;
     width: 54rem;
     border-radius: 0.625rem;
@@ -175,5 +175,26 @@
     font-size: 1.125rem;
     font-weight: 700;
     margin-top: 1.125rem;
+  }
+
+  &__pay-btn {
+    background-color: $primary-color;
+    // width: 382px;
+    // height: 68px;
+    font: $secondary-font;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    color: $btn-text;
+    padding: 1.3rem 7.3rem;
+
+    &:hover {
+      filter: brightness(90%);
+    }
   }
 }

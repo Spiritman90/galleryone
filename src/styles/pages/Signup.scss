@@ -39,12 +39,12 @@
     // width: 29.125rem;
     width: 100%;
     border-radius: 0.5rem;
-    color: #828282;
-    background-color: $darker-background;
+    color: $input-color;
+    background-color: $input-background;
     outline: none;
     font-family: $primary-font;
     font-size: 1.5rem;
-    border: 0.125rem solid #d0d2d4;
+    border: 0.125rem solid $input-border;
     padding: 0.5rem 0.4rem;
     padding-left: 1rem;
 
@@ -108,12 +108,12 @@
       width: 100%;
       gap: 0.8125rem;
       border-radius: 0.5rem;
-      border: 0.1875rem solid $primary-color;
+      border: 0.1875rem solid $input-border;
       font-family: $secondary-font;
       font-size: 1.25rem;
       line-height: 1.75rem;
       color: $primary-color;
-      background-color: $darker-background;
+      background-color: inherit;
       cursor: pointer;
       font-weight: 700;
       padding: 1.25rem 6rem;

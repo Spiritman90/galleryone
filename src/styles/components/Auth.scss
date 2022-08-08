@@ -1,5 +1,8 @@
+@import "../variables/colors.scss";
+
 .auth {
-  background-color: #151c28;
+  // background-color: #151c28;
+  background-color: $background-color-main;
   background-image: url(./../../assets/gOne.svg);
   background-repeat: no-repeat;
   background-position: center left;

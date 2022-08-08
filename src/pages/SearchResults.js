@@ -9,10 +9,10 @@ const SearchResults = () => {
   return (
     <section className='search-result'>
       <div className='search-result__lead'>
-        <h2 className='search-result__heading'>Search Results</h2>
+        <h2 className='search-result__heading'>Best deals for you</h2>
         <p className='search-result__text'>
-          {searchedProducts?.length - 1}+ <span>results for</span>{" "}
-          {searchedProducts?.[0]?.title}
+          {searchedProducts?.length - 1}+ <span>results for</span> "
+          {searchedProducts?.[0]?.title}"
         </p>
       </div>
       <div className='search-result__products'>
