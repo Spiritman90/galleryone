@@ -33,35 +33,6 @@ const Sell = () => {
                 <button className='sell__button'>Upload Photo</button>
               </div>
 
-              {/* <div className='sell__radio'>
-                <form className='sell__check'>
-                  <div className='sell__item'>
-                    <input
-                      type='radio'
-                      value='regular'
-                      name='auction'
-                      style={{ accentColor: "#eb861e" }}
-                    />
-                    <label className='sell__label'>Regular</label>
-                    <p className='sell__text'>
-                      Your item will be verified and shared with everyone{" "}
-                    </p>
-                  </div>
-                  <div className='sell__item'>
-                    <input
-                      type='radio'
-                      value='live-auction'
-                      name='auction'
-                      style={{ accentColor: "#eb861e" }}
-                    />
-                    <label className='sell__label'>Live Auction</label>
-                    <p className='sell__text'>
-                      {" "}
-                      Your item will be considered by a panel for live auction{" "}
-                    </p>
-                  </div>
-                </form>
-              </div> */}
             </div>
             <div className='sell__form'>
               <form className='sell__block'>
