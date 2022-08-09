@@ -4,7 +4,7 @@ const FUND_URL =
   "https://gallery-one-app.herokuapp.com/api/transaction/initialize";
 
 //Fund Wallet
-const fundWallet = async (token, data) => {
+const fundWallet = async (data, token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,

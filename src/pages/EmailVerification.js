@@ -73,12 +73,9 @@ const EmailVerification = () => {
               width: 64,
               height: 64,
               padding: 0,
-              backgroundColor: "#07090D",
-              // border: "1px solid #BDBDBD",
-              // outline: "none",
+              backgroundColor: "#efefef;",
             }}
             containerClassName='email__otp'
-            // containerStyle={{ flex: "1" }}
             type='number'
             inputMode='numeric'
             length={6}
