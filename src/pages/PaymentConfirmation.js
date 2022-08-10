@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import check from "../assets/Check.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -6,7 +6,6 @@ import { useNavigate } from "react-router";
 import { confirmPayment, reset } from "../redux/wallet/walletSlice";
 
 const PaymentConfirmation = () => {
-  // const [amount, setAmount] = useState("");
   const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
