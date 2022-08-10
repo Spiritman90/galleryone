@@ -3,6 +3,7 @@ import authReducer from "./auth/authSlice";
 import cartReducer, { getTotals } from "./cart/cartSlice";
 import productReducer from "./productSlice";
 import walletReducer from "./wallet/walletSlice";
+import sellReducer from "./sell/sellSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     cart: cartReducer,
     products: productReducer,
     wallet: walletReducer,
+    sell: sellReducer,
   },
 });
 

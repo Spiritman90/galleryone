@@ -48,3 +48,27 @@
                   </div>
                 </form>
               </div> */}
+
+
+
+
+                {/* <div className='sell__border'>
+                <p className='sell__upload'>Upload File</p>
+                <div className='sell__dotted'>
+                  <form className='sell__form'>
+                    <div className='sell__image'>
+                      <img src={file} alt='file' className='sell__file' />
+                      <p className='sell__drag'>Drag and Drop here</p>
+                      <p className='sell__drag'>Or</p>
+                      <p className='sell__drag'>Browse</p>
+                    </div>
+                    <input
+                      type='file'
+                      accept='image/*'
+                      style={{ display: "none" }}
+                      required
+                    />
+                  </form>
+                </div>
+                <button className='sell__button'>Upload Photo</button>
+              </div> */}

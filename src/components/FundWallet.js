@@ -2,23 +2,21 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
-
 import { fundWallet, reset } from "../redux/wallet/walletSlice";
 
 const FundWallet = () => {
   const [showReply, setShowReply] = useState(false);
   const [amount, setAmount] = useState("");
-  const { walletBalance, isLoading, isError, isSuccess, message } = useSelector(
+  const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
-  // const { user } = useSelector((state) => state.auth);
-  // console.log(user);
+  const { urlRedirect } = useSelector((state) => state.wallet?.walletBalance);
+
+  console.log(urlRedirect);
 
   const data = {
     amount,
   };
-
-  // console.log(data);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,12 +27,12 @@ const FundWallet = () => {
     }
 
     if (isSuccess) {
-      toast.success("Successful payment");
-      // navigate("/");
+      toast.success("Redirecting....");
+      window.location.assign(urlRedirect);
     }
 
     dispatch(reset());
-  }, [walletBalance, isError, isSuccess, message, navigate, dispatch]);
+  }, [isError, isSuccess, message, navigate, dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

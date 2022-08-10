@@ -48,11 +48,11 @@
     flex: 1;
   }
 
-  &__container {
-    margin-top: 2rem;
-    display: flex;
-    gap: 6rem;
-  }
+  // &__container {
+  //   margin-top: 2rem;
+  //   display: flex;
+  //   gap: 6rem;
+  // }
 
   &__heading {
     font-family: $secondary-font;
@@ -177,7 +177,7 @@
     font-size: 1.5rem;
     border: 0.125rem solid #d0d2d4;
     color: #828282;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     &:focus {
       border: 0.125rem solid $primary-color;
     }
@@ -222,4 +222,19 @@
       filter: brightness(85%);
     }
   }
+}
+
+.upload__image-wrapper {
+  margin-top: 1rem;
+
+  & button {
+    margin-bottom: 1rem;
+  }
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  margin-top: 1rem;
 }

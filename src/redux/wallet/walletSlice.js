@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import walletService from "./walletService";
 
 const initialState = {
-  walletBalance: 0,
+  walletBalance: "",
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -10,6 +10,7 @@ const initialState = {
   message: "",
 };
 
+//Fund wallet
 export const fundWallet = createAsyncThunk(
   "wallet/fundWallet",
   async (data, thunkAPI) => {
@@ -17,6 +18,24 @@ export const fundWallet = createAsyncThunk(
       const token = localStorage.getItem("user");
       console.log(token);
       return await walletService.fundWallet(data, token);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+//Confirm payment
+export const confirmPayment = createAsyncThunk(
+  "wallet/confirm-payment",
+  async (reference, thunkAPI) => {
+    try {
+      const token = localStorage.getItem("user");
+      return await walletService.confirmPayment(token, reference);
     } catch (error) {
       const message =
         (error.response &&
@@ -55,6 +74,19 @@ const walletSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         // state.walletBalance = "0";
+      })
+      .addCase(confirmPayment.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(confirmPayment.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.walletBalance = action.payload;
+      })
+      .addCase(confirmPayment.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.walletBalance = action.payload;
       });
   },
 });

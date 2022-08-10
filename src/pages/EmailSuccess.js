@@ -1,18 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 import ValidEmail from "../customicons/ValidEmail";
 
 const EmailSuccess = () => {
-   const { user } = useSelector(
-    (state) => state.auth
-  );
+  const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
   return (
     <section className='email-sucess'>
       <div className='email-success__button'>
-        <button className='email-success__btn' onClick={() => navigate("/")}>
+        <button
+          className='email-success__btn'
+          onClick={() => navigate("/login")}
+        >
           Back to Homepage
         </button>
       </div>

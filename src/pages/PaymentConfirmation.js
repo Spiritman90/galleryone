@@ -1,7 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import check from "../assets/Check.png";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
+import { confirmPayment, reset } from "../redux/wallet/walletSlice";
 
 const PaymentConfirmation = () => {
+  // const [amount, setAmount] = useState("");
+  const { isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.wallet
+  );
+  const { walletBalance } = useSelector((state) => state.wallet);
+
+  console.log(walletBalance);
+  const reference = window.location.href();
+  console.log(reference);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess) {
+      toast.success("Redirecting....");
+      // window.location.assign(urlRedirect);
+    }
+
+    dispatch(reset());
+  }, [isError, isSuccess, message, navigate, dispatch]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(reset());
+    dispatch(confirmPayment(reference));
+    console.log(reference);
+
+    // setAmount("");
+  };
+
   return (
     <section className='paid'>
       <div className='paid__image'>
@@ -16,7 +56,21 @@ const PaymentConfirmation = () => {
       </div>
 
       <div className='paid__button'>
-        <button className='paid__btn'>Confirm payment</button>
+        {!isLoading && (
+          <button className='paid__btn' type='submit' onClick={handleSubmit}>
+            Confirm payment
+          </button>
+        )}
+        {isLoading && (
+          <button
+            className='paid__btn'
+            type='submit'
+            disabled
+            onClick={handleSubmit}
+          >
+            Confirming payment...
+          </button>
+        )}
       </div>
     </section>
   );
