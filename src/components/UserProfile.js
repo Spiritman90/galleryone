@@ -12,7 +12,10 @@ import { useSelector } from "react-redux";
 const UserProfile = () => {
   const [showModal, setShowModal] = useState(false);
   const [showFundWallet, setShowFundWallet] = useState(false);
-  const { walletBalance } = useSelector((state) => state.wallet);
+  const { walletBalance } = useSelector(
+    (state) => state.wallet?.walletBalance?.balance
+  );
+  console.log(walletBalance);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -37,7 +40,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN 20,000</h4>
+        <h4>{walletBalance}</h4>
       </div>
       <div className='user__actions'>
         <div

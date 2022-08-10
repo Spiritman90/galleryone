@@ -15,7 +15,6 @@ const PaymentConfirmation = () => {
   console.log(walletBalance);
   const ref = window.location.href;
   const reference = ref.split("=")[2];
-  console.log(reference);
 
   const myRef = {
     reference,
@@ -30,8 +29,8 @@ const PaymentConfirmation = () => {
     }
 
     if (isSuccess) {
-      toast.success("Redirecting....");
-      // window.location.assign(urlRedirect);
+      toast.success("Success, please check your wallet");
+      navigate("/");
     }
 
     dispatch(reset());
@@ -42,7 +41,6 @@ const PaymentConfirmation = () => {
 
     dispatch(reset());
     dispatch(confirmPayment(myRef));
-    console.log(myRef);
   };
 
   return (
