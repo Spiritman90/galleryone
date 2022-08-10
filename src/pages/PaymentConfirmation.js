@@ -13,7 +13,7 @@ const PaymentConfirmation = () => {
   const { walletBalance } = useSelector((state) => state.wallet);
 
   console.log(walletBalance);
-  const reference = window.location.href();
+  const reference = window.location.href;
   console.log(reference);
 
   const dispatch = useDispatch();
