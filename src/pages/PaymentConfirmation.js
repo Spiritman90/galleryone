@@ -17,6 +17,10 @@ const PaymentConfirmation = () => {
   const reference = ref.split("=")[2];
   console.log(reference);
 
+  const myRef = {
+    reference,
+  };
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -37,10 +41,8 @@ const PaymentConfirmation = () => {
     e.preventDefault();
 
     dispatch(reset());
-    dispatch(confirmPayment(reference));
-    console.log(reference);
-
-    // setAmount("");
+    dispatch(confirmPayment(myRef));
+    console.log(myRef);
   };
 
   return (
