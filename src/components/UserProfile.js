@@ -18,10 +18,10 @@ const UserProfile = () => {
   const [showFundWallet, setShowFundWallet] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { newBalance } = useSelector(
-    (state) => state.wallet?.walletBalance?.balance
-  );
-  console.log(newBalance);
+  // const { newBalance } = useSelector(
+  //   (state) => state.wallet?.walletBalance?.balance
+  // );
+  // console.log(newBalance);
 
   // const { isLoading, isError, isSuccess, message } = useSelector(
   //   (state) => state.wallet
