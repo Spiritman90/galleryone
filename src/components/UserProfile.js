@@ -32,7 +32,7 @@ const UserProfile = () => {
     }
 
     if (isSuccess) {
-      // toast.success("Redirecting....");
+      toast.success("Wallet has been funded");
     }
 
     // dispatch(reset());
