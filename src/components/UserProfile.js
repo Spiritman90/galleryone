@@ -35,7 +35,7 @@ const UserProfile = () => {
     //   toast.success("Wallet has been funded");
     // }
 
-    dispatch(reset());
+    // dispatch(reset());
     if (walletBalance) {
       dispatch(getBalance());
     }
@@ -43,7 +43,7 @@ const UserProfile = () => {
     if (isLoading) {
       return <Spinner />;
     }
-  }, [isError, isSuccess, isLoading, message, dispatch]);
+  }, [isError, isSuccess, message, dispatch]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -66,7 +66,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN {JSON.stringify(walletBalance)}</h4>
+        <h4>NGN 0.00</h4>
       </div>
       <div className='user__actions'>
         <div
