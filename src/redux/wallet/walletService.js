@@ -38,7 +38,7 @@ const confirmPayment = async (token, reference) => {
 };
 
 // Get balance
-const getBalance = async (token) => {
+const getBalance = async () => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
