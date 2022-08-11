@@ -3,9 +3,10 @@ import Wallet from "../customicons/Wallet";
 import Avatar from "../customicons/Avatar";
 import Wallet2 from "../customicons/Wallet2";
 import Logout from "../customicons/Logout";
-// import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 // import { useSelector } from "react-redux";
 import Modal from "../components/Modal";
+import { toast } from "react-toastify";
 import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
 import Spinner from "../components/Spinner";
@@ -16,6 +17,7 @@ const UserProfile = () => {
   const [showModal, setShowModal] = useState(false);
   const [showFundWallet, setShowFundWallet] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   // const { newBalance } = useSelector(
   //   (state) => state.wallet?.walletBalance?.balance
   // );
@@ -35,14 +37,12 @@ const UserProfile = () => {
     }
 
     dispatch(reset());
-    const data = dispatch(getBalance());
+    dispatch(getBalance());
 
     if (isLoading) {
       return <Spinner />;
     }
   }, [isError, isSuccess, message, dispatch]);
-
-  console.log(data);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -50,7 +50,6 @@ const UserProfile = () => {
       : setShowModal(!showModal);
   };
 
-  const navigate = useNavigate();
   return (
     <div className='user__profile'>
       <div className='user__balance'>
