@@ -31,9 +31,9 @@ const UserProfile = () => {
       toast.error(message);
     }
 
-    if (isSuccess) {
-      toast.success("Wallet has been funded");
-    }
+    // if (isSuccess) {
+    //   toast.success("Wallet has been funded");
+    // }
 
     // dispatch(reset());
     if (walletBalance) {
@@ -66,7 +66,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN 0.00</h4>
+        <h4>NGN {walletBalance}</h4>
       </div>
       <div className='user__actions'>
         <div
