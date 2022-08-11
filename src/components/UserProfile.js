@@ -23,22 +23,24 @@ const UserProfile = () => {
 
   console.log(walletBalance);
 
-  // useEffect(() => {
-  //   if (isError) {
-  //     toast.error(message);
-  //   }
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
 
-  //   if (isSuccess) {
-  //     // toast.success("Redirecting....");
-  //   }
+    if (isSuccess) {
+      // toast.success("Redirecting....");
+    }
 
-  //   dispatch(reset());
-  //   // dispatch(getBalance());
+    // dispatch(reset());
+    if (walletBalance.newBalance.balance) {
+      dispatch(getBalance());
+    }
 
-  //   if (isLoading) {
-  //     return <Spinner />;
-  //   }
-  // }, [isError, isSuccess, message, dispatch]);
+    if (isLoading) {
+      return <Spinner />;
+    }
+  }, [isError, isSuccess, message, dispatch]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
