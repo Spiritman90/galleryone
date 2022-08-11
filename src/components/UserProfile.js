@@ -35,15 +35,15 @@ const UserProfile = () => {
     //   toast.success("Wallet has been funded");
     // }
 
-    // dispatch(reset());
     if (walletBalance) {
       dispatch(getBalance());
+      dispatch(reset());
     }
 
     if (isLoading) {
       return <Spinner />;
     }
-  }, [isError, isSuccess, message, dispatch]);
+  }, [isError, isSuccess, message, walletBalance, isLoading, dispatch]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
