@@ -16,7 +16,6 @@ export const fundWallet = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const token = localStorage.getItem("user");
-      console.log(token);
       return await walletService.fundWallet(data, token);
     } catch (error) {
       const message =
@@ -36,6 +35,25 @@ export const confirmPayment = createAsyncThunk(
     try {
       const token = localStorage.getItem("user");
       return await walletService.confirmPayment(token, reference);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+//getBalance
+export const getBalance = createAsyncThunk(
+  "wallet/getBalance",
+  async (token, thunkAPI) => {
+    try {
+      const token = localStorage.getItem("user");
+      return await walletService.getBalance(token);
     } catch (error) {
       const message =
         (error.response &&
@@ -84,6 +102,19 @@ const walletSlice = createSlice({
         state.walletBalance = action.payload;
       })
       .addCase(confirmPayment.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.walletBalance = action.payload;
+      })
+      .addCase(getBalance.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getBalance.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.walletBalance = action.payload;
+      })
+      .addCase(getBalance.rejected, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
         state.walletBalance = action.payload;

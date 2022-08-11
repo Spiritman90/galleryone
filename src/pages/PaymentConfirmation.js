@@ -12,6 +12,8 @@ const PaymentConfirmation = () => {
   const { walletBalance } = useSelector((state) => state.wallet);
 
   console.log(walletBalance);
+  const resp = walletBalance?.newBalance?.response;
+  // console.log(resp);
   const ref = window.location.href;
   const reference = ref.split("=")[2];
 
@@ -28,7 +30,7 @@ const PaymentConfirmation = () => {
     }
 
     if (isSuccess) {
-      toast.success("Success, please check your wallet");
+      toast.success(resp, "Please check your wallet");
       navigate("/");
     }
 

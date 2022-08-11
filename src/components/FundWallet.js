@@ -12,8 +12,6 @@ const FundWallet = () => {
   );
   const { urlRedirect } = useSelector((state) => state.wallet?.walletBalance);
 
-  console.log(urlRedirect);
-
   const data = {
     amount,
   };
@@ -42,8 +40,6 @@ const FundWallet = () => {
       dispatch(reset());
       dispatch(fundWallet(data));
     }
-
-    setAmount("");
   };
 
   return (
