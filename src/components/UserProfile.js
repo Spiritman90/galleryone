@@ -66,7 +66,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN {walletBalance.newBalance.balance}</h4>
+        <h4>NGN {walletBalance?.newBalance?.balance}</h4>
       </div>
       <div className='user__actions'>
         <div
