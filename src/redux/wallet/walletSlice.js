@@ -104,20 +104,20 @@ const walletSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.walletBalance = action.payload;
+      })
+      .addCase(getBalance.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getBalance.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.walletBalance = action.payload;
+      })
+      .addCase(getBalance.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.walletBalance = action.payload;
       });
-    // .addCase(getBalance.pending, (state) => {
-    //   state.isLoading = true;
-    // })
-    // .addCase(getBalance.fulfilled, (state, action) => {
-    //   state.isLoading = false;
-    //   state.isSuccess = true;
-    //   state.walletBalance = action.payload;
-    // })
-    // .addCase(getBalance.rejected, (state, action) => {
-    //   state.isLoading = false;
-    //   state.isSuccess = true;
-    //   state.walletBalance = action.payload;
-    // });
   },
 });
 
