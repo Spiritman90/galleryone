@@ -19,6 +19,10 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const { walletBalance } = useSelector((state) => state.wallet);
+
+  console.log(walletBalance);
+
   // useEffect(() => {
   //   if (isError) {
   //     toast.error(message);
