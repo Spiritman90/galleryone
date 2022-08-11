@@ -47,7 +47,6 @@ export const confirmPayment = createAsyncThunk(
   }
 );
 
-getBalance;
 export const getBalance = createAsyncThunk(
   "wallet/getBalance",
   async (token, thunkAPI) => {
