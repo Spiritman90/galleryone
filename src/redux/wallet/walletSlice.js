@@ -48,23 +48,23 @@ export const confirmPayment = createAsyncThunk(
 );
 
 //getBalance
-export const getBalance = createAsyncThunk(
-  "wallet/getBalance",
-  async (token, thunkAPI) => {
-    try {
-      const token = localStorage.getItem("user");
-      return await walletService.getBalance(token);
-    } catch (error) {
-      const message =
-        (error.response &&
-          error.response.data &&
-          error.response.data.message) ||
-        error.message ||
-        error.toString();
-      return thunkAPI.rejectWithValue(message);
-    }
-  }
-);
+// export const getBalance = createAsyncThunk(
+//   "wallet/getBalance",
+//   async (token, thunkAPI) => {
+//     try {
+//       const token = localStorage.getItem("user");
+//       return await walletService.getBalance(token);
+//     } catch (error) {
+//       const message =
+//         (error.response &&
+//           error.response.data &&
+//           error.response.data.message) ||
+//         error.message ||
+//         error.toString();
+//       return thunkAPI.rejectWithValue(message);
+//     }
+//   }
+// );
 
 const walletSlice = createSlice({
   name: "wallet",
@@ -105,20 +105,20 @@ const walletSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.walletBalance = action.payload;
-      })
-      .addCase(getBalance.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getBalance.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.walletBalance = action.payload;
-      })
-      .addCase(getBalance.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.walletBalance = action.payload;
       });
+    // .addCase(getBalance.pending, (state) => {
+    //   state.isLoading = true;
+    // })
+    // .addCase(getBalance.fulfilled, (state, action) => {
+    //   state.isLoading = false;
+    //   state.isSuccess = true;
+    //   state.walletBalance = action.payload;
+    // })
+    // .addCase(getBalance.rejected, (state, action) => {
+    //   state.isLoading = false;
+    //   state.isSuccess = true;
+    //   state.walletBalance = action.payload;
+    // });
   },
 });
 

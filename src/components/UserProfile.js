@@ -18,31 +18,31 @@ const UserProfile = () => {
   const [showFundWallet, setShowFundWallet] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const { newBalance } = useSelector(
-  //   (state) => state.wallet?.walletBalance?.balance
-  // );
-  // console.log(walletBalance);
-
-  const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.wallet
+  const { newBalance } = useSelector(
+    (state) => state.wallet?.walletBalance?.balance
   );
+  console.log(newBalance);
 
-  useEffect(() => {
-    if (isError) {
-      toast.error(message);
-    }
+  // const { isLoading, isError, isSuccess, message } = useSelector(
+  //   (state) => state.wallet
+  // );
 
-    if (isSuccess) {
-      // toast.success("Redirecting....");
-    }
+  // useEffect(() => {
+  //   if (isError) {
+  //     toast.error(message);
+  //   }
 
-    dispatch(reset());
-    dispatch(getBalance());
+  //   if (isSuccess) {
+  //     // toast.success("Redirecting....");
+  //   }
 
-    if (isLoading) {
-      return <Spinner />;
-    }
-  }, [isError, isSuccess, message, dispatch]);
+  //   dispatch(reset());
+  //   // dispatch(getBalance());
+
+  //   if (isLoading) {
+  //     return <Spinner />;
+  //   }
+  // }, [isError, isSuccess, message, dispatch]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
