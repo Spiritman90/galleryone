@@ -37,25 +37,25 @@ const confirmPayment = async (token, reference) => {
   return response.data;
 };
 
-//Get balance
-// const getBalance = async (token) => {
-//   const config = {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//     },
-//   };
-//   const response = await axios.get(GET_BALANCE, config);
-//   if (response.data) {
-//     localStorage.setItem("userBalance", JSON.stringify(response.data));
-//   }
-//   console.log(response.data);
-//   return response.data;
-// };
+// Get balance
+const getBalance = async (token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.get(GET_BALANCE, config);
+  if (response.data) {
+    localStorage.setItem("userBalance", JSON.stringify(response.data));
+  }
+  console.log(response.data);
+  return response.data;
+};
 
 const walletService = {
   fundWallet,
   confirmPayment,
-  // getBalance,
+  getBalance,
 };
 
 export default walletService;

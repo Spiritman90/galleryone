@@ -47,24 +47,24 @@ export const confirmPayment = createAsyncThunk(
   }
 );
 
-//getBalance
-// export const getBalance = createAsyncThunk(
-//   "wallet/getBalance",
-//   async (token, thunkAPI) => {
-//     try {
-//       const token = localStorage.getItem("user");
-//       return await walletService.getBalance(token);
-//     } catch (error) {
-//       const message =
-//         (error.response &&
-//           error.response.data &&
-//           error.response.data.message) ||
-//         error.message ||
-//         error.toString();
-//       return thunkAPI.rejectWithValue(message);
-//     }
-//   }
-// );
+getBalance;
+export const getBalance = createAsyncThunk(
+  "wallet/getBalance",
+  async (token, thunkAPI) => {
+    try {
+      const token = localStorage.getItem("user");
+      return await walletService.getBalance(token);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 const walletSlice = createSlice({
   name: "wallet",
