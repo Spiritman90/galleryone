@@ -31,9 +31,9 @@ const UserProfile = () => {
       toast.error(message);
     }
 
-    // if (isSuccess) {
-    //   toast.success("Wallet has been funded");
-    // }
+    if (isSuccess) {
+      toast.success("Wallet has been funded");
+    }
 
     if (walletBalance) {
       dispatch(reset());
