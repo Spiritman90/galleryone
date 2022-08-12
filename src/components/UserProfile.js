@@ -36,8 +36,8 @@ const UserProfile = () => {
     // }
 
     if (walletBalance) {
-      dispatch(getBalance());
       dispatch(reset());
+      dispatch(getBalance());
     }
 
     if (isLoading) {
