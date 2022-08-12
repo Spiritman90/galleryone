@@ -43,7 +43,7 @@ const UserProfile = () => {
     // if (isLoading) {
     //   return <Spinner />;
     // }
-  }, [isError, isSuccess, message, isLoading, dispatch]);
+  }, [isError, isSuccess, message, isLoading]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
