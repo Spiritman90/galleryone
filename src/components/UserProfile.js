@@ -31,18 +31,18 @@ const UserProfile = () => {
       toast.error(message);
     }
 
-    if (isSuccess) {
-      toast.success("Wallet has been funded");
-    }
+    // if (isSuccess) {
+    //   toast.success("Wallet has been funded");
+    // }
 
     if (walletBalance) {
       dispatch(reset());
       dispatch(getBalance());
     }
 
-    if (isLoading) {
-      return <Spinner />;
-    }
+    // if (isLoading) {
+    //   return <Spinner />;
+    // }
   }, [isError, isSuccess, message, isLoading, dispatch]);
 
   const hideModal = (ele) => {

@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import DeleteIcon from "../customicons/DeleteIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
+
+import { toast } from "react-toastify";
 import { BsArrowLeft } from "react-icons/bs";
 import {
   addToCart,
@@ -10,9 +13,52 @@ import {
   removeFromCart,
 } from "../redux/cart/cartSlice";
 
+import { makePayment, reset } from "../redux/wallet/walletSlice";
+
 const AddToCart = () => {
-  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const cart = useSelector((state) => state.cart);
+  const { isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.wallet
+  );
+
+  const [productId, setProductId] = useState(cart?.cartItems[0]?._id);
+  const [amount, setAmount] = useState(cart?.cartTotalAmount + 500);
+
+  // console.log(productId);
+  // console.log(amount);
+
+  const data = {
+    productId,
+    amount,
+  };
+
+  const refreshCart = () => {
+    cart.cartItems.length = 0;
+  };
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess) {
+      toast.success("Payment successful");
+      navigate("/");
+      refreshCart();
+    }
+
+    dispatch(reset());
+  }, [isError, isSuccess, message, dispatch, refreshCart, navigate]);
+
+  const handlePayment = () => {
+    dispatch(reset());
+    dispatch(makePayment(data));
+
+    setProductId("");
+    setAmount("");
+  };
 
   useEffect(() => {
     dispatch(getTotals());
@@ -107,9 +153,20 @@ const AddToCart = () => {
                 </div>
 
                 <div className='cart__button'>
-                  <button className='cart__pay-btn'>
-                    Pay NGN {cart.cartTotalAmount + 500}
-                  </button>
+                  {!isLoading && (
+                    <button className='cart__pay-btn' onClick={handlePayment}>
+                      Pay NGN {cart.cartTotalAmount + 500}
+                    </button>
+                  )}
+                  {isLoading && (
+                    <button
+                      className='cart__pay-btn'
+                      disabled
+                      onClick={handlePayment}
+                    >
+                      Paying...
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
