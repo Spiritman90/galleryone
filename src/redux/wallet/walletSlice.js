@@ -135,12 +135,12 @@ const walletSlice = createSlice({
       .addCase(getBalance.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.walletBalance = action.payload;
+        state.currentBalance = action.payload;
       })
       .addCase(getBalance.rejected, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.walletBalance = action.payload;
+        state.currentBalance = action.payload;
       })
       .addCase(makePayment.pending, (state) => {
         state.isLoading = true;
