@@ -19,7 +19,7 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { currentBalance } = useSelector((state) => state.wallet);
+  const { walletBalance } = useSelector((state) => state.wallet);
   const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
@@ -35,7 +35,7 @@ const UserProfile = () => {
     //   toast.success("Wallet has been funded");
     // }
 
-    if (currentBalance) {
+    if (walletBalance) {
       dispatch(reset());
       dispatch(getBalance());
     }
