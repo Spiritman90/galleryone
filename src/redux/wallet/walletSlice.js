@@ -2,11 +2,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import walletService from "./walletService";
 
 //Get balance from local storage
-// const walletBalance = JSON.parse(localStorage.getItem("walletBalance"));
+const currentBalance = JSON.parse(localStorage.getItem("currentBalance"));
 
 const initialState = {
-  // walletBalance: walletBalance ? walletBalance : 0.0,
   walletBalance: "",
+  currentBalance: currentBalance ? currentBalance : 0.0,
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -114,7 +114,7 @@ const walletSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        // state.walletBalance = "0";
+        state.walletBalance = action.payload;
       })
       .addCase(confirmPayment.pending, (state) => {
         state.isLoading = true;

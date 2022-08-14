@@ -48,7 +48,7 @@ const getBalance = async (token) => {
   };
   const response = await axios.get(GET_BALANCE, config);
   if (response.data) {
-    localStorage.setItem("walletBalance", JSON.stringify(response.data));
+    localStorage.setItem("currentBalance", JSON.stringify(response.data));
   }
   console.log(response.data);
   return response.data;

@@ -13,7 +13,6 @@ const PaymentConfirmation = () => {
 
   console.log(walletBalance);
   const resp = walletBalance?.newBalance?.response;
-  // console.log(resp);
   const ref = window.location.href;
   const reference = ref.split("=")[2];
 
@@ -35,7 +34,7 @@ const PaymentConfirmation = () => {
     }
 
     dispatch(reset());
-  }, [isError, isSuccess, message, navigate, dispatch]);
+  }, [isError, isSuccess, message, navigate, dispatch, resp]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

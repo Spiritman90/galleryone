@@ -9,7 +9,7 @@ import Modal from "../components/Modal";
 import { toast } from "react-toastify";
 import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
-import Spinner from "../components/Spinner";
+// import Spinner from "../components/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { getBalance, reset } from "../redux/wallet/walletSlice";
 
@@ -19,12 +19,12 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { walletBalance } = useSelector((state) => state.wallet);
+  const { currentBalance } = useSelector((state) => state.wallet);
   const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
 
-  console.log(walletBalance);
+  console.log(currentBalance);
 
   useEffect(() => {
     if (isError) {
@@ -35,7 +35,7 @@ const UserProfile = () => {
     //   toast.success("Wallet has been funded");
     // }
 
-    if (walletBalance) {
+    if (currentBalance) {
       dispatch(reset());
       dispatch(getBalance());
     }
@@ -43,7 +43,7 @@ const UserProfile = () => {
     // if (isLoading) {
     //   return <Spinner />;
     // }
-  }, [isError, isSuccess, message, isLoading, dispatch, walletBalance]);
+  }, [isError, isSuccess, message, isLoading, dispatch, currentBalance]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -66,7 +66,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        {/* <h4>NGN {walletBalance}</h4> */}
+        <h4>NGN {currentBalance}</h4>
       </div>
       <div className='user__actions'>
         <div
