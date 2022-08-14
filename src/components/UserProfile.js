@@ -43,7 +43,7 @@ const UserProfile = () => {
     // if (isLoading) {
     //   return <Spinner />;
     // }
-  }, [isError, isSuccess, message, isLoading]);
+  }, [isError, isSuccess, message, isLoading, dispatch, walletBalance]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -66,7 +66,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN {walletBalance?.newBalance?.balance}</h4>
+        {/* <h4>NGN {walletBalance}</h4> */}
       </div>
       <div className='user__actions'>
         <div

@@ -22,11 +22,9 @@ const Home = () => {
     dispatch(fetchAllProducts(data));
   }, [data]);
 
-  //comment
-
   return (
     <header className='header'>
-      <Banner />
+      <Banner className='banner' />
       <section className='offers'>
         <p className='offers__heading'>Best Offers </p>
         {isPending && <Spinner />}

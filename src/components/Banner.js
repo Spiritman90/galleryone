@@ -21,6 +21,7 @@ function Banner() {
         src={showBanner ? burna : salah}
         alt='burna'
         className='header__photo'
+        style={{ borderRadius: "0.5rem" }}
       />
     </div>
   );

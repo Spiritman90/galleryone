@@ -16,12 +16,16 @@
     color: $btn-gray;
     background-color: $darker-background;
     padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .offers__card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    background-color: $background-color-minor;
+    padding: 2rem 1rem;
   }
 }
 
