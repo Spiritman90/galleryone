@@ -19,13 +19,13 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { walletBalance } = useSelector((state) => state.wallet);
-  const { currentBalance } = useSelector((state) => state.wallet);
+  const { walletBalance } = useSelector((state) => state?.wallet);
+  const { currentBalance } = useSelector((state) => state?.wallet);
   // const { isLoading, isError, isSuccess, message } = useSelector(
   //   (state) => state.wallet
   // );
 
-  console.log(currentBalance);
+  console.log(currentBalance, walletBalance);
 
   // useEffect(() => {
   //   if (walletBalance) {

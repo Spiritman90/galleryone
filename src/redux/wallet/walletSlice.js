@@ -19,8 +19,8 @@ export const fundWallet = createAsyncThunk(
   "wallet/fundWallet",
   async (data, thunkAPI) => {
     try {
-      const token = localStorage.getItem("user");
-      return await walletService.fundWallet(data, token);
+      // const token = localStorage.getItem("token");
+      return await walletService.fundWallet(data);
     } catch (error) {
       const message =
         (error.response &&
@@ -37,8 +37,8 @@ export const confirmPayment = createAsyncThunk(
   "wallet/confirm-payment",
   async (reference, thunkAPI) => {
     try {
-      const token = localStorage.getItem("user");
-      return await walletService.confirmPayment(token, reference);
+      // const token = localStorage.getItem("user");
+      return await walletService.confirmPayment(reference);
     } catch (error) {
       const message =
         (error.response &&
@@ -56,8 +56,8 @@ export const getBalance = createAsyncThunk(
   "wallet/getBalance",
   async (_, thunkAPI) => {
     try {
-      const token = localStorage.getItem("user");
-      return await walletService.getBalance(token);
+      // const token = localStorage.getItem("user");
+      return await walletService.getBalance();
     } catch (error) {
       const message =
         (error.response &&
@@ -75,8 +75,8 @@ export const makePayment = createAsyncThunk(
   "wallet/makePayment",
   async (data, thunkAPI) => {
     try {
-      const token = localStorage.getItem("user");
-      return await walletService.makePayment(data, token);
+      // const token = localStorage.getItem("user");
+      return await walletService.makePayment(data);
     } catch (error) {
       const message =
         (error.response &&

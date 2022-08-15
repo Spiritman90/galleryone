@@ -11,6 +11,7 @@ const productSlice = createSlice({
   reducers: {
     fetchAllProducts: (state, action) => {
       state.allProducts = action.payload;
+      state.searchedProducts = initialState.searchedProducts;
     },
 
     searchResult: (state, action) => {

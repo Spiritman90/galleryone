@@ -21,7 +21,13 @@ const SearhBar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(searchResult(searchedProduct));
+    if (searchTerm !== "") {
+      dispatch(searchResult(searchedProduct));
+    }
+
+    if (searchTerm === "") {
+      navigate("/");
+    }
   }, [searchTerm]);
 
   const handleSubmit = (e) => {

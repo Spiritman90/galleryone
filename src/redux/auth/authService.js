@@ -10,9 +10,9 @@ const CONFIRM_PASSWORD_URL =
 //Register user
 const register = async (userData) => {
   const response = await axios.post(SIGNUP_URL, userData);
-  if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
-  }
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
   return response.data;
 };
 
@@ -20,7 +20,7 @@ const register = async (userData) => {
 const login = async (userData) => {
   const response = await axios.post(LOGIN_URL, userData);
   if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
+    localStorage.setItem("token", JSON.stringify(response.data));
   }
   return response.data;
 };
@@ -28,32 +28,32 @@ const login = async (userData) => {
 //Verify user
 const verify = async (userData) => {
   const response = await axios.post(VERIFY_URL, userData);
-  if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
-  }
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
 
   return response.data;
 };
 //Logout user
 const logout = async () => {
-  localStorage.removeItem("user");
+  localStorage.removeItem("token");
 };
 
 //ResetPassword
 const resetPassword = async (userData) => {
   const response = await axios.post(PASSWORD_URL, userData);
-  if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
-  }
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
   return response.data;
 };
 
 //Confirm Password
 const confirmPassword = async (userData) => {
   const response = await axios.post(CONFIRM_PASSWORD_URL, userData);
-  if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
-  }
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
   return response.data;
 };
 

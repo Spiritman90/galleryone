@@ -15,12 +15,15 @@ const Home = () => {
   );
 
   const dispatch = useDispatch();
+  // const allProducts = useSelector((state) => state.products.);
   const { allProducts, searchedProducts } = useSelector(
     (state) => state.products
   );
 
   useEffect(() => {
-    dispatch(fetchAllProducts(data));
+    if (data) {
+      dispatch(fetchAllProducts(data));
+    }
     // dispatch(getBalance());
   }, [data]);
 
