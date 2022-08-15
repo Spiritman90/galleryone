@@ -7,6 +7,7 @@ import useFetch from "../hooks/useFetch";
 import Spinner from "../components/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProducts } from "../redux/productSlice";
+import { getBalance } from "../redux/wallet/walletSlice";
 
 const Home = () => {
   const [data, isPending, error] = useFetch(
@@ -20,6 +21,8 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchAllProducts(data));
+    dispatch(getBalance());
+
   }, [data]);
 
   return (

@@ -21,28 +21,28 @@ const UserProfile = () => {
 
   const { walletBalance } = useSelector((state) => state.wallet);
   const { currentBalance } = useSelector((state) => state.wallet);
-  const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.wallet
-  );
+  // const { isLoading, isError, isSuccess, message } = useSelector(
+  //   (state) => state.wallet
+  // );
 
   console.log(currentBalance);
 
-  useEffect(() => {
-    if (walletBalance) {
-      dispatch(reset());
-      dispatch(getBalance());
-    }
+  // useEffect(() => {
+  //   if (walletBalance) {
+  //     dispatch(reset());
+  //     dispatch(getBalance());
+  //   }
 
-    if (isError) {
-      toast.error(message);
-    }
-    if (isSuccess) {
-      toast.success("Wallet funded successfully");
-    }
-    // if (isLoading) {
-    //   return <Spinner />;
-    // }
-  }, [isError, isSuccess, message]);
+  //   if (isError) {
+  //     toast.error(message);
+  //   }
+  //   if (isSuccess) {
+  //     toast.success("Wallet funded successfully");
+  //   }
+  //   // if (isLoading) {
+  //   //   return <Spinner />;
+  //   // }
+  // }, [isError, isSuccess, message]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
