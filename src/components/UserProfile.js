@@ -28,31 +28,29 @@ const UserProfile = () => {
   console.log(currentBalance);
 
   useEffect(() => {
-    if (isError) {
-      toast.error(message);
-    }
 
-    // if (isSuccess) {
-    //   toast.success("Wallet has been funded");
+    // if (walletBalance > 0){
+
     // }
 
-    if (walletBalance) {
-      dispatch(getBalance());
-      dispatch(reset());
-    }
+    // dispatch(reset());
+    // dispatch(getBalance());
 
+
+
+    // if (isError) {
+    //   toast.error(message);
+    // }
+
+    // if (isSuccess) {
+    //   toast.success("Wallet funded successfully");
+    // }
+
+    
     // if (isLoading) {
     //   return <Spinner />;
     // }
-  }, [
-    isError,
-    isSuccess,
-    message,
-    isLoading,
-    dispatch,
-    currentBalance,
-    walletBalance,
-  ]);
+  }, [isError, isSuccess, message, isLoading]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"

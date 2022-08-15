@@ -54,7 +54,7 @@ export const confirmPayment = createAsyncThunk(
 //Get Balance
 export const getBalance = createAsyncThunk(
   "wallet/getBalance",
-  async (token, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const token = localStorage.getItem("user");
       return await walletService.getBalance(token);
