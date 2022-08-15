@@ -21,8 +21,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchAllProducts(data));
-    dispatch(getBalance());
-
+    // dispatch(getBalance());
   }, [data]);
 
   return (
