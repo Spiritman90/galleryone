@@ -25,7 +25,7 @@ const FundWallet = () => {
     }
     if (isSuccess) {
       toast.success("Redirecting....");
-      window.location.assign(urlRedirect);
+      // window.location.assign(urlRedirect);
     }
     dispatch(reset());
   }, [isError, isSuccess, message, navigate, dispatch]);
@@ -35,7 +35,7 @@ const FundWallet = () => {
     if (!amount) {
       toast.error("Please enter an amount");
     } else {
-      dispatch(reset());
+      // dispatch(reset());
       dispatch(fundWallet(data));
     }
   };

@@ -15,6 +15,7 @@ const PaymentConfirmation = () => {
   const resp = walletBalance?.newBalance?.response;
   const ref = window.location.href;
   const reference = ref.split("=")[2];
+  console.log(reference)
 
   const myRef = {
     reference,
@@ -24,21 +25,20 @@ const PaymentConfirmation = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // if (isError) {
-    //   toast.error(message);
-    // }
-    // if (isSuccess) {
-    //   toast.success(resp, "Please check your wallet");
-    //   navigate("/");
-    // }
-    // dispatch(reset());
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess) {
+      toast.success(resp, "Please check your wallet");
+    }
+    dispatch(reset());
   }, [isError, isSuccess, message, navigate, dispatch, resp]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
-    dispatch(reset());
-    dispatch(confirmPayment(myRef));
+      e.preventDefault();
+      dispatch(reset());
+      dispatch(confirmPayment(myRef));
+      navigate("/");
   };
 
   return (

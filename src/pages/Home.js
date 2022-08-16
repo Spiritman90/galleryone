@@ -13,7 +13,6 @@ const Home = () => {
   const [data, isPending, error] = useFetch(
     "https://gallery-one-app.herokuapp.com/api/getAllProduct"
   );
-
   const dispatch = useDispatch();
   // const allProducts = useSelector((state) => state.products.);
   const { allProducts, searchedProducts } = useSelector(

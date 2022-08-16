@@ -2,11 +2,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import walletService from "./walletService";
 
 //Get balance from local storage
-const currentBalance = JSON.parse(localStorage.getItem("currentBalance"));
+// const currentBalance = JSON.parse(localStorage.getItem("currentBalance"));
 
 const initialState = {
   walletBalance: "",
-  currentBalance: currentBalance ? currentBalance : 0.0,
+  currentBalance: 0.0,
   isError: false,
   isSuccess: false,
   isLoading: false,

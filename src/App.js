@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  Outlet,
+} from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
@@ -25,64 +31,26 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
-import { useSelector } from "react-redux";
 import SearchResults from "./pages/SearchResults";
 import PaymentConfirmation from "./pages/PaymentConfirmation";
+import { useState } from "react";
+
+function ProtectedRoutes() {
+  const token = localStorage.getItem("token");
+  const [user] = useState(token ? token : "");
+
+  if (!user) {
+    return <Navigate replace to='/signup' />;
+  }
+
+  return <Outlet />;
+}
 
 function App() {
-  const { user } = useSelector((state) => state.auth);
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='*' element={<Error />} />
-            <Route
-              path='/liveauction'
-              element={user ? <LiveAuction /> : <Navigate to='/signup' />}
-            />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/privacy' element={<Privacy />} />
-            <Route path='/success' element={<Success />} />
-            <Route
-              path='/payment-confirmation'
-              element={<PaymentConfirmation />}
-            />
-            <Route path='/search-results' element={<SearchResults />} />
-            <Route
-              path='/product-details/:id'
-              element={user ? <ProductDetails /> : <Navigate to='/signup' />}
-            />
-            <Route
-              path='/buy-now'
-              element={user ? <BuyNow /> : <Navigate to='/signup' />}
-            />
-            <Route
-              path='/cart'
-              element={user ? <AddToCart /> : <Navigate to='/signup' />}
-            />
-
-            <Route path='/sell' element={<SellerWrapper />}>
-              <Route
-                path='sell_form'
-                element={user ? <Sell /> : <Navigate to='/signup' />}
-              />
-              <Route
-                path='profile'
-                element={user ? <Personal /> : <Navigate to='/signup' />}
-              />
-              <Route
-                path='history'
-                element={user ? <History /> : <Navigate to='/signup' />}
-              />
-              <Route
-                path='inbox'
-                element={user ? <Inbox /> : <Navigate to='/signup' />}
-              />
-            </Route>
-          </Route>
           <Route element={<AuthWrapper />}>
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />
@@ -91,6 +59,31 @@ function App() {
             <Route path='/email-verification' element={<EmailVerification />} />
             <Route path='/email-success' element={<EmailSuccess />} />
             <Route path='/email-failure' element={<EmailFailure />} />
+          </Route>
+          <Route element={<Layout />}>
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/privacy' element={<Privacy />} />
+            <Route path='/success' element={<Success />} />
+            <Route element={<ProtectedRoutes />}>
+              <Route path='/liveauction' element={<LiveAuction />} />
+              <Route
+                path='/payment-confirmation'
+                element={<PaymentConfirmation />}
+              />
+              <Route path='/search-results' element={<SearchResults />} />
+              <Route path='/product-details/:id' element={<ProductDetails />} />
+              <Route path='/buy-now' element={<BuyNow />} />
+              <Route path='/cart' element={<AddToCart />} />
+              <Route path='/sell' element={<SellerWrapper />}>
+                <Route path='sell_form' element={<Sell />} />
+                <Route path='profile' element={<Personal />} />
+                <Route path='history' element={<History />} />
+                <Route path='inbox' element={<Inbox />} />
+              </Route>
+            </Route>
+            <Route path='/' element={<Home />} />
+            <Route path='*' element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>

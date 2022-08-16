@@ -17,9 +17,7 @@ const fundWallet = async (data) => {
       Authorization: `Bearer ${token}`,
     },
   };
-
   const response = await axios.post(FUND_URL, data, config);
-  console.log(response,"fund wallet")
   // if (response.data) {
   //   localStorage.setItem("walletBalance", JSON.stringify(response.data));
   // }
@@ -28,14 +26,14 @@ const fundWallet = async (data) => {
 };
 
 //confirm payment
-const confirmPayment = async ( reference) => {
+const confirmPayment = async (reference) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   };
   const response = await axios.post(CONFIRM_PAYMENT, reference, config);
-  console.log(response)
+  console.log(response);
   // if (response.data) {
   //   localStorage.setItem("payment", JSON.stringify(response.data));
   // }
@@ -51,7 +49,7 @@ const getBalance = async () => {
     },
   };
   const response = await axios.get(GET_BALANCE, config);
-  console.log(response)
+  console.log(response);
   // if (response.data) {
   //   localStorage.setItem("currentBalance", JSON.stringify(response.data));
   // }
