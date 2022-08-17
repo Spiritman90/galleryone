@@ -106,9 +106,9 @@ const walletSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(fundWallet.fulfilled, (state, action) => {
+        state.walletBalance = action.payload;
         state.isLoading = false;
         state.isSuccess = true;
-        state.walletBalance = action.payload;
       })
       .addCase(fundWallet.rejected, (state, action) => {
         state.isLoading = false;
