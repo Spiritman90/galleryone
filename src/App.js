@@ -25,12 +25,17 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import SearchResults from "./pages/SearchResults";
 import PaymentConfirmation from "./pages/PaymentConfirmation";
 
 function App() {
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
+  // console.log(user);
+
+  const user = localStorage.getItem("token");
+  console.log(user);
+
   return (
     <>
       <BrowserRouter>
