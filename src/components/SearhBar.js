@@ -3,12 +3,13 @@ import { useState } from "react";
 import SearchIcon from "../customicons/SearchIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { searchResult } from "../redux/productSlice";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 // import { toast } from "react-toastify";
 
 const SearhBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { allProducts } = useSelector((state) => state.products);
+  const { pathname } = useLocation();
 
   const searchedProduct = allProducts?.filter((product) => {
     return (
@@ -21,13 +22,20 @@ const SearhBar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(searchResult(searchedProduct));
+    if (searchTerm !== "") {
+      dispatch(searchResult(searchedProduct));
+    }
   }, [searchTerm]);
+
+  const onBlurHandler = () => {
+    if (pathname === "/search-results" && searchTerm === "") {
+      navigate("/");
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/search-results");
-    // setSearchTerm("");
   };
 
   return (
@@ -37,6 +45,7 @@ const SearhBar = () => {
           type='text'
           placeholder='Search'
           className='search-input'
+          onBlur={onBlurHandler}
           onChange={(event) => {
             setSearchTerm(event.target.value);
           }}
