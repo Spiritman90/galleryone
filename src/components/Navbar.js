@@ -5,7 +5,6 @@ import UserNavbar from "./UserNavbar";
 
 const Navbar = () => {
   const user = localStorage.getItem("token");
-
   const navigate = useNavigate();
 
   return (
