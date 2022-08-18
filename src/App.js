@@ -34,7 +34,7 @@ function App() {
   // console.log(user);
 
   const user = localStorage.getItem("token");
-  console.log(user);
+  // console.log(user);
 
   return (
     <>

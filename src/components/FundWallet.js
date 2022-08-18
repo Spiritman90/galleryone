@@ -10,7 +10,7 @@ const FundWallet = () => {
   const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
-  const { urlRedirect } = useSelector((state) => state.wallet.walletBalance);
+  const { urlRedirect } = useSelector((state) => state.wallet?.walletBalance);
 
   const data = {
     amount,
@@ -28,7 +28,7 @@ const FundWallet = () => {
       window.location.assign(urlRedirect);
     }
     dispatch(reset());
-  }, [isError, isSuccess, message, navigate, dispatch]);
+  }, [isError, isSuccess, message, navigate, dispatch]); //eslint-disable-line
 
   const handleSubmit = (e) => {
     e.preventDefault();

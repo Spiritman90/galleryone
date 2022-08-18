@@ -2,9 +2,10 @@ import Logo from "../customicons/Logo";
 import SearhBar from "./SearhBar";
 import { Link, useNavigate } from "react-router-dom";
 import UserNavbar from "./UserNavbar";
+import { fetchUserToken } from "../service";
 
 const Navbar = () => {
-  const user = localStorage.getItem("token");
+  const user = fetchUserToken();
 
   const navigate = useNavigate();
 
