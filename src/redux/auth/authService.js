@@ -11,13 +11,13 @@ const register = async (userData) => {
 const login = async (userData) => {
   const response = await makeUnAuthorizedPost("signIn", userData);
   localStorage.setItem("token", JSON.stringify(response));
-  return response.data;
+  return response;
 };
 
 //Verify user
 const verify = async (userData) => {
   const response = await makeUnAuthorizedPost("confirmSignUp", userData);
-  return response.data;
+  return response;
 };
 //Logout user
 const logout = async () => {
@@ -27,7 +27,7 @@ const logout = async () => {
 //ResetPassword
 const resetPassword = async (userData) => {
   const response = await makeUnAuthorizedPost("forgotPassword", userData);
-  return response.data;
+  return response;
 };
 
 //Confirm Password
@@ -36,7 +36,7 @@ const confirmPassword = async (userData) => {
     "confirmForgotPassword",
     userData
   );
-  return response.data;
+  return response;
 };
 
 const authService = {
