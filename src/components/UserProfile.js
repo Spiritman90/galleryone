@@ -11,7 +11,7 @@ import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
 // import Spinner from "../components/Spinner";
 import { useSelector, useDispatch } from "react-redux";
-// import { getBalance, reset } from "../redux/wallet/walletSlice";
+import { getBalance, reset } from "../redux/wallet/walletSlice";
 
 const UserProfile = () => {
   const [showModal, setShowModal] = useState(false);
@@ -20,12 +20,12 @@ const UserProfile = () => {
   const navigate = useNavigate();
 
   const { walletBalance } = useSelector((state) => state?.wallet);
-  // const { currentBalance } = useSelector((state) => state?.wallet);
+  const { currentBalance } = useSelector((state) => state?.wallet);
   // const { isLoading, isError, isSuccess, message } = useSelector(
   //   (state) => state.wallet
   // );
 
-  // console.log(currentBalance, walletBalance);
+  console.log(currentBalance, walletBalance);
 
   // useEffect(() => {
   //   if (walletBalance) {
@@ -65,7 +65,7 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN 0.00</h4>
+        <h4>NGN {currentBalance}</h4>
       </div>
       <div className='user__actions'>
         <div

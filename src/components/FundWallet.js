@@ -23,12 +23,14 @@ const FundWallet = () => {
     if (isError) {
       toast.error(message);
     }
+
     if (isSuccess) {
       toast.success("Redirecting....");
       window.location.assign(urlRedirect);
     }
+
     dispatch(reset());
-  }, [isError, isSuccess, message, navigate, dispatch]); //eslint-disable-line
+  }, [isError, isSuccess, message, navigate, dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

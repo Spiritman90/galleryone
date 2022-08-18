@@ -2,13 +2,11 @@ import React from "react";
 import { Outlet } from "react-router";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import UserNavbar from "./UserNavbar";
-import { fetchUserToken } from "../service";
 
 function Layout() {
-  // const { user } = useSelector((state) => state?.auth);
-  const user = fetchUserToken();
+  const { user } = useSelector((state) => state.auth);
   return (
     <>
       {user ? <UserNavbar /> : <Navbar />}

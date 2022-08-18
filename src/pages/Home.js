@@ -14,6 +14,7 @@ const Home = () => {
     "https://gallery-one-app.herokuapp.com/api/getAllProduct"
   );
   const dispatch = useDispatch();
+  // const allProducts = useSelector((state) => state.products.);
   const { allProducts, searchedProducts } = useSelector(
     (state) => state.products
   );
@@ -22,6 +23,7 @@ const Home = () => {
     if (data) {
       dispatch(fetchAllProducts(data));
     }
+    // dispatch(getBalance());
   }, [data]);
 
   return (

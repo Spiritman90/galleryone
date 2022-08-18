@@ -1,22 +1,38 @@
-import { makeUnAuthorizedPost } from "../../service";
+import axios from "axios";
+
+const SIGNUP_URL = "https://gallery-one-app.herokuapp.com/api/signUp";
+const VERIFY_URL = "https://gallery-one-app.herokuapp.com/api/confirmSignUp";
+const LOGIN_URL = "https://gallery-one-app.herokuapp.com/api/signIn";
+const PASSWORD_URL = "https://gallery-one-app.herokuapp.com/api/forgotPassword";
+const CONFIRM_PASSWORD_URL =
+  "https://gallery-one-app.herokuapp.com/api/confirmForgotPassword";
 
 //Register user
 const register = async (userData) => {
-  const response = await makeUnAuthorizedPost("signUp", userData);
-
-  return response;
+  const response = await axios.post(SIGNUP_URL, userData);
+  if (response.data) {
+    localStorage.setItem("user", JSON.stringify(response.data));
+  }
+  return response.data;
 };
 
 //Login user
 const login = async (userData) => {
-  const response = await makeUnAuthorizedPost("signIn", userData);
-  localStorage.setItem("token", JSON.stringify(response));
-  return response.data;
+  const response = await axios.post(LOGIN_URL, userData);
+  if (response.data) {
+    localStorage.setItem("token", JSON.stringify(response.data));
+    return response.data;
+  }
+  return response;
 };
 
 //Verify user
 const verify = async (userData) => {
-  const response = await makeUnAuthorizedPost("confirmSignUp", userData);
+  const response = await axios.post(VERIFY_URL, userData);
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
+
   return response.data;
 };
 //Logout user
@@ -26,16 +42,19 @@ const logout = async () => {
 
 //ResetPassword
 const resetPassword = async (userData) => {
-  const response = await makeUnAuthorizedPost("forgotPassword", userData);
+  const response = await axios.post(PASSWORD_URL, userData);
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
   return response.data;
 };
 
 //Confirm Password
 const confirmPassword = async (userData) => {
-  const response = await makeUnAuthorizedPost(
-    "confirmForgotPassword",
-    userData
-  );
+  const response = await axios.post(CONFIRM_PASSWORD_URL, userData);
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
   return response.data;
 };
 

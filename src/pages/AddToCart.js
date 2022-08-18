@@ -34,6 +34,10 @@ const AddToCart = () => {
     amount,
   };
 
+  const refreshCart = () => {
+    cart.cartItems.length = 0;
+  };
+
   useEffect(() => {
     if (isError) {
       toast.error(message);
@@ -42,10 +46,11 @@ const AddToCart = () => {
     if (isSuccess) {
       toast.success("Payment successful");
       navigate("/");
+      refreshCart();
     }
 
     dispatch(reset());
-  }, [isError, isSuccess, message, dispatch, navigate]);
+  }, [isError, isSuccess, message, dispatch, refreshCart, navigate]);
 
   const handlePayment = () => {
     dispatch(reset());
