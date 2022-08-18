@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = "https://gallery-one-app.herokuapp.com/api/";
 const REQUEST_TIMEOUT = 6000;
 
-export const fetchUserToken = () => localStorage.getItem("token");
+export const fetchUserToken = () => JSON.parse(localStorage.getItem("token"));
 const clearData = () => localStorage.clear();
 
 /** general headers **/

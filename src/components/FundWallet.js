@@ -30,7 +30,7 @@ const FundWallet = () => {
     }
 
     dispatch(reset());
-  }, [isError, isSuccess, message, navigate, dispatch]);
+  }, [isError, isSuccess, message, navigate, dispatch, urlRedirect]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

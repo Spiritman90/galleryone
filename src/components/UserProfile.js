@@ -6,43 +6,18 @@ import Logout from "../customicons/Logout";
 import { useNavigate } from "react-router";
 // import { useSelector } from "react-redux";
 import Modal from "../components/Modal";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
 // import Spinner from "../components/Spinner";
-import { useSelector, useDispatch } from "react-redux";
-import { getBalance, reset } from "../redux/wallet/walletSlice";
+import { useSelector } from "react-redux";
 
 const UserProfile = () => {
   const [showModal, setShowModal] = useState(false);
   const [showFundWallet, setShowFundWallet] = useState(false);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { walletBalance } = useSelector((state) => state?.wallet);
   const { currentBalance } = useSelector((state) => state?.wallet);
-  // const { isLoading, isError, isSuccess, message } = useSelector(
-  //   (state) => state.wallet
-  // );
-
-  console.log(currentBalance, walletBalance);
-
-  // useEffect(() => {
-  //   if (walletBalance) {
-  //     dispatch(reset());
-  //     dispatch(getBalance());
-  //   }
-
-  //   if (isError) {
-  //     toast.error(message);
-  //   }
-  //   if (isSuccess) {
-  //     toast.success("Wallet funded successfully");
-  //   }
-  //   // if (isLoading) {
-  //   //   return <Spinner />;
-  //   // }
-  // }, [isError, isSuccess, message]);
 
   const hideModal = (ele) => {
     ele === "fundWallet"

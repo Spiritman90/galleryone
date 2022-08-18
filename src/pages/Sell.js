@@ -8,24 +8,36 @@ import { itemUpload, reset } from "../redux/sell/sellSlice";
 
 const Sell = () => {
   const [changeView, setChangeView] = useState(0);
+  const [data, setData] = useState({
+    item: "",
+    price: "",
+    category: "",
+    description: "",
+  });
+
+  const inputChangehandler = (e) => {
+    const { name, value } = e.target;
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const [images, setImages] = useState([]);
-  const [item, setItem] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
+  // const [item, setItem] = useState("");
+  // const [price, setPrice] = useState("");
+  // const [category, setCategory] = useState("");
+  // const [description, setDescription] = useState("");
   const maxNumber = 5;
   const dispatch = useDispatch();
   const { items, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.sell
   );
 
-  const data = {
-    images,
-    item,
-    price,
-    category,
-    description,
-  };
+  // const data = {
+  //   images,
+  //   item,
+  //   price,
+  //   category,
+  //   description,
+  // };
 
   useEffect(() => {
     if (isError) {
@@ -39,22 +51,31 @@ const Sell = () => {
     dispatch(reset());
   }, [items, isError, isSuccess, message, dispatch]);
 
-  const onChange = (imageList, addUpdateIndex) => {
-    // data for submit
-    console.log(imageList, addUpdateIndex);
-    setImages(imageList);
+  const onImageHandler = (e) => {
+    const [file] = e.target.files;
+
+    setImages((prev) => [...prev, file]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    images.forEach((image) => formData.append("images", image));
+    const dataKeys = Object.keys(data);
 
-    dispatch(reset());
-    dispatch(itemUpload(data));
-    console.log(images);
-    console.log(item);
-    console.log(price);
-    console.log(category);
-    console.log(description);
+    dataKeys.forEach((key) => formData.append(key, data[key]));
+
+    // if (images.length === 5) {
+    //   setData((prev) => ({ ...prev, images: [...images] }));
+    // }
+
+    dispatch(itemUpload(formData));
+    // dispatch(reset());
+    // console.log(images);
+    // console.log(item);
+    // console.log(price);
+    // console.log(category);
+    // console.log(description);
   };
 
   return (
@@ -64,7 +85,7 @@ const Sell = () => {
           <div className='sell__padding'>
             <h4 className='sell__heading'>Item Information</h4>
             <div className='sell__container'>
-              <ImageUploading
+              {/* <ImageUploading
                 multiple={true}
                 value={images}
                 onChange={onChange}
@@ -116,27 +137,40 @@ const Sell = () => {
                     </div>
                   </>
                 )}
-              </ImageUploading>
+              </ImageUploading> */}
             </div>
             <div className='sell__form'>
-              <form className='sell__block'>
+              <form onSubmit={handleSubmit} className='sell__block'>
+                <label className='sell__labels'>
+                  <span>Add Image</span>
+                  <input
+                    type='file'
+                    placeholder='add image'
+                    className='sell__inputs'
+                    onChange={onImageHandler}
+                    // value={item}
+                  />
+                </label>
                 <label className='sell__labels'>
                   <input
                     type='text'
                     placeholder='Item name'
                     className='sell__inputs'
-                    onChange={(e) => setItem(e.target.value)}
-                    value={item}
+                    onChange={inputChangehandler}
+                    value={data.item}
+                    name='item'
                   />
                 </label>
 
                 <label className='sell__labels'>
                   <input
                     type='text'
+                    pattern='^[0-9]*$'
                     placeholder='Item price'
                     className='sell__inputs'
-                    onChange={(e) => setPrice(e.target.value)}
-                    value={price}
+                    onChange={inputChangehandler}
+                    value={data.price}
+                    name='price'
                   />
                 </label>
                 <label className='sell__labels'>
@@ -144,8 +178,9 @@ const Sell = () => {
                     type='text'
                     placeholder='Item category'
                     className='sell__inputs'
-                    onChange={(e) => setCategory(e.target.value)}
-                    value={category}
+                    onChange={inputChangehandler}
+                    value={data.category}
+                    name='category'
                   />
                 </label>
 
@@ -153,8 +188,9 @@ const Sell = () => {
                   <textarea
                     placeholder='Item description'
                     className='sell__textarea'
-                    onChange={(e) => setDescription(e.target.value)}
-                    value={description}
+                    onChange={inputChangehandler}
+                    value={data.description}
+                    name='description'
                   ></textarea>
                 </label>
               </form>
@@ -173,9 +209,10 @@ const Sell = () => {
                 )}
                 {isLoading && (
                   <button
+                    disabled
                     className='sell__btn'
                     type='submit'
-                    onClick={handleSubmit}
+                    // onClick={handleSubmit}
                   >
                     Uploading...
                   </button>

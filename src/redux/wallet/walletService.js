@@ -49,11 +49,9 @@ const getBalance = async () => {
     },
   };
   const response = await axios.get(GET_BALANCE, config);
-  console.log(response);
   // if (response.data) {
   //   localStorage.setItem("currentBalance", JSON.stringify(response.data));
   // }
-  console.log(response.data);
   return response.data;
 };
 const makePayment = async (data) => {

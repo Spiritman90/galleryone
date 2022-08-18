@@ -7,15 +7,19 @@ import { Link, NavLink } from "react-router-dom";
 import UserProfile from "./UserProfile";
 import Bag from "../customicons/Bag";
 // import Cart from "../customicons/Cart";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getBalance } from "../redux/wallet/walletSlice";
 
 const UserNavbar = () => {
   const [showUserProfile, setShowUserProfile] = useState(false);
-  // const cart = useSelector((state) => state.cart);
   const { cartTotalQuantity } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    setShowUserProfile(!showUserProfile);
+    setShowUserProfile((prev) => !prev);
+    if (showUserProfile === false) {
+      dispatch(getBalance());
+    }
   };
   return (
     <nav className='user__navbar'>
@@ -42,10 +46,10 @@ const UserNavbar = () => {
         </div>
       </Link>
 
-      <div className='user' onClick={handleClick}>
+      <button className='user' onClick={handleClick}>
         <User className='user__image' />
         <Arrow />
-      </div>
+      </button>
       {showUserProfile ? <UserProfile /> : null}
     </nav>
   );

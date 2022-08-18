@@ -7,7 +7,7 @@ import useFetch from "../hooks/useFetch";
 import Spinner from "../components/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProducts } from "../redux/productSlice";
-import { getBalance } from "../redux/wallet/walletSlice";
+// import { getBalance } from "../redux/wallet/walletSlice";
 
 const Home = () => {
   const [data, isPending, error] = useFetch(
@@ -30,12 +30,51 @@ const Home = () => {
     <header className='header'>
       <Banner className='banner' />
       <section className='offers'>
+        {/* <p className='offers__heading'>Great offers</p> */}
+        {/* {isPending && <Spinner />}
+        {error && <Error />} */}
+        {/* <div className='great__card'>
+          {(searchedProducts || allProducts)?.slice(1, 4).map((product) => (
+            <Link
+              className='great__card-itm'
+              to={`/product-details/${product._id}`}
+              key={product._id}
+            >
+              <ProductImage
+                ImageSource={product.avaterMainUrl}
+                // title={product.title}
+                // price={product.price}
+              />
+            </Link>
+          ))}
+        </div> */}
+      </section>
+      <section className='offers'>
         <p className='offers__heading'>Best Offers </p>
         {isPending && <Spinner />}
         {error && <Error />}
         <div className='offers__card'>
           {(searchedProducts || allProducts)?.map((product) => (
-            <Link to={`/product-details/${product._id}`} key={product._id}>
+            <Link
+              className='offers__card-itm'
+              to={`/product-details/${product._id}`}
+              key={product._id}
+            >
+              <ProductImage
+                ImageSource={product.avaterMainUrl}
+                title={product.title}
+                price={product.price}
+              />
+            </Link>
+          ))}
+        </div>
+        <div className='offers__card'>
+          {(searchedProducts || allProducts)?.map((product) => (
+            <Link
+              className='offers__card-itm'
+              to={`/product-details/${product._id}`}
+              key={product._id}
+            >
               <ProductImage
                 ImageSource={product.avaterMainUrl}
                 title={product.title}
