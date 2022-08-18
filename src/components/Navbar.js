@@ -2,10 +2,10 @@ import Logo from "../customicons/Logo";
 import SearhBar from "./SearhBar";
 import { Link, useNavigate } from "react-router-dom";
 import UserNavbar from "./UserNavbar";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const user = localStorage.getItem("token");
-
+  const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
   return (

@@ -2,11 +2,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import walletService from "./walletService";
 
 //Get balance from local storage
-// const currentBalance = JSON.parse(localStorage.getItem("currentBalance"));
+const currentBalance = JSON.parse(localStorage.getItem("currentBalance"));
 
 const initialState = {
   walletBalance: "",
-  currentBalance: 0.0,
+  currentBalance: currentBalance ? currentBalance : 0.0,
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -19,8 +19,8 @@ export const fundWallet = createAsyncThunk(
   "wallet/fundWallet",
   async (data, thunkAPI) => {
     try {
-      // const token = localStorage.getItem("token");
-      return await walletService.fundWallet(data);
+      const token = localStorage.getItem("user");
+      return await walletService.fundWallet(data, token);
     } catch (error) {
       const message =
         (error.response &&
@@ -37,8 +37,8 @@ export const confirmPayment = createAsyncThunk(
   "wallet/confirm-payment",
   async (reference, thunkAPI) => {
     try {
-      // const token = localStorage.getItem("user");
-      return await walletService.confirmPayment(reference);
+      const token = localStorage.getItem("user");
+      return await walletService.confirmPayment(token, reference);
     } catch (error) {
       const message =
         (error.response &&
@@ -56,8 +56,8 @@ export const getBalance = createAsyncThunk(
   "wallet/getBalance",
   async (_, thunkAPI) => {
     try {
-      // const token = localStorage.getItem("user");
-      return await walletService.getBalance();
+      const token = localStorage.getItem("user");
+      return await walletService.getBalance(token);
     } catch (error) {
       const message =
         (error.response &&
@@ -75,8 +75,8 @@ export const makePayment = createAsyncThunk(
   "wallet/makePayment",
   async (data, thunkAPI) => {
     try {
-      // const token = localStorage.getItem("user");
-      return await walletService.makePayment(data);
+      const token = localStorage.getItem("user");
+      return await walletService.makePayment(data, token);
     } catch (error) {
       const message =
         (error.response &&
@@ -106,9 +106,9 @@ const walletSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(fundWallet.fulfilled, (state, action) => {
-        state.walletBalance = action.payload;
         state.isLoading = false;
         state.isSuccess = true;
+        state.walletBalance = action.payload;
       })
       .addCase(fundWallet.rejected, (state, action) => {
         state.isLoading = false;
