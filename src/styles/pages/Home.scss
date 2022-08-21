@@ -3,6 +3,10 @@
 .header {
   margin: 4rem;
 
+  @media screen and (max-width: 528px) {
+    margin: 1.5rem;
+  }
+
   &__photo {
     width: 100%;
   }
@@ -18,6 +22,10 @@
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 528px) {
+      border-radius: 0rem;
+    }
   }
 
   .offers__card {
@@ -37,60 +45,20 @@
       min-width: 304px;
       max-width: 304px;
     }
-  }
-  .great__card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 238px);
-    gap: 1rem 0.625rem;
 
-    &-itm {
-      overflow: hidden;
-      &:first-child {
-        grid-row: 1/3;
-      }
-      img {
-        height: fit-content;
-        width: fit-content;
-      }
+    @media screen and (max-width: 528px) {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+
+  .header__photo {
+    border-radius: 0.5rem;
+    @media screen and (max-width: 528px) {
+      border-radius: 0;
+      margin-bottom: -2rem;
+      margin-top: 0;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 }
-
-// @media screen and (max-width: 528px) {
-//   .offers__card {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
-
-// .parent {
-//   position: relative;
-// }
-
-// .bag-container {
-//   z-index: 5;
-//   position: absolute;
-//   display: flex;
-//   left: 79rem;
-//   // right: 1rem;
-//   top: -2.8rem;
-// }
-
-// .bag-quantity {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 1.5625rem;
-//   width: 1.5625rem;
-//   background: #eb5757;
-//   border-radius: 50%;
-//   font-size: 1rem;
-//   font-weight: 700;
-//   font-family: $secondary-font;
-//   color: $btn-gray;
-//   line-height: 1.625rem;
-//   margin-left: -2.5rem;
-// }

@@ -35,6 +35,9 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
+    background-color: inherit;
+    border: none;
+    outline: none;
 
     &__image {
       border-radius: 50%;

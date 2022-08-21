@@ -1,7 +1,13 @@
 @import "../variables/colors.scss";
 .email-success__button {
   margin-top: 3.9375rem;
-  margin-left: 14.5rem;
+  margin-left: 3.9375rem;
+
+  @media screen and (max-width: 528px) {
+    // margin: 3rem auto;
+    display: grid;
+    place-items: center;
+  }
 }
 
 .email-success__btn {
@@ -33,4 +39,8 @@
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2.5rem;
+
+  @media screen and (max-width: 528px) {
+    font-size: 1.5rem;
+  }
 }

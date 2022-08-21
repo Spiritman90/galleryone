@@ -48,8 +48,7 @@ const EmailVerification = () => {
       <div className='email__lead'>
         <h1 className='email__heading'>Email Verification</h1>
         <p className='email__created'>
-          Account created successfully, kindly check your email for confirmation
-          code.
+          Enter the 6 digit number you received in your inbox
         </p>
       </div>
 
@@ -85,7 +84,6 @@ const EmailVerification = () => {
             focusBorderColor='#eb861e'
             size='lg'
             onChange={onPinInputChange}
-            background='red'
             borderColor='#BDBDBD'
           />
         </div>

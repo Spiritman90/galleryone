@@ -8,7 +8,7 @@ import UserProfile from "./UserProfile";
 import Bag from "../customicons/Bag";
 // import Cart from "../customicons/Cart";
 import { useDispatch, useSelector } from "react-redux";
-import { getBalance } from "../redux/wallet/walletSlice";
+// import { getBalance } from "../redux/wallet/walletSlice";
 
 const UserNavbar = () => {
   const [showUserProfile, setShowUserProfile] = useState(false);
@@ -18,7 +18,7 @@ const UserNavbar = () => {
   const handleClick = () => {
     setShowUserProfile((prev) => !prev);
     if (showUserProfile === false) {
-      dispatch(getBalance());
+      // dispatch(getBalance());
     }
   };
   return (

@@ -3,19 +3,36 @@
 .buynow {
   padding: 5.1875rem 4.4375rem;
 
+  &__a {
+    min-width: 54rem;
+    // height: 37.375rem;
+  }
+
+  &__info {
+    background-color: $background-color-minor;
+    margin-top: -1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+
   &__flex {
     display: flex;
     gap: 1.5625rem;
+
+    @media screen and (max-width: 528px) {
+      flex-direction: column;
+    }
   }
 
   &__address {
     background-color: $background-color-minor;
-    height: 7.625rem;
-    width: 47.125rem;
     border-radius: 0.625rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    // flex: 1;
+
+    @media screen and (max-width: 528px) {
+      flex-direction: column;
+    }
   }
 
   &__text {
@@ -39,10 +56,10 @@
   }
 
   &__input1 {
-    height: 4.25rem;
-    width: 23.125rem;
+    background-color: $background-color-minor;
     border-radius: 0.5rem;
     border: 0.125rem solid #d0d2d4;
+    padding: 1rem 8.9rem;
     padding-left: 1rem;
     background-color: $input-background;
     outline: none;
@@ -62,8 +79,7 @@
   }
 
   &__input2 {
-    height: 4.25rem;
-    width: 47.125rem;
+    padding: 1rem 32.9rem;
     border-radius: 0.5rem;
     border: 0.125rem solid #d0d2d4;
     padding-left: 1rem;
@@ -106,10 +122,9 @@
   }
 
   &__paymentinput1 {
-    height: 4.25rem;
-    width: 47.125rem;
     border-radius: 0.5rem;
     outline: none;
+    padding: 1rem 32.9rem;
     padding-left: 1rem;
     background-color: $input-background;
     border: 0.125rem solid #d0d2d4;
@@ -129,10 +144,9 @@
   }
 
   &__paymentinput2 {
-    height: 4.25rem;
-    width: 14.5625rem;
     border-radius: 0.5rem;
     outline: none;
+    padding: 1rem 4.5rem;
     padding-left: 1rem;
     background-color: $input-background;
     border: 0.125rem solid #d0d2d4;
@@ -147,9 +161,7 @@
   }
 
   &__b {
-    height: 53.9375rem;
-    // width: 25.9375rem;
-    flex: 1;
+    min-width: 25.9375rem;
     border-radius: 0.625rem;
     padding-bottom: 3rem;
     background-color: $background-color-minor;

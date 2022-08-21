@@ -38,6 +38,11 @@
     color: $btn-gray;
     margin-right: 7rem;
 
+    @media screen and (max-width: 528px) {
+      margin-right: 25px;
+      width: 100%;
+    }
+
     span {
       font-family: $secondary-font;
       font-size: 1rem;
@@ -63,7 +68,9 @@
     margin-top: 1rem;
 
     &__link {
-      display: none;
+      display: inline-block;
+      // margin-left: 2rem;
+      margin-right: 14rem;
     }
   }
 }

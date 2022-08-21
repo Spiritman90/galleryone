@@ -1,23 +1,8 @@
 @import "../variables/colors.scss";
 
-.email-failure__button {
-  margin-top: 3.9375rem;
-  margin-left: 14.5rem;
-}
-
-.email-failure__btn {
-  font-family: $secondary-font;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.8125rem;
-  color: $primary-color;
-  border: none;
-  background-color: inherit;
-  outline: none;
-  cursor: pointer;
-
-  &:hover {
-    filter: brightness(90%);
+.email-failure {
+  @media screen and (max-width: 528px) {
+    padding: 1rem;
   }
 }
 
@@ -27,6 +12,15 @@
   margin-top: 10rem;
 }
 
+.email-failure__message {
+  display: grid;
+  place-items: center;
+
+  @media screen and (max-width: 528px) {
+    padding: 1rem;
+  }
+}
+
 .email__failure__text {
   color: #fff;
   font-family: $secondary-font;
@@ -34,6 +28,10 @@
   font-weight: 700;
   line-height: 2.5rem;
   margin-top: 2rem;
+
+  @media screen and (max-width: 528px) {
+    font-size: 1.125rem;
+  }
 }
 
 .email__failure__text2 {
@@ -43,4 +41,8 @@
   line-height: 2.5rem;
   color: #fff;
   margin-top: 0.5rem;
+  @media screen and (max-width: 528px) {
+    font-size: 1rem;
+    text-align: justify;
+  }
 }

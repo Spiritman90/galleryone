@@ -11,8 +11,11 @@
   &__logo {
     display: flex;
     grid-column: 2/3;
-
     align-self: center;
+
+    @media screen and (max-width: 528px) {
+      display: none;
+    }
   }
   .features {
     &__feature {
@@ -24,6 +27,10 @@
     &__about {
       align-self: center;
       grid-column: 8/9;
+    }
+
+    @media screen and (max-width: 528px) {
+      padding-right: 2rem;
     }
   }
 }

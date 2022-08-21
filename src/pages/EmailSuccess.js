@@ -20,7 +20,9 @@ const EmailSuccess = () => {
 
       <div className='email-sucess__icon'>
         <ValidEmail />
-        <p className='email__success__text'>{user?.message}</p>
+        <p className='email__success__text'>
+          {user?.message} Your mail has been verified
+        </p>
       </div>
     </section>
   );

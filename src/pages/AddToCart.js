@@ -40,8 +40,8 @@ const AddToCart = () => {
     }
 
     if (isSuccess) {
-      toast.success("Payment successful");
-      navigate("/");
+      // toast.success("Payment successful");
+      navigate("/success");
     }
 
     dispatch(reset());

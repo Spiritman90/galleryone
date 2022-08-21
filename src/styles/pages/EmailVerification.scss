@@ -1,15 +1,20 @@
 @import "../variables/colors.scss";
 
 .email {
-  margin: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 4rem auto;
+  display: grid;
+  place-items: center;
+
+  @media screen and (max-width: 528px) {
+    padding: 2rem;
+  }
 
   &__lead {
-    display: grid;
-    place-items: center;
+    margin-left: -1rem;
+
+    // @media screen and (max-width: 528px) {
+    //   margin: 0 1.5rem;
+    // }
   }
 
   &__heading {
@@ -18,6 +23,9 @@
     font-weight: 700;
     line-height: 1.375rem;
     color: #fff;
+    // @media screen and (max-width: 528px) {
+    //   margin-left: -6.5rem;
+    // }
   }
 
   &__created {
@@ -28,9 +36,8 @@
   }
 
   &__input1 {
-    height: 4.25rem;
-    width: 55.75rem;
-    // width: 100%;
+    padding: 1rem 5rem;
+    width: 100%;
     border-radius: 0.5rem;
     padding-left: 1rem;
     outline: none;
@@ -41,18 +48,23 @@
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 2.25rem;
-    // margin-top: 4.6875rem;
     margin-top: 2rem;
     margin-bottom: 3.8125rem;
 
     &:focus {
       border: 0.125rem solid $primary-color;
     }
+
+    // @media screen and (max-width: 528px) {
+    //   width: 20rem;
+    //   // margin: 0 1.5rem;
+    // }
   }
 
   &__otp {
     display: flex;
     gap: 2rem;
+    width: 100%;
 
     &-text {
       color: #fff;
@@ -63,9 +75,9 @@
       margin-bottom: -4rem;
     }
     &-input {
-      height: 5.875rem;
-      width: 5.4375rem;
-      // width: 100%;
+      // height: 5.875rem;
+      // width: 5.4375rem;
+      width: 100%;
       border-radius: 0.5rem;
       padding-left: 1rem;
       outline: none;
@@ -97,9 +109,9 @@
   }
 
   &__otp-input {
-    height: 5.875rem;
-    width: 5.4375rem;
-    // width: 100%;
+    // height: 5.875rem;
+    // width: 5.4375rem;
+    width: 100%;
     border-radius: 0.5rem;
     padding-left: 1rem;
     outline: none;
@@ -142,6 +154,7 @@
 
   &__btn-verify {
     padding: 1.5rem 8rem;
+    width: 100%;
     border-radius: 0.5rem;
     border: none;
     background-color: $primary-color;

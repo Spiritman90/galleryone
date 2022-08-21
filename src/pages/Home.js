@@ -14,7 +14,6 @@ const Home = () => {
     "https://gallery-one-app.herokuapp.com/api/getAllProduct"
   );
   const dispatch = useDispatch();
-  // const allProducts = useSelector((state) => state.products.);
   const { allProducts, searchedProducts } = useSelector(
     (state) => state.products
   );
@@ -23,32 +22,11 @@ const Home = () => {
     if (data) {
       dispatch(fetchAllProducts(data));
     }
-    // dispatch(getBalance());
   }, [data]);
 
   return (
     <header className='header'>
       <Banner className='banner' />
-      <section className='offers'>
-        {/* <p className='offers__heading'>Great offers</p> */}
-        {/* {isPending && <Spinner />}
-        {error && <Error />} */}
-        {/* <div className='great__card'>
-          {(searchedProducts || allProducts)?.slice(1, 4).map((product) => (
-            <Link
-              className='great__card-itm'
-              to={`/product-details/${product._id}`}
-              key={product._id}
-            >
-              <ProductImage
-                ImageSource={product.avaterMainUrl}
-                // title={product.title}
-                // price={product.price}
-              />
-            </Link>
-          ))}
-        </div> */}
-      </section>
       <section className='offers'>
         <p className='offers__heading'>Best Offers </p>
         {isPending && <Spinner />}

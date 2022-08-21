@@ -25,12 +25,14 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import SearchResults from "./pages/SearchResults";
 import PaymentConfirmation from "./pages/PaymentConfirmation";
+import { useState } from "react";
 
 function App() {
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
+  const [userSignedIn, setUserSignedIn] = useState(true);
   return (
     <>
       <BrowserRouter>
@@ -41,7 +43,9 @@ function App() {
             <Route path='*' element={<Error />} />
             <Route
               path='/liveauction'
-              element={user ? <LiveAuction /> : <Navigate to='/signup' />}
+              element={
+                userSignedIn ? <LiveAuction /> : <Navigate to='/signup' />
+              }
             />
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />
@@ -53,33 +57,37 @@ function App() {
             <Route path='/search-results' element={<SearchResults />} />
             <Route
               path='/product-details/:id'
-              element={user ? <ProductDetails /> : <Navigate to='/signup' />}
+              element={
+                userSignedIn ? <ProductDetails /> : <Navigate to='/signup' />
+              }
             />
             <Route
               path='/buy-now'
-              element={user ? <BuyNow /> : <Navigate to='/signup' />}
+              element={userSignedIn ? <BuyNow /> : <Navigate to='/signup' />}
             />
             <Route
               path='/cart'
-              element={user ? <AddToCart /> : <Navigate to='/signup' />}
+              element={userSignedIn ? <AddToCart /> : <Navigate to='/signup' />}
             />
 
             <Route path='/sell' element={<SellerWrapper />}>
               <Route
                 path='sell_form'
-                element={user ? <Sell /> : <Navigate to='/signup' />}
+                element={userSignedIn ? <Sell /> : <Navigate to='/signup' />}
               />
               <Route
                 path='profile'
-                element={user ? <Personal /> : <Navigate to='/signup' />}
+                element={
+                  userSignedIn ? <Personal /> : <Navigate to='/signup' />
+                }
               />
               <Route
                 path='history'
-                element={user ? <History /> : <Navigate to='/signup' />}
+                element={userSignedIn ? <History /> : <Navigate to='/signup' />}
               />
               <Route
                 path='inbox'
-                element={user ? <Inbox /> : <Navigate to='/signup' />}
+                element={userSignedIn ? <Inbox /> : <Navigate to='/signup' />}
               />
             </Route>
           </Route>

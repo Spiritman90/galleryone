@@ -64,30 +64,35 @@ const ProductDetails = () => {
         />
         <img src={data?.avaterLeftUrl} alt='item' className='pdetails__photo' />
         <div className='pdetails__buttons'>
-          <button
-            className='pdetails__buybtn'
-            onClick={() => navigate("/buy-now")}
-          >
-            Buy Now
-          </button>
-          <button
-            className='pdetails__bidbtn'
-            onClick={() => setShowBidModal(!showBidModaL)}
-          >
-            Make a bid
-          </button>
+          <div>
+            <button
+              className='pdetails__buybtn'
+              onClick={() => navigate("/buy-now")}
+            >
+              Buy Now
+            </button>
+          </div>
+          <div>
+            <button
+              className='pdetails__bidbtn'
+              onClick={() => setShowBidModal(!showBidModaL)}
+            >
+              Make a bid
+            </button>
+          </div>
           {showBidModaL && (
             <Modal comp={"bid"} hideModal={hideModal}>
               <Bid />
             </Modal>
           )}
-
-          <button
-            className='pdetails__add'
-            onClick={() => handleAddToCart(data)}
-          >
-            Add to cart
-          </button>
+          <div>
+            <button
+              className='pdetails__add'
+              onClick={() => handleAddToCart(data)}
+            >
+              Add to cart
+            </button>
+          </div>
         </div>
       </div>
 
