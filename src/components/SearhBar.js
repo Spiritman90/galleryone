@@ -13,7 +13,7 @@ const SearhBar = () => {
 
   const searchedProduct = allProducts?.filter((product) => {
     return (
-      product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      product.title?.toLowerCase().includes(searchTerm.toLowerCase()) &&
       searchTerm !== ""
     );
   });
