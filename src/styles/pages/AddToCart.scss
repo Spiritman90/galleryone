@@ -1,12 +1,18 @@
 @import "../variables/colors.scss";
 .cart {
-  // padding: 5.1875rem;
   padding: 5.1875rem 4.4375rem;
-  // margin-top: 9rem;
+
+  @media screen and (max-width: 528px) {
+    padding: 4.375rem 1rem;
+  }
 
   &__flex {
     display: flex;
     gap: 1.5625rem;
+
+    @media screen and (max-width: 528px) {
+      flex-direction: column;
+    }
   }
 
   &__empty {
@@ -39,6 +45,11 @@
     border-radius: 0.625rem;
     background-color: $background-color-minor;
     margin-top: 4rem;
+
+    @media screen and (max-width: 528px) {
+      max-width: 26.75rem;
+      // height: 12rem;
+    }
   }
 
   &__details {
@@ -48,6 +59,11 @@
     border-radius: 0.625rem;
     margin-bottom: 1rem;
     cursor: pointer;
+
+    @media screen and (max-width: 528px) {
+      max-width: 26.75rem;
+      height: 12rem;
+    }
   }
 
   &__header {
@@ -57,6 +73,10 @@
     line-height: 2.8125rem;
     color: $btn-gray;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1rem;
+    }
   }
 
   &__parent {
@@ -92,9 +112,6 @@
   }
 
   &__icon {
-    // display: grid;
-    // place-items: center;
-    // padding-left: 20rem;
     display: flex;
     justify-content: flex-end;
     margin-top: -6rem;
@@ -108,7 +125,7 @@
   }
 
   &__btn {
-    background-color: #636870;
+    background-color: $primary-color;
     border-radius: 50%;
     padding: 0.1875rem 0.4375rem;
     outline: none;
@@ -179,8 +196,6 @@
 
   &__pay-btn {
     background-color: $primary-color;
-    // width: 382px;
-    // height: 68px;
     font: $secondary-font;
     font-weight: 700;
     font-size: 1.25rem;
@@ -192,6 +207,10 @@
     cursor: pointer;
     color: $btn-text;
     padding: 1.3rem 7.3rem;
+
+    @media screen and (max-width: 528px) {
+      padding: 1rem 7rem;
+    }
 
     &:hover {
       filter: brightness(90%);
