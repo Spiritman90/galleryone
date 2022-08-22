@@ -4,16 +4,36 @@
   margin: 5.0625rem 3.0625rem;
   color: $btn-gray;
 
+  @media screen and (max-width: 528px) {
+    padding: 2.87rem 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
   &__wrapper {
     display: flex;
     gap: 2.5rem;
+
+    @media screen and (max-width: 528px) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__current {
+    @media screen and (max-width: 528px) {
+      margin-left: -9rem;
+    }
   }
 
   &__image {
-    // width: 769px;
-    // width: 100%;
     width: 48.0625rem;
     border-radius: 1rem;
+
+    @media screen and (max-width: 528px) {
+      width: 6.0625rem;
+      height: 6.25rem;
+    }
   }
 
   &__details {
@@ -62,6 +82,12 @@
     color: $btn-gray;
   }
 
+  &__bids {
+    @media screen and (max-width: 528px) {
+      margin-left: -9rem;
+    }
+  }
+
   &__bid {
     font-family: $secondary-font;
     font-size: 0.875rem;
@@ -87,6 +113,10 @@
     font-weight: 700;
     line-height: 1.75rem;
     cursor: pointer;
+
+    @media screen and (max-width: 528px) {
+      margin-left: -7rem;
+    }
 
     &:hover {
       filter: brightness(90%);
@@ -153,6 +183,10 @@
       font-weight: 400;
       line-height: 2.375rem;
       color: $btn-gray;
+
+      @media screen and (max-width: 528px) {
+        font-size: 0.75rem;
+      }
     }
 
     &__name {
@@ -161,6 +195,10 @@
       font-weight: 400;
       line-height: 2.375rem;
       color: $btn-gray;
+
+      @media screen and (max-width: 528px) {
+        font-size: 0.875rem;
+      }
     }
   }
 }
