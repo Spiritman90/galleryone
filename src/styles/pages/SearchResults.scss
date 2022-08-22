@@ -72,8 +72,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       background-color: none;
-      padding: 0;
-      gap: 1rem;
+      padding: 1rem;
+      gap: 2rem;
     }
 
     & .product__photo {
