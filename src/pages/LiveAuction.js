@@ -32,7 +32,7 @@ const LiveAuction = () => {
             <p className='auction__amount'>N20000</p>
           </div>
           <div className='auction__button'>
-            <button className='auction__btn'>Bid NGN 22000</button>
+            <button className='auction__btn'>Bid 22000</button>
           </div>
         </div>
       </div>
