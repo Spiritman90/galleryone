@@ -24,7 +24,7 @@ const UserNavbar = () => {
   return (
     <nav className='user__navbar'>
       <Link className='navbar__logo' to='/'>
-        <Logo />
+        <Logo className='navbar_logo' />
       </Link>
       <ul className='navbar__list'>
         <NavLink to='/liveauction'>

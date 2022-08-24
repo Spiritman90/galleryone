@@ -11,7 +11,7 @@ import { fetchAllProducts } from "../redux/productSlice";
 
 const Home = () => {
   const [data, isPending, error] = useFetch(
-    "https://gallery-one-app.herokuapp.com/api/getAllProduct"
+    "http://api.galleryone.com.ng:5000/api/getAllProduct"
   );
   const dispatch = useDispatch();
   const { allProducts, searchedProducts } = useSelector(

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://gallery-one-app.herokuapp.com/api/";
+const API_URL = "http://api.galleryone.com.ng:5000/api/";
 const REQUEST_TIMEOUT = 6000;
 
 export const fetchUserToken = () => JSON.parse(localStorage.getItem("token"));

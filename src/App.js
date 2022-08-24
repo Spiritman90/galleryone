@@ -32,6 +32,8 @@ import { useState } from "react";
 
 function App() {
   // const { user } = useSelector((state) => state.auth);
+  // const user = localStorage.getItem("token");
+
   const [userSignedIn, setUserSignedIn] = useState(true);
   return (
     <>
