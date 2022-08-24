@@ -150,7 +150,7 @@ const AddToCart = () => {
                 <div className='cart__button'>
                   {!isLoading && (
                     <button className='cart__pay-btn' onClick={handlePayment}>
-                      Pay NGN {cart.cartTotalAmount + 500}
+                      Pay {cart.cartTotalAmount + 500}
                     </button>
                   )}
                   {isLoading && (
