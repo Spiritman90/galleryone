@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Wallet from "../customicons/Wallet";
 import Avatar from "../customicons/Avatar";
 import Wallet2 from "../customicons/Wallet2";
 import Logout from "../customicons/Logout";
 import { useNavigate } from "react-router";
-// import { useSelector } from "react-redux";
 import Modal from "../components/Modal";
-// import { toast } from "react-toastify";
 import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
-// import Spinner from "../components/Spinner";
 import { useSelector } from "react-redux";
 
 const UserProfile = () => {
@@ -18,6 +15,7 @@ const UserProfile = () => {
   const navigate = useNavigate();
 
   const { currentBalance } = useSelector((state) => state?.wallet);
+  const { isLoading } = useSelector((state) => state.wallet);
 
   const hideModal = (ele) => {
     ele === "fundWallet"
@@ -40,7 +38,14 @@ const UserProfile = () => {
             </span>
           </div>
         </div>
-        <h4>NGN {currentBalance}</h4>
+        {isLoading && (
+          <p>
+            <strong>
+              <i>Fetching balance...</i>
+            </strong>
+          </p>
+        )}
+        {!isLoading && <h4>NGN {currentBalance}</h4>}
       </div>
       <div className='user__actions'>
         <div

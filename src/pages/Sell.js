@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import file from "../assets/file.jpg";
 import Verify from "./Verify";
-import ImageUploading from "react-images-uploading";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { itemUpload, reset } from "../redux/sell/sellSlice";
@@ -25,7 +24,6 @@ const Sell = () => {
   // const [price, setPrice] = useState("");
   // const [category, setCategory] = useState("");
   // const [description, setDescription] = useState("");
-  const maxNumber = 5;
   const dispatch = useDispatch();
   const { items, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.sell

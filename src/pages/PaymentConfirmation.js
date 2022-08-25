@@ -11,11 +11,9 @@ const PaymentConfirmation = () => {
   );
   const { walletBalance } = useSelector((state) => state.wallet);
 
-  console.log(walletBalance);
   const resp = walletBalance?.newBalance?.response;
   const ref = window.location.href;
   const reference = ref.split("=")[2];
-  console.log(reference);
 
   const myRef = {
     reference,

@@ -25,16 +25,16 @@ import EmailSuccess from "./pages/EmailSuccess";
 import EmailFailure from "./pages/EmailFailure";
 import AddToCart from "./pages/AddToCart";
 import EmailVerification from "./pages/EmailVerification";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import SearchResults from "./pages/SearchResults";
 import PaymentConfirmation from "./pages/PaymentConfirmation";
-import { useState } from "react";
+// import { useState } from "react";
 
 function App() {
-  // const { user } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.auth);
   // const user = localStorage.getItem("token");
+  // const [userSignedIn, setUserSignedIn] = useState(true);
 
-  const [userSignedIn, setUserSignedIn] = useState(true);
   return (
     <>
       <BrowserRouter>
@@ -45,9 +45,7 @@ function App() {
             <Route path='*' element={<Error />} />
             <Route
               path='/liveauction'
-              element={
-                userSignedIn ? <LiveAuction /> : <Navigate to='/signup' />
-              }
+              element={user ? <LiveAuction /> : <Navigate to='/signup' />}
             />
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />
@@ -59,37 +57,33 @@ function App() {
             <Route path='/search-results' element={<SearchResults />} />
             <Route
               path='/product-details/:id'
-              element={
-                userSignedIn ? <ProductDetails /> : <Navigate to='/signup' />
-              }
+              element={user ? <ProductDetails /> : <Navigate to='/signup' />}
             />
             <Route
               path='/buy-now'
-              element={userSignedIn ? <BuyNow /> : <Navigate to='/signup' />}
+              element={user ? <BuyNow /> : <Navigate to='/signup' />}
             />
             <Route
               path='/cart'
-              element={userSignedIn ? <AddToCart /> : <Navigate to='/signup' />}
+              element={user ? <AddToCart /> : <Navigate to='/signup' />}
             />
 
             <Route path='/sell' element={<SellerWrapper />}>
               <Route
                 path='sell_form'
-                element={userSignedIn ? <Sell /> : <Navigate to='/signup' />}
+                element={user ? <Sell /> : <Navigate to='/signup' />}
               />
               <Route
                 path='profile'
-                element={
-                  userSignedIn ? <Personal /> : <Navigate to='/signup' />
-                }
+                element={user ? <Personal /> : <Navigate to='/signup' />}
               />
               <Route
                 path='history'
-                element={userSignedIn ? <History /> : <Navigate to='/signup' />}
+                element={user ? <History /> : <Navigate to='/signup' />}
               />
               <Route
                 path='inbox'
-                element={userSignedIn ? <Inbox /> : <Navigate to='/signup' />}
+                element={user ? <Inbox /> : <Navigate to='/signup' />}
               />
             </Route>
           </Route>

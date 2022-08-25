@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { useSelector } from "react-redux";
-
 import ValidEmail from "../customicons/ValidEmail";
 
 const EmailSuccess = () => {

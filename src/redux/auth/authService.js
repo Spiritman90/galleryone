@@ -1,12 +1,11 @@
 import axios from "axios";
 
-const SIGNUP_URL = "http://api.galleryone.com.ng:5000/api/signUp";
-const VERIFY_URL = "http://api.galleryone.com.ng:5000/api/confirmSignUp";
-// const LOGIN_URL = "http://api.galleryone.com.ng:5000/api/signIn";
+const SIGNUP_URL = "https://gallery-one-app.herokuapp.com/api/signUp";
+const VERIFY_URL = "https://gallery-one-app.herokuapp.com/api/confirmSignUp";
 const LOGIN_URL = "https://gallery-one-app.herokuapp.com/api/signIn";
-const PASSWORD_URL = "http://api.galleryone.com.ng:5000/api/forgotPassword";
+const PASSWORD_URL = "https://gallery-one-app.herokuapp.com/api/forgotPassword";
 const CONFIRM_PASSWORD_URL =
-  "http://api.galleryone.com.ng:5000/api/confirmForgotPassword";
+  "https://gallery-one-app.herokuapp.com/api/confirmForgotPassword";
 
 //Register user
 const register = async (userData) => {
@@ -68,57 +67,3 @@ const authService = {
 };
 
 export default authService;
-
-// import { makeUnAuthorizedPost } from "../../service";
-
-// //Register user
-// const register = async (userData) => {
-//   const response = await makeUnAuthorizedPost("signUp", userData);
-//   console.log(response);
-//   return response;
-// };
-
-// //Login user
-// const login = async (userData) => {
-//   const response = await makeUnAuthorizedPost("signIn", userData);
-//   const jResponse = JSON.stringify(response);
-//   localStorage.setItem("token", jResponse);
-//   console.log(response);
-//   return response;
-// };
-
-// //Verify user
-// const verify = async (userData) => {
-//   const response = await makeUnAuthorizedPost("confirmSignUp", userData);
-//   return response;
-// };
-// //Logout user
-// const logout = async () => {
-//   localStorage.removeItem("token");
-// };
-
-// //ResetPassword
-// const resetPassword = async (userData) => {
-//   const response = await makeUnAuthorizedPost("forgotPassword", userData);
-//   return response;
-// };
-
-// //Confirm Password
-// const confirmPassword = async (userData) => {
-//   const response = await makeUnAuthorizedPost(
-//     "confirmForgotPassword",
-//     userData
-//   );
-//   return response;
-// };
-
-// const authService = {
-//   register,
-//   logout,
-//   login,
-//   verify,
-//   resetPassword,
-//   confirmPassword,
-// };
-
-// export default authService;

@@ -25,9 +25,9 @@ const Login = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess) {
-      navigate("/");
-    }
+    // if (isSuccess) {
+    //   navigate("/");
+    // }
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
@@ -36,6 +36,7 @@ const Login = () => {
     dispatch(login(userData));
     setEmail("");
     setPassword("");
+    navigate("/");
   };
 
   // if (isLoading) {
