@@ -8,7 +8,7 @@
   }
 
   &__a {
-    // width: 54rem;
+    max-width: 54rem;
     flex: 1;
   }
 
@@ -54,9 +54,9 @@
     line-height: 2.375rem;
     color: #fff;
 
-    // @media screen and (max-width: 528px) {
-    //   margin-top: -1rem;
-    // }
+    @media screen and (max-width: 528px) {
+      font-size: 1.3rem;
+    }
   }
 
   &__parent {
@@ -232,16 +232,16 @@
   }
 
   &__b {
-    min-width: 25.9375rem;
+    max-width: 25.9375rem;
     border-radius: 0.625rem;
     padding-bottom: 3rem;
     background-color: $background-color-minor;
     overflow: hidden;
     overflow-y: scroll;
 
-    @media screen and (max-width: 528px) {
-      display: none;
-    }
+    // @media screen and (max-width: 528px) {
+    //   display: none;
+    // }
   }
 
   &__container {
@@ -257,6 +257,10 @@
     color: #fff;
     margin-bottom: 1.125rem;
     margin-top: 2rem;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1.3rem;
+    }
   }
 
   &__photo {
