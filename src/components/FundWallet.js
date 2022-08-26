@@ -24,12 +24,12 @@ const FundWallet = () => {
       toast.error(message);
     }
 
-    if (isSuccess) {
+    if (urlRedirect) {
       toast.success("Redirecting....");
       window.location.assign(urlRedirect);
     }
 
-    dispatch(reset());
+    // dispatch(reset());
   }, [isError, isSuccess, message, navigate, dispatch, urlRedirect]);
 
   const handleSubmit = (e) => {

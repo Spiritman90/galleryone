@@ -27,21 +27,18 @@ const PaymentConfirmation = () => {
       toast.error(message);
     }
     if (isSuccess) {
-      toast.success(resp, "Please check your wallet");
+      toast.success(resp, "Wallet funded successfully");
     }
-    dispatch(reset());
+    // dispatch(reset());
   }, [isError, isSuccess, message, navigate, dispatch, resp]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(reset());
     dispatch(confirmPayment(myRef));
-    if (isSuccess) {
-      toast.success(resp, "Please check your wallet");
-    }
     navigate("/");
+    // toast.success(resp, "Wallet funded successfully");
   };
-
   return (
     <section className='paid'>
       <div className='paid__image'>
