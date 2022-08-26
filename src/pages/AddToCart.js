@@ -34,22 +34,23 @@ const AddToCart = () => {
     amount,
   };
 
-  useEffect(() => {
-    if (isError) {
-      toast.error(message);
-    }
+  // useEffect(() => {
+  //   if (isError) {
+  //     toast.error(message);
+  //   }
 
-    if (isSuccess) {
-      // toast.success("Payment successful");
-      navigate("/success");
-    }
+  //   if (isSuccess) {
+  //     // toast.success("Payment successful");
+  //     navigate("/success");
+  //   }
 
-    dispatch(reset());
-  }, [isError, isSuccess, message, dispatch, navigate]);
+  //   dispatch(reset());
+  // }, [isError, isSuccess, message, dispatch, navigate]);
 
   const handlePayment = () => {
     dispatch(reset());
     dispatch(makePayment(data));
+    navigate("/success");
 
     setProductId("");
     setAmount("");

@@ -6,6 +6,12 @@
     padding: 4.375rem 1rem;
   }
 
+  &__a {
+    max-width: 54rem;
+    min-height: 10.625rem;
+    flex: 1;
+  }
+
   &__flex {
     display: flex;
     gap: 1.5625rem;
@@ -40,28 +46,26 @@
 
   &__b {
     height: 22.25rem;
-    // width: 25.9375rem;
-    width: 100%;
+    max-width: 25.9375rem;
     border-radius: 0.625rem;
     background-color: $background-color-minor;
     margin-top: 4rem;
 
     @media screen and (max-width: 528px) {
       max-width: 26.75rem;
-      // height: 12rem;
+      margin-top: -1rem;
     }
   }
 
   &__details {
     background-color: $background-color-minor;
     height: 10.625rem;
-    width: 54rem;
     border-radius: 0.625rem;
     margin-bottom: 1rem;
     cursor: pointer;
 
     @media screen and (max-width: 528px) {
-      max-width: 26.75rem;
+      // max-width: 26.75rem;
       height: 12rem;
     }
   }
@@ -82,7 +86,7 @@
   &__parent {
     display: flex;
     padding: 0.8125rem 3rem;
-    padding: 1.9375rem 3rem;
+    // padding: 1.9375rem 3rem;
     gap: 2rem;
     color: $btn-gray;
   }
@@ -144,6 +148,7 @@
 
   &__container {
     padding: 3.3125rem 1.25rem;
+    max-width: 25.9375rem;
   }
 
   &__subtotal {
@@ -194,6 +199,11 @@
     margin-top: 1.125rem;
   }
 
+  &__button {
+    display: grid;
+    place-items: center;
+  }
+
   &__pay-btn {
     background-color: $primary-color;
     font: $secondary-font;
@@ -203,10 +213,10 @@
     outline: none;
     border: none;
     border-radius: 0.5rem;
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
     cursor: pointer;
     color: $btn-text;
-    padding: 1.3rem 7.3rem;
+    padding: 1.3rem 6rem;
 
     @media screen and (max-width: 528px) {
       padding: 1rem 7rem;
