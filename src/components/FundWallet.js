@@ -85,7 +85,7 @@ const FundWallet = () => {
           )}
           {isLoading && (
             <button className='fund__btn' type='submit'>
-              Processing payment...
+              Processing...
             </button>
           )}
         </div>

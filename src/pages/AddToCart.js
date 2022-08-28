@@ -22,6 +22,8 @@ const AddToCart = () => {
   const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
+  // const { currentBalance } = useSelector((state) => state?.wallet);
+  // console.log(currentBalance);
 
   const [productId, setProductId] = useState(cart?.cartItems[0]?._id);
   const [amount, setAmount] = useState(cart?.cartTotalAmount + 500);
@@ -34,23 +36,24 @@ const AddToCart = () => {
     amount,
   };
 
-  // useEffect(() => {
-  //   if (isError) {
-  //     toast.error(message);
-  //   }
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
 
-  //   if (isSuccess) {
-  //     // toast.success("Payment successful");
-  //     navigate("/success");
-  //   }
+    // if (isSuccess) {
+    //   // toast.success("Payment successful");
+    //   navigate("/success");
+    // }
 
-  //   dispatch(reset());
-  // }, [isError, isSuccess, message, dispatch, navigate]);
+    dispatch(reset());
+  }, [isError, isSuccess, message, dispatch, navigate]);
 
   const handlePayment = () => {
     dispatch(reset());
     dispatch(makePayment(data));
-    navigate("/success");
+    dispatch(removeFromCart());
+    // navigate("/success");
 
     setProductId("");
     setAmount("");

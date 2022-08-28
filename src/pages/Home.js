@@ -7,11 +7,11 @@ import useFetch from "../hooks/useFetch";
 import Spinner from "../components/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProducts } from "../redux/productSlice";
-// import { getBalance } from "../redux/wallet/walletSlice";
 
 const Home = () => {
   const [data, isPending, error] = useFetch(
-    "http://api.galleryone.com.ng:5000/api/getAllProduct"
+    "https://gallery-one-app.herokuapp.com/api/getAllProduct"
+    // "http://api.galleryone.com.ng:5000/api/getAllProduct"
   );
   const dispatch = useDispatch();
   const { allProducts, searchedProducts } = useSelector(

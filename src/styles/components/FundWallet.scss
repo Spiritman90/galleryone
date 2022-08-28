@@ -2,6 +2,9 @@
 
 .fund {
   margin: 0.2rem 3rem;
+  @media screen and (max-width: 528px) {
+    margin: 0;
+  }
 
   &__heading {
     font-family: $secondary-font;
@@ -10,6 +13,10 @@
     line-height: 3.1875rem;
     color: #fff;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__amount {
@@ -47,9 +54,7 @@
   }
 
   &__input {
-    margin-top: 3rem;
-    height: 4.25rem;
-    width: 24.625rem;
+    margin-top: 1.5rem;
     border-radius: 0.5rem;
     border: 0.125rem solid $input-border;
     background-color: $input-background;
@@ -57,12 +62,18 @@
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 2.25rem;
+    padding: 0.8rem 9rem;
     padding-left: 1rem;
+    width: 100%;
     outline: none;
     color: $input-color;
     &:focus {
       border: 0.125rem solid $primary-color;
     }
+
+    // @media screen and (max-width: 528px) {
+    //   padding: 0.5rem 0rem;
+    // }
   }
 
   &__special {
@@ -97,10 +108,8 @@
 
   &__btn {
     background-color: $primary-color;
-    // padding: 1rem 4rem;
+    padding: 1rem 3rem;
     border: none;
-    height: 4.25rem;
-    width: 24.875rem;
     border-radius: 0.5rem;
     font-family: $secondary-font;
     font-size: 1.25rem;

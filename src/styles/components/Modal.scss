@@ -11,9 +11,14 @@
 .modal {
   padding: 1.875rem 5rem;
   max-width: 39.6875rem;
-  // height: 410px;
   min-height: 38.875rem;
   margin: 6.25rem auto;
   background: #333333;
   border-radius: 0.625rem;
+
+  @media screen and (max-width: 528px) {
+    max-width: 23.25rem;
+    min-height: 29.3125rem;
+    padding: 1rem 4rem;
+  }
 }
