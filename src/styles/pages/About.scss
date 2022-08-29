@@ -3,6 +3,10 @@
 .about {
   // margin: 26px 64px;
 
+  // @media screen and (max-width: 528px) {
+  //   padding: 1rem 2rem;
+  // }
+
   & p {
     font-family: $secondary-font;
     font-size: 1rem;
@@ -31,12 +35,22 @@
     margin: 1.625rem 4rem;
     gap: 1rem;
 
+    @media screen and (max-width: 528px) {
+      flex-direction: column-reverse;
+      margin: 0;
+      padding: 1rem 2rem;
+    }
+
     &__heading {
       font-family: $secondary-font;
       font-size: 4rem;
       font-weight: 700;
       line-height: 6.375rem;
       color: #fbe7d2;
+
+      @media screen and (max-width: 528px) {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -49,8 +63,13 @@
   }
 
   .value__photo {
-    width: 100%;
+    max-width: 100%;
     margin-top: 5.5rem;
+
+    @media screen and (max-width: 528px) {
+      margin-top: 2rem;
+      max-width: 26.75rem;
+    }
   }
 
   .mission {
@@ -58,6 +77,12 @@
     display: grid;
     place-items: center;
     margin: 1.625rem 4rem;
+
+    @media screen and (max-width: 528px) {
+      margin: 0;
+      padding: 1rem 2rem;
+      margin-top: -5rem;
+    }
 
     &__heading {
       font-family: $secondary-font;
@@ -69,11 +94,21 @@
       place-items: center;
       margin-bottom: 1.875rem;
       margin-top: 9.5rem;
+
+      @media screen and (max-width: 528px) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   .team {
     margin: 1.625rem 4rem;
+
+    @media screen and (max-width: 528px) {
+      margin: 0;
+      padding: 1rem 3rem;
+      margin-top: -3rem;
+    }
   }
 
   .team__heading {
@@ -92,6 +127,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3.5rem;
+
+    @media screen and (max-width: 528px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .team__photo {
@@ -144,5 +183,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin: 1.625rem 4rem;
+
+    @media screen and (max-width: 528px) {
+      grid-template-columns: 1fr;
+      margin: 0;
+      padding: 1rem 2rem;
+    }
   }
 }
