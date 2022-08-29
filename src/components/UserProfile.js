@@ -6,7 +6,7 @@ import Logout from "../customicons/Logout";
 import { useNavigate } from "react-router";
 import Modal from "../components/Modal";
 import Confirm from "../components/Confirm";
-// import FundWallet from "./FundWallet";
+import FundWallet from "./FundWallet";
 import SuccessfulBid from "./SuccessfulBid";
 import { useSelector } from "react-redux";
 
@@ -70,8 +70,8 @@ const UserProfile = () => {
 
         {showFundWallet && (
           <Modal comp={"fundWallet"} hideModal={hideModal}>
-            {/* <FundWallet /> */}
-            <SuccessfulBid />
+            <FundWallet />
+            {/* <SuccessfulBid /> */}
           </Modal>
         )}
 

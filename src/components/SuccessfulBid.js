@@ -1,9 +1,14 @@
 import React from "react";
 import sold from "../assets/sold2.png";
+// import { makePayment, reset } from "../redux/wallet/walletSlice";
 import { useNavigate } from "react-router";
 
 const SuccessfulBid = () => {
   const navigate = useNavigate();
+
+  const handlePayment = () => {
+    navigate();
+  };
   return (
     <section className='successful'>
       <div className='successful__image'>
@@ -19,13 +24,13 @@ const SuccessfulBid = () => {
       </div>
 
       <div className='successful__buttons'>
-        <button
+        {/* <button
           className='successful__dark'
           onClick={() => navigate("/buy-now")}
         >
           Payment checkout
-        </button>
-        <button className='successful__orange' onClick={() => navigate("/")}>
+        </button> */}
+        <button className='successful__orange' onClick={handlePayment}>
           Pay with wallet
         </button>
       </div>

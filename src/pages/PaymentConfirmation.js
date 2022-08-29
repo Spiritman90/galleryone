@@ -26,9 +26,9 @@ const PaymentConfirmation = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess) {
-      toast.success(resp, "Wallet funded successfully");
-    }
+    // if (myRef) {
+    //   toast.success("Wallet funded successfully");
+    // }
     // dispatch(reset());
   }, [isError, isSuccess, message, navigate, dispatch, resp]);
 
@@ -36,8 +36,11 @@ const PaymentConfirmation = () => {
     e.preventDefault();
     dispatch(reset());
     dispatch(confirmPayment(myRef));
+    if (myRef) {
+      toast.success("Wallet funded successfully");
+    }
     navigate("/");
-    // toast.success(resp, "Wallet funded successfully");
+    dispatch(reset());
   };
   return (
     <section className='paid'>
