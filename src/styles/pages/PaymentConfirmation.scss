@@ -5,6 +5,10 @@
   place-items: center;
   margin-top: 12rem;
 
+  @media screen and (max-width: 528px) {
+    padding: 1rem 2rem;
+  }
+
   &__text {
     font-family: $secondary-font;
     font-size: 1.25rem;
@@ -13,6 +17,12 @@
     color: #fff;
     margin-top: 1.75rem;
     margin-bottom: 3rem;
+    text-align: center;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1rem;
+      font-weight: 600;
+    }
   }
 
   &__btn {

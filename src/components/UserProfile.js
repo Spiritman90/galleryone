@@ -6,7 +6,8 @@ import Logout from "../customicons/Logout";
 import { useNavigate } from "react-router";
 import Modal from "../components/Modal";
 import Confirm from "../components/Confirm";
-import FundWallet from "./FundWallet";
+// import FundWallet from "./FundWallet";
+import SuccessfulBid from "./SuccessfulBid";
 import { useSelector } from "react-redux";
 
 const UserProfile = () => {
@@ -18,9 +19,9 @@ const UserProfile = () => {
   const { isLoading } = useSelector((state) => state.wallet);
 
   const hideModal = (ele) => {
-    ele === "fundWallet"
-      ? setShowFundWallet(!FundWallet)
-      : setShowModal(!showModal);
+    // ele === "fundWallet";
+    // ? setShowFundWallet(!FundWallet)
+    // : setShowModal(!showModal);
   };
 
   return (
@@ -69,7 +70,8 @@ const UserProfile = () => {
 
         {showFundWallet && (
           <Modal comp={"fundWallet"} hideModal={hideModal}>
-            <FundWallet />
+            {/* <FundWallet /> */}
+            <SuccessfulBid />
           </Modal>
         )}
 

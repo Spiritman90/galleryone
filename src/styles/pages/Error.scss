@@ -5,6 +5,10 @@
   place-items: center;
   margin-top: 8rem;
 
+  @media screen and (max-width: 528px) {
+    padding: 1rem 2rem;
+  }
+
   .error__heading {
     color: #ffffff;
     font-family: $secondary-font;
@@ -12,24 +16,10 @@
     font-weight: 700;
     line-height: 3.1875rem;
     margin-bottom: 8.8125rem;
+    text-align: center;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1.5rem;
+    }
   }
-
-  // .error__btn {
-  //   margin-top: -5rem;
-  //   background-color: $primary-color;
-  //   color: $btn-text;
-  //   font-family: $primary-font;
-  //   cursor: pointer;
-  //   // width: 100%;
-  //   border-radius: 8px;
-  //   border: none;
-  //   font-size: 19px;
-  //   font-weight: 700;
-  //   line-height: 20px;
-  //   padding: 19px 5px 19px 5px;
-
-  //   &:hover {
-  //     filter: brightness(80%);
-  //   }
-  // }
 }

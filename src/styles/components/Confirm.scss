@@ -7,6 +7,10 @@
   justify-content: center;
   margin-top: 12rem;
 
+  @media screen and (max-width: 528px) {
+    margin-top: 6rem;
+  }
+
   &__heading {
     h2 {
       color: white;
@@ -19,22 +23,26 @@
   }
 
   &__buttons {
-    display: inline-flex;
+    display: flex;
     gap: 1rem;
+
+    @media screen and (max-width: 528px) {
+      flex-direction: column;
+    }
   }
 
   &__black {
-    background-color: $darker-background;
+    background-color: $background-color-minor;
     color: $primary-color;
     font-family: $primary-font;
     cursor: pointer;
-    width: 100%;
     border-radius: 0.5rem;
     border: 0.1875rem solid $primary-color;
     font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.25rem;
     padding: 0.95rem 2.8125rem;
+    flex: 1;
 
     &:hover {
       filter: brightness(80%);
@@ -46,21 +54,15 @@
     color: $btn-text;
     font-family: $primary-font;
     cursor: pointer;
-    width: 100%;
     border-radius: 0.5rem;
     border: none;
     font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.25rem;
-    padding: 0.95rem 2.8125rem 0.95rem 2.8125rem;
+    padding: 0.95rem 2.8125rem;
 
     &:hover {
       filter: brightness(80%);
     }
-  }
-
-  &__black,
-  &__orange {
-    width: 15.625rem;
   }
 }

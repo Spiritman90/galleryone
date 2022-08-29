@@ -5,6 +5,20 @@
   place-items: center;
   margin-top: 9rem;
 
+  @media screen and (max-width: 528px) {
+    padding: 1rem 0rem;
+    margin: 0;
+  }
+
+  &__lead {
+    // background: red;
+
+    @media screen and (max-width: 528px) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
   &__heading {
     font-family: $secondary-font;
     font-size: 1.25rem;
@@ -12,7 +26,6 @@
     line-height: 1.75rem;
     color: #fff;
     margin-bottom: 0.5rem;
-    // margin-left: rem;
   }
 
   &__text {
@@ -30,9 +43,9 @@
   }
 
   &__input {
-    height: 4.25rem;
-    width: 23.6875rem;
+    padding: 1rem 4rem;
     padding-left: 1rem;
+    width: 100%;
     border-radius: 0.5rem;
     background-color: $input-background;
     outline: none;
@@ -50,8 +63,7 @@
   }
 
   &__btn {
-    height: 4.25rem;
-    width: 23.6875rem;
+    padding: 1rem 8rem;
     background-color: $primary-color;
     font-family: $secondary-font;
     font-size: 1.25rem;
