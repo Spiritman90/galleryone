@@ -7,8 +7,8 @@ import { useNavigate } from "react-router";
 import Modal from "../components/Modal";
 import Confirm from "../components/Confirm";
 import FundWallet from "./FundWallet";
-import SuccessfulBid from "./SuccessfulBid";
-import SoldOut from "../components/SoldOut";
+// import SuccessfulBid from "./SuccessfulBid";
+// import SoldOut from "../components/SoldOut";
 import { useSelector } from "react-redux";
 
 const UserProfile = () => {
@@ -71,9 +71,9 @@ const UserProfile = () => {
 
         {showFundWallet && (
           <Modal comp={"fundWallet"} hideModal={hideModal}>
-            {/* <FundWallet /> */}
+            <FundWallet />
             {/* <SuccessfulBid /> */}
-            <SoldOut />
+            {/* <SoldOut /> */}
           </Modal>
         )}
 

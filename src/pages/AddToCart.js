@@ -11,6 +11,7 @@ import {
   decreaseCart,
   getTotals,
   removeFromCart,
+  clearCart,
 } from "../redux/cart/cartSlice";
 
 import { makePayment, reset } from "../redux/wallet/walletSlice";
@@ -22,8 +23,6 @@ const AddToCart = () => {
   const { isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.wallet
   );
-  // const { currentBalance } = useSelector((state) => state?.wallet);
-  // console.log(currentBalance);
 
   const [productId, setProductId] = useState(cart?.cartItems[0]?._id);
   const [amount, setAmount] = useState(cart?.cartTotalAmount + 500);
@@ -52,8 +51,8 @@ const AddToCart = () => {
   const handlePayment = () => {
     dispatch(reset());
     dispatch(makePayment(data));
-    dispatch(removeFromCart());
-    // navigate("/success");
+    dispatch(clearCart());
+    navigate("/success");
 
     setProductId("");
     setAmount("");

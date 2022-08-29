@@ -149,6 +149,10 @@
     font-weight: 700;
     color: #d0d2d4;
     margin-top: 1rem;
+
+    @media screen and (max-width: 850px) {
+      font-size: 1rem;
+    }
   }
 
   .team__role {
@@ -165,6 +169,11 @@
     padding-bottom: 14.5625rem;
     margin-bottom: 10.125rem;
     margin-top: 8rem;
+
+    // @media screen and (max-width: 850px) {
+    //   // margin: 0;
+    //   padding: 2rem 4rem;
+    // }
   }
 
   .what__heading {
@@ -189,5 +198,10 @@
       margin: 0;
       padding: 1rem 2rem;
     }
+
+    // @media screen and (max-width: 850px) {
+    //   margin: 0;
+    //   // padding: 2rem 4rem;
+    // }
   }
 }

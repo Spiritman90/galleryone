@@ -72,7 +72,7 @@ const About = () => {
             <img src={James} alt='james' className='team__photo' />
             <div className='team__profile'>
               <p className='team__name'>James Iweobi</p>
-              <p className='team__role'>Back-end Engineer/Supervisor</p>
+              <p className='team__role'>Back-end Supervisor</p>
             </div>
           </div>
 
@@ -111,14 +111,14 @@ const About = () => {
           <div className='samuel__photo'>
             <img src={Pere} alt='samuel' className='team__photo' />
             <div className='team__profile'>
-              <p className='team__name'>Egbekun Pere-Ebi</p>
+              <p className='team__name'> Pere-Ebi</p>
               <p className='team__role'>Backend Developer</p>
             </div>
           </div>
           <div className='dimeji__photo'>
             <img src={Dimeji} alt='samuel' className='team__photo' />
             <div className='team__profile'>
-              <p className='team__name'>Oladimeji Shekoni</p>
+              <p className='team__name'>Dimeji Shekoni</p>
               <p className='team__role'>Data Analyst</p>
             </div>
           </div>
