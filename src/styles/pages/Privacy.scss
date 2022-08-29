@@ -3,11 +3,21 @@
 .privacy {
   // margin: 1.625rem 4rem;
 
+  // @media screen and (max-width: 528px) {
+  //   margin: 0;
+  //   padding: 1rem 2rem;
+  // }
+
   &__lead {
     background-color: $darker-background;
     margin-top: 3rem;
     color: #d0d2d4;
     padding: 2rem 0;
+
+    @media screen and (max-width: 528px) {
+      // margin: 0;
+      padding: 1rem 2rem;
+    }
   }
 
   &__text {
@@ -16,6 +26,11 @@
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 2.375rem;
+
+    @media screen and (max-width: 528px) {
+      margin: 0;
+      padding: 1rem 2rem;
+    }
   }
 }
 .privacy__heading {
@@ -25,6 +40,11 @@
   font-size: 4rem;
   font-weight: 600;
   line-height: 6.375rem;
+
+  @media screen and (max-width: 528px) {
+    font-size: 1.5rem;
+    margin-bottom: -2rem;
+  }
 }
 
 .policies {
