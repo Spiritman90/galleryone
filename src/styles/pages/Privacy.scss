@@ -48,7 +48,12 @@
 }
 
 .policies {
-  margin: 1.625rem 4rem;
+  padding: 1.625rem 4rem;
+
+  @media screen and (max-width: 528px) {
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+  }
 }
 
 .policy__texts {
@@ -92,17 +97,34 @@
   color: #d0d2d4;
   margin-top: 5rem;
 
+  @media screen and (max-width: 528px) {
+    margin: 0;
+    margin-top: 2rem;
+  }
+
   &__lead {
     display: flex;
     justify-content: space-around;
     justify-items: center;
     border-bottom: 0.125rem solid $primary-color;
+
+    @media screen and (max-width: 528px) {
+      flex-direction: column;
+      padding: 0rem 1rem;
+      justify-content: space-evenly;
+    }
   }
 
   &__stars {
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
+
+    @media screen and (max-width: 528px) {
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__heading {
@@ -111,6 +133,11 @@
     font-weight: 600;
     line-height: 3.625rem;
     margin-bottom: 2.625rem;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1.7rem;
+      text-align: center;
+    }
   }
 }
 
@@ -126,7 +153,14 @@
   font-weight: 600;
   line-height: 3.625rem;
   color: #d0d2d4;
-  margin: 3rem 0;
+  // margin: 3rem 0;
+
+  @media screen and (max-width: 528px) {
+    // font-size: 2rem;
+    padding: 3rem 1rem;
+    display: grid;
+    place-items: center;
+  }
 
   &__button {
     border: none;
