@@ -10,16 +10,46 @@
   display: grid;
   grid-template-columns: 1fr [logoStart] max-content [logoEnd] 1fr [searchStart] 6fr[searchEnd] 1fr [buttonStart] 5.76fr [buttonEnd] 0.85fr;
 
+  @media screen and (max-width: 528px) {
+    grid-template-columns: [logoStart] max-content [logoEnd] 1fr [searchStart] 6fr[searchEnd] 1fr [buttonStart] 1fr [buttonEnd];
+    position: relative;
+  }
+
   &__logo {
     grid-column: logoStart/logoEnd;
     align-self: center;
     // padding-right: 5rem;
   }
 
+  .hamburger {
+    font-size: 3rem;
+    color: white;
+    grid-column: buttonStart/buttonEnd;
+    align-self: center;
+    justify-self: flex-end;
+
+    &_input {
+      display: none;
+    }
+  }
+
   &__buttons {
     grid-column: buttonStart/buttonEnd;
     display: flex;
     gap: 1rem;
+
+    @media screen and (max-width: 528px) {
+      display: none;
+      grid-column: unset;
+      position: absolute;
+      right: 16px;
+      top: 84px;
+      width: 100px;
+      height: 100px;
+      flex-direction: column;
+      row-gap: 1rem;
+      background-color: yellow;
+    }
   }
   .search-label {
     grid-column: searchStart/searchEnd;
@@ -67,4 +97,11 @@
       filter: brightness(90%);
     }
   }
+}
+
+.btn_show {
+  display: flex;
+}
+.btn_hide {
+  display: none;
 }

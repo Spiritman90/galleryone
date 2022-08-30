@@ -8,11 +8,14 @@ import UserProfile from "./UserProfile";
 import Bag from "../customicons/Bag";
 import { useDispatch, useSelector } from "react-redux";
 import { getBalance } from "../redux/wallet/walletSlice";
+import useWindowSize from "../hooks/useWindowSize";
+import LogoMobile from "../customicons/LogoMobile";
 
 const UserNavbar = () => {
   const [showUserProfile, setShowUserProfile] = useState(false);
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const { width } = useWindowSize();
 
   const handleClick = () => {
     setShowUserProfile((prev) => !prev);
@@ -23,15 +26,17 @@ const UserNavbar = () => {
   return (
     <nav className='user__navbar'>
       <Link className='navbar__logo' to='/'>
-        <Logo className='navbar_logo' />
+        {/* <Logo className='navbar_logo' /> */}
+        {width < 528 ? <LogoMobile /> : <Logo />}
       </Link>
       <ul className='navbar__list'>
         <NavLink to='/liveauction'>
           <li className='navbar__item'>Live Auction</li>
         </NavLink>
-        <NavLink to='/sell'>
+        <NavLink to='/'>
           <li className='navbar__item'>Sell an Item</li>
         </NavLink>
+        {/* <NavLink to='/sell'> */}
       </ul>
       <div className='search-bar'>
         <SearhBar />

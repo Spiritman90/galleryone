@@ -10,7 +10,7 @@ const itemUpload = async (data) => {
     localStorage.setItem("item", JSON.stringify(response.data));
   }
 
-  // console.log(response);
+  console.log(response);
   return response.data;
 };
 

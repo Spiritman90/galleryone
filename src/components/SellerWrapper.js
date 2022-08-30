@@ -32,14 +32,14 @@ const SellerWrapper = () => {
             Inbox
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to='sell_form'
             className={({ isActive }) =>
               isActive ? "sell__info-active" : "sell__info"
             }
           >
             Sell an item
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to='history'
             className={({ isActive }) =>

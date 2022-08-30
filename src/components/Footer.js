@@ -15,9 +15,10 @@ const Footer = () => {
             <li className='features__item'>Live auction</li>
           </Link>
           {/* <li className='features__item'>Purchase an item</li> */}
-          <Link to='/sell'>
+          <Link to='/'>
             <li className='features__item'>Sell an item</li>
           </Link>
+          {/* <Link to='/sell'></Link> */}
         </ul>
       </div>
 

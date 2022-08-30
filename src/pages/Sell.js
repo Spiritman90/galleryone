@@ -20,22 +20,10 @@ const Sell = () => {
   };
 
   const [images, setImages] = useState([]);
-  // const [item, setItem] = useState("");
-  // const [price, setPrice] = useState("");
-  // const [category, setCategory] = useState("");
-  // const [description, setDescription] = useState("");
   const dispatch = useDispatch();
   const { items, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.sell
   );
-
-  // const data = {
-  //   images,
-  //   item,
-  //   price,
-  //   category,
-  //   description,
-  // };
 
   useEffect(() => {
     if (isError) {
@@ -60,20 +48,12 @@ const Sell = () => {
     const formData = new FormData();
     images.forEach((image) => formData.append("images", image));
     const dataKeys = Object.keys(data);
-
     dataKeys.forEach((key) => formData.append(key, data[key]));
 
-    // if (images.length === 5) {
-    //   setData((prev) => ({ ...prev, images: [...images] }));
-    // }
-
-    dispatch(itemUpload(formData));
-    // dispatch(reset());
-    // console.log(images);
-    // console.log(item);
-    // console.log(price);
-    // console.log(category);
-    // console.log(description);
+    if (images.length === 5) {
+      setData((prev) => ({ ...prev, images: [...images] }));
+      dispatch(itemUpload(formData));
+    }
   };
 
   return (
@@ -82,67 +62,14 @@ const Sell = () => {
         <div className='sell__information'>
           <div className='sell__padding'>
             <h4 className='sell__heading'>Item Information</h4>
-            <div className='sell__container'>
-              {/* <ImageUploading
-                multiple={true}
-                value={images}
-                onChange={onChange}
-                maxNumber={maxNumber}
-                dataURLKey='data_url'
-                acceptType={["jpg", "gif", "png"]}
-              >
-                {({
-                  imageList,
-                  onImageUpload,
-                  onImageRemoveAll,
-                  onImageUpdate,
-                  onImageRemove,
-                  isDragging,
-                  dragProps,
-                }) => (
-                  // write your building UI
-                  <>
-                    <div className='upload__image-wrapper'>
-                      <button
-                        style={isDragging ? { color: "red" } : null}
-                        onClick={onImageUpload}
-                        {...dragProps}
-                      >
-                        {" "}
-                        Click or Drop here
-                      </button>
-                      &nbsp;
-                      <button onClick={onImageRemoveAll}>
-                        Remove all images
-                      </button>
-                    </div>
-                    <div className='image-container'>
-                      {imageList.map((image, index) => (
-                        <div key={index}>
-                          <div className='image-item'>
-                            <img src={image.data_url} alt='' width='100' />
-                          </div>
-                          <div className='image-item__btn-wrapper'>
-                            <button onClick={() => onImageUpdate(index)}>
-                              Update
-                            </button>
-                            <button onClick={() => onImageRemove(index)}>
-                              Remove
-                            </button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </ImageUploading> */}
-            </div>
+            <div className='sell__container'></div>
             <div className='sell__form'>
               <form onSubmit={handleSubmit} className='sell__block'>
-                <label className='sell__labels'>
+                <label style={{ display: "flex" }} className='sell__labels'>
                   <span>Add Image</span>
                   <input
                     type='file'
+                    onDrop={(e) => console.log(e, "drop")}
                     placeholder='add image'
                     className='sell__inputs'
                     onChange={onImageHandler}
