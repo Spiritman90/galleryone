@@ -1,5 +1,4 @@
 import React from "react";
-// import success from "../assets/success.png";
 import Processed from "../customicons/Processed";
 
 const Success = () => {
