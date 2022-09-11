@@ -7,7 +7,7 @@ const EmailSuccess = () => {
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
   return (
-    <section className='email-sucess'>
+    <section className='email-success'>
       <div className='email-success__button'>
         <button
           className='email-success__btn'
@@ -19,9 +19,7 @@ const EmailSuccess = () => {
 
       <div className='email-sucess__icon'>
         <ValidEmail />
-        <p className='email__success__text'>
-          {user?.message} Your mail has been verified
-        </p>
+        <p className='email__success__text'>{user?.message}</p>
       </div>
     </section>
   );

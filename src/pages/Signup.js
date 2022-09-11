@@ -139,7 +139,7 @@ const Signup = () => {
           )}
           {isLoading && (
             <button className='create-btn' disabled>
-              Creating your account...
+              Creating account...
             </button>
           )}
           <button className='sign-btn' onClick={() => navigate("/login")}>

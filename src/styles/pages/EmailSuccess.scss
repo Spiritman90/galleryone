@@ -1,12 +1,19 @@
 @import "../variables/colors.scss";
+.email-success {
+  @media screen and (max-width: 528px) {
+    padding: 1rem 2rem;
+    margin-top: 12rem;
+  }
+}
+
 .email-success__button {
   margin-top: 3.9375rem;
   margin-left: 3.9375rem;
 
   @media screen and (max-width: 528px) {
-    // margin: 3rem auto;
     display: grid;
     place-items: center;
+    margin-left: 0;
   }
 }
 
@@ -24,6 +31,9 @@
   &:hover {
     filter: brightness(90%);
   }
+  @media screen and (max-width: 528px) {
+    text-align: center;
+  }
 }
 
 .email-sucess__icon {
@@ -31,6 +41,13 @@
   place-items: center;
   margin-top: 8rem;
   gap: 2.875rem;
+
+  @media screen and (max-width: 528px) {
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
 }
 
 .email__success__text {
@@ -42,5 +59,6 @@
 
   @media screen and (max-width: 528px) {
     font-size: 1.5rem;
+    text-align: center;
   }
 }
