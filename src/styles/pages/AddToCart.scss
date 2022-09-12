@@ -27,12 +27,23 @@
     color: $btn-gray;
     margin-bottom: 40rem;
 
+    @media screen and (max-width: 528px) {
+      justify-content: center;
+      margin-top: 15rem;
+    }
+
     h2 {
       font-family: $secondary-font;
       font-weight: 700;
       font-size: 3rem;
       color: $btn-gray;
       margin-bottom: 1rem;
+
+      @media screen and (max-width: 528px) {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+      }
     }
 
     span {
