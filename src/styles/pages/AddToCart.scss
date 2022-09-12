@@ -100,6 +100,11 @@
     // padding: 1.9375rem 3rem;
     gap: 2rem;
     color: $btn-gray;
+
+    @media screen and (max-width: 528px) {
+      padding: 2.5rem 1rem;
+      gap: 1rem;
+    }
   }
 
   &__photo {
