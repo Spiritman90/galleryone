@@ -3,15 +3,12 @@ import SearhBar from "./SearhBar";
 import { Link, useNavigate } from "react-router-dom";
 import UserNavbar from "./UserNavbar";
 import { FiMenu } from "react-icons/fi";
-// import { useState } from "react";
 import { useSelector } from "react-redux";
 import useWindowSize from "../hooks/useWindowSize";
 import LogoMobile from "../customicons/LogoMobile";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  // const user = localStorage.getItem("token");
-  // const [userLoggedIn, setUserLoggedIn] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();

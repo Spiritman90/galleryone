@@ -44,11 +44,10 @@
       position: absolute;
       right: 16px;
       top: 84px;
-      width: 100px;
-      height: 100px;
       flex-direction: column;
-      row-gap: 1rem;
-      background-color: yellow;
+      row-gap: 2rem;
+      background-color: $background-color-main;
+      padding: 3rem;
     }
   }
   .search-label {
@@ -75,6 +74,10 @@
     &:hover {
       filter: brightness(80%);
     }
+
+    @media screen and (max-width: 528px) {
+      padding: 1rem 2rem;
+    }
   }
 
   .orange-btn {
@@ -95,6 +98,10 @@
 
     &:hover {
       filter: brightness(90%);
+    }
+
+    @media screen and (max-width: 528px) {
+      padding: 1rem 2rem;
     }
   }
 }
