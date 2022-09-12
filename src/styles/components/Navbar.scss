@@ -27,9 +27,10 @@
     grid-column: buttonStart/buttonEnd;
     align-self: center;
     justify-self: flex-end;
+    display: none;
 
-    &_input {
-      display: none;
+    @media screen and (max-width: 528px) {
+      display: block;
     }
   }
 
@@ -109,6 +110,6 @@
 .btn_show {
   display: flex;
 }
-.btn_hide {
-  display: none;
-}
+// .btn_hide {
+//   display: none;
+// }
